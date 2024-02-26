@@ -1,0 +1,7 @@
+{
+  "calendarType": "OR",
+  "calendars": "CAT_WD,USN_WD,USU_WD",
+  "codeRepository": "[ROX]cluster_repo",
+  "description": "America Calender",
+  "resourceType": "CALENDAR"
+}

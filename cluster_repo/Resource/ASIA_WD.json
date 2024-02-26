@@ -1,0 +1,7 @@
+{
+  "calendarType": "OR",
+  "calendars": "CNS_WD,HKG_WD,INM_WD,MYL_WD,SGP_WD",
+  "codeRepository": "[ROX]cluster_repo",
+  "description": "Asia",
+  "resourceType": "CALENDAR"
+}

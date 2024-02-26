@@ -1,0 +1,8 @@
+{
+  "calendarLimitExpression": "CALENDAR_DAY(-1)",
+  "calendarType": "CAL_SELECT",
+  "calendars": "WORK_DAYS",
+  "codeRepository": "[ROX]cluster_repo",
+  "description": "Last working day of month",
+  "resourceType": "CALENDAR"
+}
