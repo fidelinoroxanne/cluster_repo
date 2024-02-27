@@ -1,0 +1,24 @@
+{
+  "codeRepository": "[Test]cluster_repo",
+  "serverNodeType": "FILE_MANAGER",
+  "totalWeightCapacity": 50,
+  "configuration": {
+    "AgentHeartbeat": 30000,
+    "NoOfPrcss": 40,
+    "connectionTimeout": 60000,
+    "enfPort": 4445,
+    "ftpInterval": 5000,
+    "logLevel": "DEBUG",
+    "logMaxFiles": 180,
+    "sysoutMaxAgeInDays": 180
+  },
+  "customFieldValues": {
+  },
+  "endpoints": 
+  [
+    {
+      "endpoint": "ROX_LOCAL",
+      "endpointType": "SFTP"
+    }
+  ]
+}
