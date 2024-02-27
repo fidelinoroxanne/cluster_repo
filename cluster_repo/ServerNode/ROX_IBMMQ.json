@@ -1,0 +1,25 @@
+{
+  "codeRepository": "[Test]cluster_repo",
+  "serverNodeType": "IBM_MQ",
+  "totalWeightCapacity": 50,
+  "configuration": {
+    "AgentHeartbeat": 30000,
+    "NoOfPrcss": 500,
+    "connectionTimeout": 60000,
+    "enfPort": 4445,
+    "firstDayOfWeek": 6,
+    "ftpInterval": 5000,
+    "logLevel": "DEBUG",
+    "logMaxFiles": 180,
+    "sysoutMaxAgeInDays": 180
+  },
+  "customFieldValues": {
+  },
+  "endpoints": 
+  [
+    {
+      "endpoint": "ROX_IBMMQ",
+      "endpointType": "IBM_MQ"
+    }
+  ]
+}
