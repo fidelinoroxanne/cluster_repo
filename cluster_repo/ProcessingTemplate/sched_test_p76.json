@@ -8,11 +8,14 @@
   "timeTriggers": 
   [
     {
+      "calendar": "ASIA_WD",
       "endTime": 86399999,
+      "onHold": true,
+      "passBy": true,
       "repeatInterval": 3600000,
       "startTime": 0,
       "timeTriggerType": "DAILY",
-      "timeZone": "Europe/Warsaw"
+      "timeZone": "Europe/London"
     }
   ]
 }
