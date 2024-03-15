@@ -1,0 +1,19 @@
+{
+  "description": "Archive completed items",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TASK",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "ARCHIVE_INTERVAL",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "completedOlderThan": 3600000,
+    "failedOlderThan": 3600000,
+    "waitingOlderThan": 3600000
+  }
+}
