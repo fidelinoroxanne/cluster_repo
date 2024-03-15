@@ -1,0 +1,18 @@
+{
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "timeTriggers": 
+  [
+    {
+      "endTime": 86399999,
+      "repeatInterval": 3600000,
+      "startTime": 0,
+      "timeTriggerType": "DAILY",
+      "timeZone": "Africa/Cairo"
+    }
+  ]
+}
