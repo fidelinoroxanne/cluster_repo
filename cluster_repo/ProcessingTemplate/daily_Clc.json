@@ -1,0 +1,43 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WF_SPT_UTR_LOAD_DM_IDY_CLC",
+      "processingTemplate": "WF_SPT_UTR_LOAD_DM_IDY_CLC",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "processingTemplate": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "templateParameters": {
+        "OCCURRENCE": "CLC",
+        "REGION": "UTR"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WF_SPT_UTR_DM_DLY",
+      "processingTemplate": "WF_SPT_UTR_DM_DLY",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}
