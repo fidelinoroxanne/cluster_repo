@@ -1,0 +1,103 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Roxanne",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_STOCK_1",
+      "processingTemplate": "WORKFLOW_LEVEL_STOCK_1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_STOCK_4",
+      "processingTemplate": "WORKFLOW_LEVEL_STOCK_4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_STOCK_2",
+      "processingTemplate": "WORKFLOW_LEVEL_STOCK_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "KK_TEST_LOCK_STOCK",
+      "processingTemplate": "KK_TEST_LOCK_STOCK",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_LOCK_3",
+      "processingTemplate": "WORKFLOW_LEVEL_LOCK_3",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_LOCK_2",
+      "processingTemplate": "WORKFLOW_LEVEL_LOCK_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_STOCK_3",
+      "processingTemplate": "WORKFLOW_LEVEL_STOCK_3",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "TEST_LOCKS_STOCKS",
+      "processingTemplate": "TEST_LOCKS_STOCKS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_STOCK",
+      "processingTemplate": "WORKFLOW_LEVEL_STOCK",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_LOCK",
+      "processingTemplate": "WORKFLOW_LEVEL_LOCK",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_LOCK_4",
+      "processingTemplate": "WORKFLOW_LEVEL_LOCK_4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}
