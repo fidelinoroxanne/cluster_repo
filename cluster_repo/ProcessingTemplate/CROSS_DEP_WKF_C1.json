@@ -1,0 +1,53 @@
+{
+  "description": "With semaphore condition",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "owner": "krystian.stepien",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "DPD_WKF_ASIA",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "resource": "DPD_WKF_ASIA",
+      "resourceType": "BINARY_SEMAPHORE",
+      "semaphoreState": "ON",
+      "timestampRelation": "EQ",
+      "timestampSelector": "SAME",
+      "workflowType": "STANDARD"
+    },
+    {
+      "dependencyType": "PROCESSING_TEMPLATE",
+      "name": "CROSS_DEP_WKF_B1",
+      "processingStatus": "COMPLETED",
+      "processingTemplate": "CROSS_DEP_WKF_B1",
+      "processingType": "WORKFLOW",
+      "timestampRelation": "EQ",
+      "timestampSelector": "SAME",
+      "workflowType": "STANDARD"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "SLEEP_10",
+      "processingTemplate": "SLEEP_10",
+      "serverNode": "ROX_NEW_LB",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "title": "SLEEP_10"
+    }
+  ]
+}
