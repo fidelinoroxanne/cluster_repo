@@ -1,0 +1,49 @@
+{
+  "description": "Scheduled execution of interface ELIMANKELI_16 on 9TH work day at 12:00 hour",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "owner": "kailash.kailash",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "MONTHLY"
+  ],
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "simple_wait",
+      "processingTemplate": "simple_wait",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ELI_BANKING_REFUND_WF_01",
+      "processingTemplate": "ELI_BANKING_REFUND_WF_01",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELIMANKELI_16",
+      "priority": "0",
+      "processingTemplate": "ELIMANKELI_16",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "ELIMANKELI_16",
+      "weight": "1"
+    }
+  ]
+}

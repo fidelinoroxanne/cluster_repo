@@ -1,0 +1,35 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "triggerType": "EVENT",
+  "customFieldValues": {
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "trigger_wf_elisa",
+      "processingStatus": "COMPLETED",
+      "processingType": "TRIGGER",
+      "resource": "trigger_wf_elisa",
+      "resourceType": "EVENT",
+      "triggerType": "EVENT"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+      "processingTemplate": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}

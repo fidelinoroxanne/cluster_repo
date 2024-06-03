@@ -1,0 +1,46 @@
+{
+  "description": "SOD_ASIA",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "joris.de.groen",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "INTRADAY",
+    "ASIA",
+    "DEPLOY"
+  ],
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "defaultValue": "ASIA",
+      "editorType": "DICTIONARY",
+      "name": "REGION",
+      "optionDataSource": "CORE_REGION_LIST",
+      "title": "REGION"
+    },
+    {
+      "defaultValue": "PDBSAsia",
+      "editorType": "TEXT",
+      "name": "PDBSDB",
+      "title": "PDBSDB"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "1",
+      "processingTemplate": "1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}
