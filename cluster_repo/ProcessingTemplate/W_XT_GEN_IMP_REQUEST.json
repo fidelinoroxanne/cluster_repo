@@ -1,0 +1,192 @@
+{
+  "folder": "XT_ALCO_IMPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "krystian.stepien",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "name": "FileWatcherOptions",
+      "required": true,
+      "title": "FileWatcherOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "RequestCopyOptions",
+      "required": true,
+      "title": "RequestCopyOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "RequestFileSource",
+      "required": true,
+      "title": "RequestFileSource"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "RequestFileTarget",
+      "required": true,
+      "title": "RequestFileTarget"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ResponseCopyOptions",
+      "required": true,
+      "title": "ResponseCopyOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ResponseFileSource",
+      "required": true,
+      "title": "ResponseFileSource"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ResponseFileTarget",
+      "required": true,
+      "title": "ResponseFileTarget"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_REQ_HEADER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_REQ_HEADER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_REQ_HEADER",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_REQ_COPY_REQUEST",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_REQ_COPY_REQUEST",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_REQ_COPY_REQUEST",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_REQ_HEADER",
+          "predecessor": "T_XT_GEN_IMP_REQ_HEADER",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_REQ_WAITFOR_RESPONSE",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_REQ_WAITFOR_RESPONSE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_REQ_WAITFOR_RESPONSE",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_REQ_COPY_REQUEST",
+          "predecessor": "T_XT_GEN_IMP_REQ_COPY_REQUEST",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_REQ_COPY_RESPONSE",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_REQ_COPY_RESPONSE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_REQ_COPY_RESPONSE",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_REQ_WAITFOR_RESPONSE",
+          "predecessor": "T_XT_GEN_IMP_REQ_WAITFOR_RESPONSE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_REQ_SAVE_ASCII",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_REQ_SAVE_ASCII",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_REQ_SAVE_ASCII",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_REQ_COPY_RESPONSE",
+          "predecessor": "T_XT_GEN_IMP_REQ_COPY_RESPONSE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_INNER_TRAILER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_INNER_TRAILER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_INNER_TRAILER",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_REQ_SAVE_ASCII",
+          "predecessor": "T_XT_GEN_IMP_REQ_SAVE_ASCII",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

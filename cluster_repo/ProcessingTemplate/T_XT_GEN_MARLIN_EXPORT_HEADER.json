@@ -1,0 +1,17 @@
+{
+  "endpointType": "USER",
+  "folder": "XT_5028_EXPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "timescape_appserver",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "processingCommand": {
+    "script": "REM force inheritance of Task variables\nREM Keep the task events tidy\nREM Job History aborted, event wait and completed\nREM \"${UXEXE}\\uxpur\" CTL TSK=T_XT_GEN_MARLIN_EXPORT_HEADER UPR=U_XT* MU=${S_CODUG} STATUS=AWT\nREM Job History Time Overrun\nREM \"${UXEXE}\\UXDLT\" FLA TSK=T_XT_GEN_MARLIN_EXPORT_HEADER UPR=U_XT* MU=${S_CODUG} STATUS=O nseq=*\nset resexe=0\nexit %resexe%"
+  }
+}

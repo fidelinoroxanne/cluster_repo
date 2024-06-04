@@ -1,0 +1,17 @@
+{
+  "endpointType": "USER",
+  "folder": "XT_5028_EXPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "timescape_appserver",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "processingCommand": {
+    "script": "if \"${NextTaskToRun}\"==\"\" GOTO COMPLETED\n:PROCESS\nEcho Kill any running executables started by ${NextTaskToRun} \nREM \"${UXEXE}\\uxend\" CTL TSK=${NextTaskToRun} UPR=* MU=${S_CODUG}\nREM Ignore 'No Articles extracted' as an error\nset resexe=0\nECHO Provoke ${NextTaskToRun} as the next task down the chain\nREM \"${UXEXE}\\uxordre\" TSK=${NextTaskToRun} MU=${S_CODUG} ELAPS=\"02359\"\nGOTO END\n:COMPLETED\nEcho No next task to run\nset resexe=0\nGOTO END\n:END\nexit %resexe%"
+  }
+}

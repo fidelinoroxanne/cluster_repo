@@ -1,0 +1,130 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "Anindya.Sarkar@rabobank.com",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "lockState": "EXCLUSIVE",
+      "name": "L_XT_CVA",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "resource": "L_XT_CVA",
+      "resourceType": "LOCK",
+      "workflowType": "STANDARD"
+    }
+  ],
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "name": "FirstTaskToStart",
+      "title": "FirstTaskToStart"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_XT_GEN_SETBUSDATE",
+      "priority": "0",
+      "processingTemplate": "W_XT_GEN_SETBUSDATE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_CVA_SETBUSDATE",
+      "weight": "1",
+      "templateParameters": {
+        "BusDateShortCode": null,
+        "BusinessDateCode": "\"Updated Issuers\"",
+        "BusinessDateCodeType": "System",
+        "NextTaskToRun": "ES_XT_CVA_ISSUER_RISK",
+        "configdb": "CONFIG"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_XT_GEN_MARLIN_EXPORT",
+      "priority": "0",
+      "processingTemplate": "W_XT_GEN_MARLIN_EXPORT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_CVA_ISSUER_RISK",
+      "weight": "1",
+      "templateParameters": {
+        "Delimiter": "\",\"",
+        "ExportArchiveOptions": "move today overwrite",
+        "ExportArchivename": null,
+        "ExportConfiguration": "E:\\CRIS_DATA\\Marlin\\ExportConfigs\\HR_CVA_IssuerRisk_Active.xml",
+        "ExportCopyName": "E:\\CRIS_DATA\\Outgoing\\CVA_Issuers\\IssuerRiskCCYYMMDD.csv",
+        "ExportCopyOptions": "today overwrite",
+        "ExportDateFormat": "dd/MM/yyyy",
+        "ExportFileName": "E:\\CRIS_DATA\\Exports\\CVA_Issuers\\IssuerRisk.csv",
+        "ExportThreads": "8",
+        "LogFileName": "E:\\CRIS_DATA\\Exports\\CVA_Issuers\\Logs\\HR_CVA_IssuerRisk_Active.txt",
+        "NextTaskToRun": null,
+        "ReportDate": "\"Updated Issuers\""
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_XT_GEN_SETBUSDATE",
+          "predecessor": "W_XT_GEN_SETBUSDATE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_XT_GEN_MARLIN_EXPORT.1",
+      "priority": "0",
+      "processingTemplate": "W_XT_GEN_MARLIN_EXPORT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_CVA_GENERIC_ISSUER_RISK",
+      "weight": "1",
+      "templateParameters": {
+        "Delimiter": "\",\"",
+        "ExportArchiveOptions": "move today overwrite",
+        "ExportArchivename": null,
+        "ExportConfiguration": "E:\\CRIS_DATA\\Marlin\\ExportConfigs\\HR_CVA_GenericIssuer_Active2.xml",
+        "ExportCopyName": "E:\\CRIS_DATA\\Outgoing\\CVA_Issuers\\V2GenericIssuersCCYYMMDD.csv",
+        "ExportCopyOptions": "today overwrite",
+        "ExportDateFormat": "dd/MM/yyyy",
+        "ExportFileName": "E:\\CRIS_DATA\\Exports\\CVA_Issuers\\V2GenericIssuers.csv",
+        "ExportThreads": "8",
+        "LogFileName": "E:\\CRIS_DATA\\Exports\\CVA_Issuers\\Logs\\HR_CVA_GenericIssuer_Active2.txt",
+        "NextTaskToRun": null,
+        "ReportDate": "\"Updated Issuers\""
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_XT_GEN_MARLIN_EXPORT",
+          "predecessor": "W_XT_GEN_MARLIN_EXPORT",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    }
+  ]
+}

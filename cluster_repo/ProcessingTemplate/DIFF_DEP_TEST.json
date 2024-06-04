@@ -1,0 +1,192 @@
+{
+  "description": "Workflow to test different types of dependencies",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "krystian.stepien@infinitedata.com",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WKF_SLEEP_2",
+      "processingTemplate": "WKF_SLEEP_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "Waiting_On_Lock",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "L_EOD",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "L_EOD",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WKF_SLEEP_1",
+      "processingTemplate": "WKF_SLEEP_1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "Waiting_On_Stock",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "maxNumberOfTaskRunning",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "maxNumberOfTaskRunning",
+          "resourcePermits": "3",
+          "resourceType": "STOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WKF_SLEEP_1.1",
+      "processingTemplate": "WKF_SLEEP_1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "Waiting_On_Semaphore",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "S_DWH_MAINTENANCE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "S_DWH_MAINTENANCE",
+          "resourceType": "BINARY_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WKF_SLEEP_2.1",
+      "processingTemplate": "WKF_SLEEP_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "Waiting_On_CrossDep",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PROCESSING_TEMPLATE",
+          "name": "CROSS_DEP_WKF_A",
+          "processingStatus": "COMPLETED",
+          "processingTemplate": "CROSS_DEP_WKF_A",
+          "processingType": "WORKFLOW",
+          "specificTimestamp": "2028-11-27",
+          "timestampRelation": "EQ",
+          "timestampSelector": "SPECIFIC_DATE",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WKF_SLEEP_1.2",
+      "processingTemplate": "WKF_SLEEP_1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "Waiting_On_TimeWindow",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "FROM_1900",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "FROM_1900",
+          "resourceType": "TIME_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WKF_SLEEP_1.3",
+      "processingTemplate": "WKF_SLEEP_1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "Waiting_On_Lock_And_CrossDep",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "L_EOD",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "L_EOD",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        },
+        {
+          "dependencyType": "PROCESSING_TEMPLATE",
+          "name": "CROSS_DEP_WKF_A",
+          "processingStatus": "COMPLETED",
+          "processingTemplate": "CROSS_DEP_WKF_A",
+          "processingType": "WORKFLOW",
+          "specificTimestamp": "2030-11-06",
+          "timestampRelation": "EQ",
+          "timestampSelector": "SPECIFIC_DATE",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WKF_SLEEP_2.2",
+      "processingTemplate": "WKF_SLEEP_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "Waiting_On_Lock_And_TimeWindow",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "L_EOD",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "L_EOD",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        },
+        {
+          "dependencyType": "RESOURCE",
+          "name": "FROM_1900",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "FROM_1900",
+          "resourceType": "TIME_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "STANDARD"
+        }
+      ]
+    }
+  ]
+}

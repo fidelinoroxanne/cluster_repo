@@ -1,0 +1,59 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "bxtv450506",
+  "owner": "ton.schreurs",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "Performance_Test"
+  ],
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "sleep 5\ncd /home/anowadmin/api/\n./performance_test_api.sh ${environment} ${domain} ${objects}\n\n#check on differences in size of json output file\ncd /home/anowadmin/api/log\nCURRENT_FILENAME=`ls -ltr *${environment}*.json | tail -n1 | tr -s \"[:blank:]\"|  cut -d\" \" -f9`\nCURRENT_FILESIZE=$(stat -c%s \"$CURRENT_FILENAME\")\nPREVIOUS_FILENAME=`ls -ltr *${environment}*.json | tail -n2 | head -1 | tr -s \"[:blank:]\"|  cut -d\" \" -f9`\nPREVIOUS_FILESIZE=$(stat -c%s \"$PREVIOUS_FILENAME\")\nif (( $CURRENT_FILESIZE != $PREVIOUS_FILESIZE )); then\n   cp $CURRENT_FILENAME performance_test_${environment}_`date +%Y%m%d`.json_bck\nfi\n"
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "ST_TS_RUNNING_PERFORMANCE_TEST",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "ST_TS_RUNNING_PERFORMANCE_TEST",
+      "resourcePermits": "1",
+      "resourceType": "STOCK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    }
+  ],
+  "designParameters": 
+  [
+    {
+      "defaultValue": "sb",
+      "editorType": "TEXT",
+      "name": "environment",
+      "required": true,
+      "title": "Environment"
+    },
+    {
+      "defaultValue": "SB_WORKLOADAUTOMATION_PLAYGROUND",
+      "editorType": "TEXT",
+      "name": "domain",
+      "required": true,
+      "title": "Domain"
+    },
+    {
+      "defaultValue": "WF_AEG_SYD_B05_INFA_PROCESSING_DLY,WF_AEG_SYD_LEA_INFA_PROCESSING_DLY",
+      "editorType": "TEXT",
+      "name": "objects",
+      "required": true,
+      "title": "Objects to export"
+    }
+  ]
+}

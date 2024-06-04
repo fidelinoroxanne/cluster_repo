@@ -1,0 +1,21 @@
+{
+  "endpoint": "EP_LOKERO_ANOWAGENT_ANPLAINF_SSH",
+  "endpointType": "SSH",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "node": "NODE_OS_LOKERO",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "title": "MANKELIINT160EXPORT_A12",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "/dropbox/anplainf/anplainf/scripts/export_anaplan.sh 8a8194884b27c72b014b4c6a049e5a1c 3AE8B17EC3B240F3B39443B020E00879 MANKELI_Revenue_Interconnection_and_Roaming /dropbox/anplainf/anplainf/ToInfaprod/REVENUE_IC_AND_ROAMING.txt"
+  }
+}

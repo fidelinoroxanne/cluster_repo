@@ -1,0 +1,218 @@
+{
+  "folder": "XT_BRAZIL_COMMODITIES",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "jaideep.panwar",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "processingCommand": {
+  },
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "name": "FileToWatchFor",
+      "required": true,
+      "title": "FileToWatchFor"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "FileWatcherOptions",
+      "required": true,
+      "title": "FileWatcherOptions"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
+      "resultMapping": "RM_EQ2_COMPLETED",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "2"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 2,
+            "variable": "WATCH_FOR_FILE_EXIT_CODE"
+          }
+        },
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "0"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 0,
+            "variable": "WATCH_FOR_FILE_EXIT_CODE"
+          }
+        },
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "2"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 2,
+            "variable": "WAIT_FOR_EXIT_CODE_CYCLIC"
+          }
+        },
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "0"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 0,
+            "variable": "WAIT_FOR_EXIT_CODE_CYCLIC"
+          }
+        },
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "2"
+              },
+              {
+                "fieldName": "${MY_ORIGIN_IS}",
+                "operator": "EQ",
+                "value": "T_XT_BRAZIL_COMMODITIES_WATCHFOR_STALE_RATES"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 2,
+            "variable": "WATCH_FOR_STALE_RATES_EXIT_CODE"
+          }
+        },
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "2"
+              },
+              {
+                "fieldName": "${MY_ORIGIN_IS}",
+                "operator": "EQ",
+                "value": "T_XT_BRAZIL_COMMODITIES_WAIT_FOR_DATED_FILE"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 2,
+            "variable": "WAIT_FOR_DATED_FILE_EXIT_CODE"
+          }
+        }
+      ]
+    }
+  ]
+}

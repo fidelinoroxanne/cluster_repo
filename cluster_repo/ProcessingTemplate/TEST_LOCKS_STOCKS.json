@@ -1,0 +1,255 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Roxanne",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "ROX"
+  ],
+  "workflowType": "CYCLE",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "cycleDelay": 30000,
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleDuration": 600000,
+    "cycleFailMode": "RESTART_NONE",
+    "cycleType": "TIME"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "NOTIFY_GROUP",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_STARTED",
+      "processingCommand": {
+        "notificationGroup": "ROX",
+        "notificationMessageTemplate": "Sample_Notification_Template"
+      }
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S",
+      "processingTemplate": "ROX_SLEEP_10S",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "1permit_only",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "1permit_only",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "CYCLE"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S_X",
+      "processingTemplate": "ROX_SLEEP_10S_X",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "1permit_only",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "1permit_only",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "CYCLE"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_X",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_X",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_V",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_V",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_Z",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_Z",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S_w",
+      "processingTemplate": "ROX_SLEEP_10S_w",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_X.1",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_X",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK.1",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S_Z",
+      "processingTemplate": "ROX_SLEEP_10S_Z",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_B_S",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_B_S",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "1permit_only",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "1permit_only",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "CYCLE"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S_X.1",
+      "processingTemplate": "ROX_SLEEP_10S_X",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S.1",
+      "processingTemplate": "ROX_SLEEP_10S",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_A_S",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_A_S",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "1permit_only",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "1permit_only",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "CYCLE"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_W",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_W",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_C_S",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_C_S",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "1permit_only",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "1permit_only",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "CYCLE"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S_V",
+      "processingTemplate": "ROX_SLEEP_10S_V",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_10S_Y",
+      "processingTemplate": "ROX_SLEEP_10S_Y",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "ROX_SLEEP_WITH_LOCK_Y",
+      "processingTemplate": "ROX_SLEEP_WITH_LOCK_Y",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "endpointType": "USER",
+  "folder": "XT_BLOOMBERG1100",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "timescape_appserver",
+  "owner": "Anil.Valavala",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "processingCommand": {
+    "script": "Echo on\n${XT_BUSINESSDATE} ${configdb} ${BusinessDateCode} ${BusinessDateCodeType} ${BusDateShortCode} ${AllowWeekendAsBusinessDay}\nEcho off\nset retcode=%errorlevel%\necho BusinessDate ended with return code: %retcode%\nIF %retcode% EQU 0 GOTO NORMALFLOW\nGOTO ERRORFLOW\n:NORMALFLOW\nset resexe=0\nGOTO END\n:ERRORFLOW\nset resexe=1\nGOTO END\n:END\nexit %resexe%"
+  }
+}

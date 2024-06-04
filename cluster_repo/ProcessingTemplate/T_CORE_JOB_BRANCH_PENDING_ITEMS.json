@@ -1,0 +1,24 @@
+{
+  "description": "ok",
+  "folder": "BV_CORE_ASIA_BRANCH_INTRADAY.BV",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "core_appserver",
+  "owner": "krystian.stepien",
+  "priority": "1",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "P0"
+  ],
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "cd ${FIC}/bin/\n${FIC}/bin/runJava.ssh DollarUniverseUtils.jar com.rabobank.core.DolarUniverseUtils.CorePendingItemsCheck ${TNXDB} ${BRANCH}"
+  }
+}

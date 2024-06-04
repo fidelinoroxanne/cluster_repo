@@ -1,0 +1,127 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "oleksandr.semichev",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "CYCLE",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "cycleCondition": {
+      "criteria": 
+      [
+        {
+          "fieldName": "${STALE_RATES_NOT_FOUND}",
+          "operator": "EQ_NUM",
+          "value": "1"
+        },
+        {
+          "fieldName": "${TIMEOUT_COUNTER}",
+          "operator": "EQ_NUM",
+          "value": "20"
+        }
+      ],
+      "operator": "OR"
+    },
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleFailMode": "RESTART_NONE",
+    "cycleType": "UNTIL"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "T_XT_GEN_FILE_WATCHER",
+      "processingTemplate": "T_XT_GEN_FILE_WATCHER",
+      "resultMapping": "RM_EQ2_COMPLETED",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_MUREX_FU_1900SP_CHECKS_CYCLE_FILE_WATCHER_FOR_STALE_RATES",
+      "templateParameters": {
+        "FileToWatchFor": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP_STALE_RATES.txt",
+        "FileWatcherOptions": "leadtime=0 retries=1 interval=5"
+      },
+      "actions": 
+      [
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "2"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 1,
+            "variable": "STALE_RATES_NOT_FOUND"
+          }
+        },
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "PLUS_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 1,
+            "variable": "TIMEOUT_COUNTER"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_IMP_REQUEST",
+      "processingTemplate": "W_XT_GEN_IMP_REQUEST",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE_SEND_CHECK_REQUEST",
+      "templateParameters": {
+        "FileWatcherOptions": "interval=30 retries=30 leadtime=180",
+        "RequestCopyOptions": "overwrite",
+        "RequestFileSource": "E:\\CRIS_DATA\\Marlin\\Itemlists\\Input\\MX_FU_1900SP_Check.req",
+        "RequestFileTarget": "E:\\CRIS_DATA\\FTP\\Bloomberg\\Request\\MX_FU_1900SP_Check.req",
+        "ResponseCopyOptions": "overwrite move",
+        "ResponseFileSource": "E:\\CRIS_DATA\\FTP\\Bloomberg\\Response\\MX_FU_1900SP_Check.out",
+        "ResponseFileTarget": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP_Check.out"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_TOOLRUNNER",
+      "processingTemplate": "W_XT_GEN_TOOLRUNNER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE_FIND_STALE_RATES",
+      "templateParameters": {
+        "ToolName": "E:\\TIMESCAPE\\TOOLS\\OUTPUTFILEFILTER\\OUTPUTFILEFILTER.EXE",
+        "ToolParameters": "E:\\TIMESCAPE\\CONFIGS\\OUTPUTFILEFILTER\\MUREX_1900SP_STALE_RATES.XML"
+      }
+    }
+  ]
+}

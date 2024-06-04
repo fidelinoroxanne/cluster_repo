@@ -1,0 +1,399 @@
+{
+  "description": "ELItelWF14",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "DATE_VARS",
+      "priority": "0",
+      "processingTemplate": "DATE_VARS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAM}",
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_3"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELISA_REFUND_ABP_SFLS002_TRF",
+      "priority": "0",
+      "processingTemplate": "ELISA_REFUND_ABP_SFLS002_TRF",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "ELISA_REFUND_ARCHIVING_SCRIPT",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAMS}",
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_3"
+          }
+        },
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "ELISA_REFUND_REPORT_GENERATION",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "ELISA_REFUND_REPORT_ABP_SFLS002_TRF",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "ELISA_REPORT_ARCHIVING_SCRIPT",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_4"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "0"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_1"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "DATE_VARS",
+          "predecessor": "DATE_VARS",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELISA_REFUND_REPORT_GENERATION",
+      "priority": "0",
+      "processingTemplate": "ELISA_REFUND_REPORT_GENERATION",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAM}",
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_3"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ELISA_REFUND_ABP_SFLS002_TRF",
+          "predecessor": "ELISA_REFUND_ABP_SFLS002_TRF",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELISA_REFUND_REPORT_ABP_SFLS002_TRF",
+      "priority": "0",
+      "processingTemplate": "ELISA_REFUND_REPORT_ABP_SFLS002_TRF",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAM}",
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_3"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "0"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_2"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ELISA_REFUND_REPORT_GENERATION",
+          "predecessor": "ELISA_REFUND_REPORT_GENERATION",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "HPUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELISA_REPORT_ARCHIVING_SCRIPT",
+      "priority": "0",
+      "processingTemplate": "ELISA_REPORT_ARCHIVING_SCRIPT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAM}",
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_3"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ELISA_REFUND_REPORT_ABP_SFLS002_TRF",
+          "predecessor": "ELISA_REFUND_REPORT_ABP_SFLS002_TRF",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELISA_REFUND_ARCHIVING_SCRIPT",
+      "priority": "0",
+      "processingTemplate": "ELISA_REFUND_ARCHIVING_SCRIPT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAM}",
+            "notificationGroup": "AMDPRD_CASHFLOW_GROUP",
+            "notificationMessageTemplate": "AMDPRD_BANKING_REFUND_WF01_3"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ELISA_REPORT_ARCHIVING_SCRIPT",
+          "predecessor": "ELISA_REPORT_ARCHIVING_SCRIPT",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "HPUX",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

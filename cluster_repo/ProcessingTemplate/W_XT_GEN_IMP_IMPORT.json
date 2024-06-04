@@ -1,0 +1,195 @@
+{
+  "folder": "XT_ALCO_IMPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "oleksandr.semichev",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "name": "APRConfigName",
+      "required": true,
+      "title": "APRConfigName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "APRInputFile",
+      "required": true,
+      "title": "APRInputFile"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "CheckLoadItemCode",
+      "required": true,
+      "title": "CheckLoadItemCode"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ContinueOnError",
+      "title": "ContinueOnError"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ImportFileName",
+      "required": true,
+      "title": "ImportFileName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ImportTDFName",
+      "required": true,
+      "title": "ImportTDFName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ImportThreads",
+      "title": "ImportThreads"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ValidationTDF",
+      "title": "ValidationTDF"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_IMPORT_HEADER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_IMPORT_HEADER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_IMPORT_HEADER",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_IMPORT_APPLYPRICERULES",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_IMPORT_APPLYPRICERULES",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_IMPORT_APPLYPRICERULES",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_IMPORT_HEADER",
+          "predecessor": "T_XT_GEN_IMP_IMPORT_HEADER",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_IMPORT_RUN_TDF",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_IMPORT_RUN_TDF",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_IMPORT_RUN_TDF",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_IMPORT_APPLYPRICERULES",
+          "predecessor": "T_XT_GEN_IMP_IMPORT_APPLYPRICERULES",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_IMPORT_CHECKLOAD",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_IMPORT_CHECKLOAD",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_IMPORT_CHECKLOAD",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_IMPORT_RUN_TDF",
+          "predecessor": "T_XT_GEN_IMP_IMPORT_RUN_TDF",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_IMP_IMPORT_VALIDATE",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_IMP_IMPORT_VALIDATE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_IMP_IMPORT_VALIDATE",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_IMPORT_CHECKLOAD",
+          "predecessor": "T_XT_GEN_IMP_IMPORT_CHECKLOAD",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_INNER_TRAILER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_INNER_TRAILER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_INNER_TRAILER",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_IMP_IMPORT_VALIDATE",
+          "predecessor": "T_XT_GEN_IMP_IMPORT_VALIDATE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

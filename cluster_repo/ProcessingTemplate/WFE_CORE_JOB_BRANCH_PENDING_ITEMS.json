@@ -1,0 +1,43 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "lazyLoad": true,
+  "owner": "tomasz.bartos",
+  "passActionsToChildren": true,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "FOR_EACH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "forEachCollection": "[\n   {\n      \"REGION\":\"ASIA\",\n      \"BRANCH\":\"HKG\",\n      \"TNXDB\":\"TXNAsia\",\n      \"PDBSDB\":\"PDBSAsia\"\n   },\n   {\n      \"REGION\":\"ASIA\",\n      \"BRANCH\":\"SGP\",\n      \"TNXDB\":\"TXNAsia\",\n      \"PDBSDB\":\"PDBSAsia\"\n   },\n     {\n      \"REGION\":\"ASIA\",\n      \"BRANCH\":\"CNS\",\n      \"TNXDB\":\"TXNAsia\",\n      \"PDBSDB\":\"PDBSAsia\"\n   },\n   {\n      \"REGION\":\"ASIA\",\n      \"BRANCH\":\"INM\",\n      \"TNXDB\":\"TXNAsia\",\n      \"PDBSDB\":\"PDBSAsia\"\n   }\n]",
+    "forEachCollectionType": "JSON"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "WC_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "processingTemplate": "WC_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "WC_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "ignoreCondition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "processingTimestamp",
+            "operator": "NOT_IN_CAL",
+            "value": "${BRANCH}_WD"
+          }
+        ],
+        "operator": "AND"
+      }
+    }
+  ]
+}

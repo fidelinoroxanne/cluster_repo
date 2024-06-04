@@ -1,0 +1,44 @@
+{
+  "highRiskStatisticMethod": "COUNT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "Roxanne",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "tags": 
+  [
+    "ROX"
+  ],
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "lockState": "EXCLUSIVE",
+      "name": "new_lock_0614",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "resource": "new_lock_0614",
+      "resourceType": "LOCK",
+      "workflowType": "STANDARD"
+    }
+  ],
+  "items": 
+  [
+    {
+      "disallowConcurrentExecution": false,
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "sleep_rox_10",
+      "processingTemplate": "sleep_rox_10",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "title": "sleep_rox_10"
+    }
+  ]
+}

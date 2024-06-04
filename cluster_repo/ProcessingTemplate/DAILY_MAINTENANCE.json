@@ -1,0 +1,65 @@
+{
+  "description": "Daily internal AutomateNOW! maintenance",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "disallowConcurrentExecution": false,
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "ARCHIVE_CLEANUP",
+      "processingTemplate": "ARCHIVE_CLEANUP",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ARCHIVE_INTERVAL",
+          "predecessor": "ARCHIVE_INTERVAL",
+          "processingStatus": "COMPLETED"
+        }
+      ]
+    },
+    {
+      "disallowConcurrentExecution": false,
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "ARCHIVE_INTERVAL",
+      "processingTemplate": "ARCHIVE_INTERVAL",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "disallowConcurrentExecution": false,
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "RECALCULATE_STATISTICS",
+      "processingTemplate": "RECALCULATE_STATISTICS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ARCHIVE_CLEANUP",
+          "predecessor": "ARCHIVE_CLEANUP",
+          "processingStatus": "COMPLETED"
+        }
+      ]
+    }
+  ]
+}

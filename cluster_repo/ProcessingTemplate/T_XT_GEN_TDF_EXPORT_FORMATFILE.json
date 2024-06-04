@@ -1,0 +1,18 @@
+{
+  "endpointType": "USER",
+  "folder": "XT_ABF_EXPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "timescape_appserver",
+  "owner": "jaideep.panwar",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "processingCommand": {
+    "script": "IF \"${FormatFileConfig}\"==\"\" GOTO SKIPSTEP\nEcho on\nE:\\Timescape\\Tools\\FormatFile\\FormatFile.exe -x:\"${FormatFileConfig}\"\nEcho Off\nset retcode=%errorlevel%\necho FormatFile ended with return code: %retcode%\nIF %retcode% EQU 0 GOTO NORMALFLOW\nGOTO ERRORFLOW\n:NORMALFLOW\nset resexe=0\nGOTO END\n:ERRORFLOW\nset resexe=1\nGOTO END\n:SKIPSTEP\nEcho FormatConfigFile variable is not defined, step is skipped\nset resexe=0\nGOTO END\n:END\nexit %resexe%"
+  }
+}

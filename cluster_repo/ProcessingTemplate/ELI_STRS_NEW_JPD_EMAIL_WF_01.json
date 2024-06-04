@@ -1,0 +1,1057 @@
+{
+  "description": "ELIStrsNewJPDEmailWF01 without DELDAY (moved to other wkf) - before changed to CYCLIC",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "owner": "shrinivas.shendye",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "XSTR_PROD"
+  ],
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+  },
+  "actions": 
+  [
+    {
+      "duration": 3600000,
+      "durationThresholdType": "DURATION",
+      "processingActionType": "NOTIFY_GROUP",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "EXECUTING_LONG",
+      "processingCommand": {
+        "cc": "${EXSTREAM_TEAM}",
+        "contentType": "TEXT",
+        "notificationGroup": "AMDPRD_OPS",
+        "notificationMessageTemplate": "AMDPRD_JPD_EMAIL_WF_RUNNING_LONG"
+      }
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "GEN_BATCH_ID_1_170",
+      "priority": "0",
+      "processingTemplate": "GEN_BATCH_ID_WIN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "GEN_BATCH_ID_1_170",
+      "weight": "1",
+      "templateParameters": {
+        "BATCH_NO": "1",
+        "SUFFIX": "170"
+      },
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_LIST_FILE_TRF01",
+      "passBy": true,
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_LIST_FILE_TRF01",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_LIST_FILE_TRF01",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        },
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "GEN_BATCH_ID_1_170",
+          "predecessor": "GEN_BATCH_ID_1_170",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
+      "passBy": true,
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_LIST_FILE_TRF01",
+          "predecessor": "STRS_JPD_EMAIL_LIST_FILE_TRF01",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
+      "passBy": true,
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
+          "predecessor": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "JPD_EMAIL_MAIL_WAIT",
+      "passBy": true,
+      "priority": "0",
+      "processingTemplate": "JPD_EMAIL_MAIL_WAIT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "JPD_EMAIL_MAIL_WAIT",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
+          "predecessor": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_TRF01",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_TRF01",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_TRF01",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "JPD_EMAIL_MAIL_WAIT",
+          "predecessor": "JPD_EMAIL_MAIL_WAIT",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "INTERNAL",
+          "taskType": "WAIT"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_COPYF_FILES",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_COPYF_FILES",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_COPYF_FILES",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${IT_INFRA_TEAM}\n${EXSTREAM_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_TRF01",
+          "predecessor": "STRS_JPD_EMAIL_TRF01",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_TRIGGER",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_TRIGGER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_TRIGGER",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": true,
+            "cc": "${OPS_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_EXSTREAM",
+            "notificationMessageTemplate": "AMDPRD_EXTREAM_PROCESSING_FAIL"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_COPYF_FILES",
+          "predecessor": "STRS_JPD_EMAIL_COPYF_FILES",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_TRF_FC",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_TRF_FC",
+      "sensorType": "FILE_SENSOR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_TRF_FC",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "SET_SEMAPHORE_STATE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "resource": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+            "value": "ON"
+          }
+        },
+        {
+          "duration": 900000,
+          "durationThresholdType": "DURATION",
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "EXECUTING_LONG",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "notificationGroup": "AMDPRD_EXSTREAM",
+            "notificationMessageTemplate": "AMDPRD_MOVE_FLAG_GENERATION_RUNNING_LONG"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_EXSTREAM",
+            "notificationMessageTemplate": "AMDPRD_CONTROL_MOVE_FILE_MISSING"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "!=300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${OPS_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_EXSTREAM",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_TRIGGER",
+          "predecessor": "STRS_JPD_EMAIL_TRIGGER",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAILF_COMPRESS_TARKKI",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAILF_COMPRESS_TARKKI",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAILF_COMPRESS_TARKKI",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_TRF_FC",
+          "predecessor": "STRS_JPD_EMAIL_TRF_FC",
+          "processingStatus": "COMPLETED",
+          "processingType": "SERVICE",
+          "serverNodeType": "FILE_MANAGER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_EMAIL_TAR_PACKAGE",
+      "priority": "0",
+      "processingTemplate": "STRS_EMAIL_TAR_PACKAGE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_EMAIL_TAR_PACKAGE",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${IT_INFRA_TEAM}\n${EXSTREAM_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAILF_COMPRESS_TARKKI",
+          "predecessor": "STRS_JPD_EMAILF_COMPRESS_TARKKI",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_TARKKI_CREA_DIR",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_TARKKI_CREA_DIR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_TARKKI_CREA_DIR",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${TCS_BILLING_TEAM}\n${EXSTREAM_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK_TCS"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "TARKKI_MAINTENANCE_SEMAPHORE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "TARKKI_MAINTENANCE_SEMAPHORE",
+          "resourceType": "BINARY_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "STANDARD"
+        },
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_EMAIL_TAR_PACKAGE",
+          "predecessor": "STRS_EMAIL_TAR_PACKAGE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_TRF02",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_TRF02",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_TRF02",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "TCS_BILLING_TEAM\nEXSTREAM_TEAM\nIT_INFRA_TEAM",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK_TCS"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "TARKKI_MAINTENANCE_SEMAPHORE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "TARKKI_MAINTENANCE_SEMAPHORE",
+          "resourceType": "BINARY_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "STANDARD"
+        },
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_TARKKI_CREA_DIR",
+          "predecessor": "STRS_JPD_EMAIL_TARKKI_CREA_DIR",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_EMAIL_PROD_DEL_SOURCE",
+      "priority": "0",
+      "processingTemplate": "STRS_EMAIL_PROD_DEL_SOURCE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_EMAIL_PROD_DEL_SOURCE",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_TRF02",
+          "predecessor": "STRS_JPD_EMAIL_TRF02",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_TARKKI_BATCH_RUN",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_TARKKI_BATCH_RUN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_TARKKI_BATCH_RUN",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "SET_SEMAPHORE_STATE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "1"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "resource": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+            "value": "OFF"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "1"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": true,
+            "cc": "${EXSTREAM_TEAM}\n${AMDOCS_BILLING_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_TARKKI_BATCH_ERROR_CODE_1"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "!=1"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${AMDOCS_BILLING_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "2"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": true,
+            "cc": "${IT_INFRA_TEAM}\n${EXSTREAM_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_TARKKI_BATCH_ERROR_CODE_2"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "TARKKI_MAINTENANCE_SEMAPHORE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "TARKKI_MAINTENANCE_SEMAPHORE",
+          "resourceType": "BINARY_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "STANDARD"
+        },
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_TRF02",
+          "predecessor": "STRS_JPD_EMAIL_TRF02",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "JPD_SUMMARY_PDF_FILES_TRF",
+      "priority": "0",
+      "processingTemplate": "JPD_SUMMARY_PDF_FILES_TRF",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "JPD_SUMMARY_PDF_FILES_TRF",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        },
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "SKIP_ON",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "300"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "relation": {
+              "peer": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_EMAIL_PROD_DEL_SOURCE",
+          "predecessor": "STRS_EMAIL_PROD_DEL_SOURCE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        },
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_EMAIL_TARKKI_BATCH_RUN",
+          "predecessor": "STRS_JPD_EMAIL_TARKKI_BATCH_RUN",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "JPD_SUMMARY_PDF_FILES_TRF",
+          "predecessor": "JPD_SUMMARY_PDF_FILES_TRF",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
+          "predecessor": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "STRS_JPD_EMAIL_DELETE_MOVE_FLAG",
+      "priority": "0",
+      "processingTemplate": "STRS_JPD_EMAIL_DELETE_MOVE_FLAG",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "STRS_JPD_EMAIL_DELETE_MOVE_FLAG",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "SET_SEMAPHORE_STATE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "resource": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+            "value": "ON"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
+          "predecessor": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

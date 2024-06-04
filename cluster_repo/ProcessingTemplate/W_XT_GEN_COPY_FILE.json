@@ -1,0 +1,100 @@
+{
+  "folder": "XT_ARTS_HQLA",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "name": "CopyOptions",
+      "required": true,
+      "title": "CopyOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "DateOverrideFile",
+      "title": "DateOverrideFile"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "SourceFileName",
+      "required": true,
+      "title": "SourceFileName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "TargetFileName",
+      "required": true,
+      "title": "TargetFileName"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_COPY_FILE_HEADER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_COPY_FILE_HEADER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_COPY_FILE_HEADER",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_COPYFILE",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_COPYFILE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_COPYFILE",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_COPY_FILE_HEADER",
+          "predecessor": "T_XT_GEN_COPY_FILE_HEADER",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_INNER_TRAILER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_INNER_TRAILER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_INNER_TRAILER",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_COPYFILE",
+          "predecessor": "T_XT_GEN_COPYFILE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

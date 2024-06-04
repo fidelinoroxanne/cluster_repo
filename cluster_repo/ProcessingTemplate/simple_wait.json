@@ -1,0 +1,38 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "WAIT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "waitDuration": "PT10S",
+    "waitMode": "FOR"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "NOTIFY_GROUP",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_COMPLETED",
+      "processingCommand": {
+        "notificationGroup": "ROX",
+        "notificationMessageTemplate": "Sample_Notification_Template"
+      }
+    },
+    {
+      "processingActionType": "TRIGGER_EVENT",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_COMPLETED",
+      "processingCommand": {
+        "resource": "trigger_wf_elisa",
+        "timestampSelector": "SAME"
+      }
+    }
+  ]
+}

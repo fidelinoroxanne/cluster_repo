@@ -1,0 +1,25 @@
+{
+  "autoArchive": true,
+  "owner": "dawiener",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "tags": 
+  [
+    "AnowDomainMaintenance"
+  ],
+  "workflowType": "STANDARD",
+  "workspace": "DomainMaintenance.Anow.ws",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "name": "ArchiveOldItems.Anow.maint",
+      "processingTemplate": "ArchiveOldItems.Anow.maint"
+    },
+    {
+      "name": "ArchiveCleanup.Anow.maint",
+      "processingTemplate": "ArchiveCleanup.Anow.maint"
+    }
+  ]
+}

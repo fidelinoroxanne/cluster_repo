@@ -1,0 +1,61 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "fidelinoroxanne",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "FORCE_FAILED",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "ADD_TAG",
+      "processingCommand": {
+        "abortChildren": false,
+        "actionTargetType": "SELF",
+        "forbidChildrenStart": true,
+        "forceChildren": false,
+        "keepForcedStatus": true,
+        "killChildren": false,
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING"
+      }
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WAIT_FOR_1MIN",
+      "processingTemplate": "WAIT_FOR_1MIN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WAIT_FOR_2MIN",
+      "processingTemplate": "WAIT_FOR_2MIN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "WAIT_FOR_1MIN",
+          "predecessor": "WAIT_FOR_1MIN",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "INTERNAL",
+          "taskType": "WAIT"
+        }
+      ]
+    }
+  ]
+}

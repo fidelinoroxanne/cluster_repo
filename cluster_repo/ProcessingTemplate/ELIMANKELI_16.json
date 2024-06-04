@@ -1,0 +1,33 @@
+{
+  "description": "ELIMankeli 16 Folder (#160)",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "FOLDER"
+  ],
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELIMANKELI_I160",
+      "priority": "0",
+      "processingTemplate": "ELIMANKELI_I160",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "ELIMANKELI_I160",
+      "weight": "1"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "timescape_appserver",
+  "owner": "oleksandr.semichev",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "Echo on\n${XT_FILEWATCHER} file=${FileToWatchFor} ${FileWatcherOptions}\nEcho off\n\nset retcode=%errorlevel%\necho FileWatcher ended with return code: %retcode%\n\nIF %retcode% EQU 0 GOTO NORMALFLOW\nGOTO NOTFOUNDFLOW\n\n:NORMALFLOW\nset resexe=0\nGOTO END\n\n:NOTFOUNDFLOW\nset resexe=2\nGOTO END\n\n:END\nexit %resexe%"
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "hint": "FileToWatchFor",
+      "name": "FileToWatchFor",
+      "required": true,
+      "title": "FileToWatchFor"
+    },
+    {
+      "editorType": "TEXT",
+      "hint": "FileWatcherOptions",
+      "name": "FileWatcherOptions",
+      "required": true,
+      "title": "FileWatcherOptions"
+    }
+  ]
+}

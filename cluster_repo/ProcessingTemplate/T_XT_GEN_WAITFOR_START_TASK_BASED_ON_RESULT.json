@@ -1,0 +1,19 @@
+{
+  "endpointType": "USER",
+  "folder": "XT_BRAZIL_COMMODITIES",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "timescape_appserver",
+  "owner": "wojciech.szweda",
+  "priority": "0",
+  "processingType": "TASK",
+  "resultMapping": "RM_EQ2_COMPLETED",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "processingCommand": {
+    "script": "Echo on\n${XT_FILEWATCHER} file=${FileToWatchFor} ${FileWatcherOptions}\nEcho off\nset retcode=%errorlevel%\necho FileWatcher ended with return code: %retcode%\nIF %retcode% EQU 0 GOTO NORMALFLOW\nGOTO NOTFOUNDFLOW\n:NORMALFLOW\nif \"${NextTaskToRun}\"==\"\" GOTO COMPLETED\n:PROCESS\nEcho Kill any running executables started by ${NextTaskToRun} \nREM \"${UXEXE}\\uxend\" CTL TSK=${NextTaskToRun} UPR=* MU=${S_CODUG}\nREM Ignore 'No Articles extracted' as an error\nset resexe=0\nECHO Provoke ${NextTaskToRun} as the next task down the chain\nREM \"${UXEXE}\\uxordre\" TSK=${NextTaskToRun} MU=${S_CODUG} ELAPS=\"02359\"\nGOTO END\n:NOTFOUNDFLOW\nif \"${NextTaskIfNotFound}\"==\"\" GOTO COMPLETED\n:PROCESS\nEcho Kill any running executables started by ${NextTaskIfNotFound} \nREM \"${UXEXE}\\uxend\" CTL TSK=${NextTaskIfNotFound} UPR=* MU=${S_CODUG}\nREM Ignore 'No Articles extracted' as an error\nset resexe=0\nECHO Provoke ${NextTaskIfNotFound} as the next task down the chain as the file was not found\nREM \"Line below added by InfiniteData\"\nexit 2\nREM \"${UXEXE}\\uxordre\" TSK=${NextTaskIfNotFound} MU=${S_CODUG} ELAPS=\"02359\"\nGOTO END\n:COMPLETED\nEcho No next task to run\n:END\nset resexe=0\nexit %resexe%"
+  }
+}

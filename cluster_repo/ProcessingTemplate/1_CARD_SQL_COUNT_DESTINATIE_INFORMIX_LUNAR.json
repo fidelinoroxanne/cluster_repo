@@ -1,0 +1,39 @@
+{
+  "endpoint": "INFORMIX_ENDPOINT_V2",
+  "endpointType": "INFORMIX",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "INFORMIX_V2",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INFORMIX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "RDBMS_SQL_STATEMENT",
+  "processingCommand": {
+    "rowsVariableLevel": "SELF",
+    "selectResultAction": "FIRST_ROW_AS_VARIABLES",
+    "selectResultVariableLevel": "SELF",
+    "statement": "select count(*) nr_rec from t_intermediar where data_contab='${DateModDDMMYYYY(\"${lastWorkingDay}\")}'",
+    "statementType": "SELECT"
+  },
+  "designParameters": 
+  [
+    {
+      "editorType": "OUTPUT",
+      "name": "nrRows",
+      "outputFormat": "TEXT",
+      "resource": "1_CARD_DESTINATIE_ROWS",
+      "resourceType": "VARIABLE",
+      "saveValueToResource": true,
+      "title": "nrRows",
+      "outputDefinition": {
+        "linePattern": "nr_rec=",
+        "linePatternOperator": "CONTAINS",
+        "valueEndOperator": "LINE_END",
+        "valueStartOperator": "END_OF_PATTERN"
+      }
+    }
+  ]
+}

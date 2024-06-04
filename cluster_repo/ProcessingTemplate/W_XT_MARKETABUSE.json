@@ -1,0 +1,139 @@
+{
+  "folder": "XT_MARKETABUSE",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "lockState": "EXCLUSIVE",
+      "name": "L_XT_MARKETABUSE",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "resource": "L_XT_MARKETABUSE",
+      "resourceType": "LOCK",
+      "workflowType": "STANDARD"
+    },
+    {
+      "dependencyType": "WORKFLOW_ITEM",
+      "name": "W_XT_BLOOMBERG_2100.W_XT_GEN_COPY_FILE",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "statusCode": "0",
+      "statusCodeOperator": "EQ_NUM",
+      "timestampRelation": "EQ",
+      "timestampSelector": "SAME",
+      "workflowTemplate": "W_XT_BLOOMBERG_2100",
+      "workflowTemplateItem": "W_XT_GEN_COPY_FILE",
+      "workflowType": "STANDARD"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_SETBUSDATE",
+      "processingTemplate": "W_XT_GEN_SETBUSDATE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MARKETABUSE_SET_BUSINESS_DATE",
+      "templateParameters": {
+        "BusinessDateCode": "MarketAbuse",
+        "BusinessDateCodeType": "System",
+        "NextTaskToRun": null,
+        "configdb": "CONFIG"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_TDF_EXPORT",
+      "processingTemplate": "W_XT_GEN_TDF_EXPORT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MARKETABUSE_EQUITY",
+      "templateParameters": {
+        "ExportArchiveName": "E:\\CRIS_DATA\\MarketAbuse\\Archive\\EquityRatesCCYYMMDD.csv",
+        "ExportArchiveOptions": "move overwrite today",
+        "ExportCopyName": "E:\\CRIS_DATA\\Outgoing\\MarketAbuse\\EquityRatesCCYYMMDD.csv",
+        "ExportCopyOptions": "today overwrite",
+        "ExportFileName": "E:\\CRIS_DATA\\Exports\\MarketAbuse\\EquityRatesCCYYMMDD.csv",
+        "Tdf": "E:\\Timescape\\TDF\\Export\\MarketAbuse\\Exp_Equity_MarketAbuse.tdf"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_XT_GEN_SETBUSDATE",
+          "predecessor": "W_XT_GEN_SETBUSDATE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_TDF_EXPORT.1",
+      "processingTemplate": "W_XT_GEN_TDF_EXPORT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MARKETABUSE_FXFORWARD",
+      "templateParameters": {
+        "ExportArchiveName": "E:\\CRIS_DATA\\MarketAbuse\\Archive\\FXForwardsCCYYMMDD.csv",
+        "ExportArchiveOptions": "move overwrite today",
+        "ExportCopyName": "E:\\CRIS_DATA\\Outgoing\\MarketAbuse\\FXForwardsCCYYMMDD.csv",
+        "ExportCopyOptions": "overwrite today",
+        "ExportFileName": "E:\\CRIS_DATA\\Exports\\MarketAbuse\\FXForwardsCCYYMMDD.csv",
+        "Tdf": "E:\\Timescape\\TDF\\Export\\MarketAbuse\\Exp_FX_Forward_MarketAbuse.tdf"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_XT_GEN_SETBUSDATE",
+          "predecessor": "W_XT_GEN_SETBUSDATE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_TDF_EXPORT.2",
+      "processingTemplate": "W_XT_GEN_TDF_EXPORT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MARKETABUSE_FXRATES",
+      "templateParameters": {
+        "ExportArchiveName": "E:\\CRIS_DATA\\MarketAbuse\\Archive\\FXRatesCCYYMMDD.csv",
+        "ExportArchiveOptions": "move overwrite today",
+        "ExportCopyName": "E:\\CRIS_DATA\\Outgoing\\MarketAbuse\\FXRatesCCYYMMDD.csv",
+        "ExportCopyOptions": "today overwrite",
+        "ExportFileName": "E:\\CRIS_DATA\\Exports\\MarketAbuse\\FXRatesCCYYMMDD.csv",
+        "Tdf": "E:\\Timescape\\TDF\\Export\\MarketAbuse\\Exp_FX_Rates_MarketAbuse.tdf"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_XT_GEN_SETBUSDATE",
+          "predecessor": "W_XT_GEN_SETBUSDATE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    }
+  ]
+}

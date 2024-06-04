@@ -1,0 +1,34 @@
+{
+  "description": "ok",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "core_appserver",
+  "owner": "krystian.stepien",
+  "priority": "1",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "P0"
+  ],
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "forceCompletedCondition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "${PDBS}",
+        "operator": "EQ",
+        "value": "OFF"
+      }
+    ],
+    "operator": "AND"
+  },
+  "processingCommand": {
+    "script": "cd ${FIC}/bin/\n${FIC}/bin/runJava.ssh DollarUniverseUtils.jar com.rabobank.core.DolarUniverseUtils.CorePDBSPendingItemsCheck ${PDBSDB} ${BRANCH}"
+  }
+}

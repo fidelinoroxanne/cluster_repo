@@ -1,0 +1,21 @@
+{
+  "endpoint": "EP_INFA_ANOWAGENT_CTMANKAL_SSH",
+  "endpointType": "SSH",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "node": "NODE_OS_INFA",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "title": "MANKELIINT160RM_A1",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "rm -f /Mankeli/Anaplan/FromAnaplan/CAPEX.txt"
+  }
+}

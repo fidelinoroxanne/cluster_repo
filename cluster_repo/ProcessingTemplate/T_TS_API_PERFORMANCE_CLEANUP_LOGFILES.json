@@ -1,0 +1,21 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "bxtv450506",
+  "owner": "ton.schreurs",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "Performance_Test"
+  ],
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "# remove output files older than 60 days\nset -x\n\nexport LOGDIR=/home/anowadmin/api/log\ncd $LOGDIR\n\nls -lt *.[jl]* | tail\n\nfind $LOGDIR -name \"*.log\" -mtime +60 -exec rm {} +\nfind $LOGDIR -name \"*.json\" -mtime +60 -exec rm {} +"
+  }
+}

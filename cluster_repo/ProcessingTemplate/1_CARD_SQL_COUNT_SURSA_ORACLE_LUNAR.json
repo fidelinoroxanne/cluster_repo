@@ -1,0 +1,36 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "oracle",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "ORACLE",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "RDBMS_SQL_STATEMENT",
+  "processingCommand": {
+    "rowsVariableLevel": "SELF",
+    "selectResultAction": "FIRST_ROW_AS_VARIABLES",
+    "statement": "select  count(persid) nr_rec from (\nSELECT to_char(data_ref, 'yyyymmdd') data_contab, persid, pack_type_id pachet_tipid, CASE WHEN turnover_type = 'CR' THEN cr_turnover ELSE db_turnover END rulaj\nFROM (SELECT data_ref, persid, customer_id, pack_type_id, account_id,\n             CASE WHEN db_turnover_ref IS NOT NULL AND cr_turnover_ref IS NULL THEN 'DB'\n                  WHEN db_turnover_ref IS NULL AND cr_turnover_ref IS NOT NULL THEN 'CR'\n             END turnover_type, db_turnover, cr_turnover \n      FROM dvhcardpro.dvh_cmp_monthly_turnover \n      WHERE ((db_turnover IS NOT NULL AND db_turnover>=db_turnover_ref) OR (cr_turnover IS NOT NULL AND cr_turnover>=cr_turnover_ref))))\n   WHERE data_contab='${DateMod(\"${lastWorkingDay}\")}'",
+    "statementType": "SELECT"
+  },
+  "designParameters": 
+  [
+    {
+      "editorType": "OUTPUT",
+      "name": "nrRows",
+      "outputFormat": "TEXT",
+      "resource": "1_CARD_SURSA_ROWS",
+      "resourceType": "VARIABLE",
+      "saveValueToResource": true,
+      "title": "nrRows",
+      "outputDefinition": {
+        "linePattern": "NR_REC=",
+        "linePatternOperator": "CONTAINS",
+        "valueEndOperator": "LINE_END",
+        "valueStartOperator": "END_OF_PATTERN"
+      }
+    }
+  ]
+}

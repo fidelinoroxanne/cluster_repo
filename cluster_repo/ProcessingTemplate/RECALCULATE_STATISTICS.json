@@ -1,0 +1,14 @@
+{
+  "description": "Run processing statistics recalculation",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TASK",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "RECALCULATE_STATISTICS",
+  "customFieldValues": {
+  }
+}

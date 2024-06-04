@@ -1,0 +1,133 @@
+{
+  "description": "Workflow to trigger ELI_STRS_NEW_JPD_EMAIL_WF_01 - to stop @01:45",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "owner": "shrinivas.shendye",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "XSTR_PROD"
+  ],
+  "workflowType": "CYCLE",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "cycleDelay": "300000",
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleDuration": 57000000,
+    "cycleFailMode": "RESTART_NONE",
+    "cycleTimeZone": "Europe/Helsinki",
+    "cycleType": "TIME"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "ELI_STRS_NEW_JPD_EMAIL_WF_01_FC",
+      "priority": "0",
+      "processingTemplate": "ELI_STRS_NEW_JPD_EMAIL_WF_01_FC",
+      "sensorType": "FILE_SENSOR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "ELI_STRS_NEW_JPD_EMAIL_WF_01_FC",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "TRIGGER_EVENT",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "0"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "resource": "ELI_STRS_NEW_JPD_EMAIL_WF_01_EVENT",
+            "timestampSelector": "SAME"
+          }
+        },
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": false,
+            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "notificationGroup": "AMDPRD_OPS",
+            "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
+          }
+        },
+        {
+          "processingActionType": "SET_SEMAPHORE_STATE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "statusCode",
+                "operator": "EQ",
+                "value": "0"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "resource": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+            "value": "OFF"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "ELI_MAINTENANCE_SEMAPHORE_01",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ELI_MAINTENANCE_SEMAPHORE_01",
+          "resourceType": "BINARY_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "CYCLE"
+        },
+        {
+          "dependencyType": "RESOURCE",
+          "name": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+          "resourceType": "BINARY_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "CYCLE"
+        },
+        {
+          "dependencyType": "RESOURCE",
+          "name": "LOKERO_MAINTENANCE_SEMAPHORE",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "LOKERO_MAINTENANCE_SEMAPHORE",
+          "resourceType": "BINARY_SEMAPHORE",
+          "semaphoreState": "ON",
+          "workflowType": "CYCLE"
+        }
+      ]
+    }
+  ]
+}

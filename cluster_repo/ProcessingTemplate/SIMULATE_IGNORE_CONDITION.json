@@ -1,0 +1,44 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "FOR_EACH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "cycleDelay": "1000",
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleFailMode": "RESTART_NONE",
+    "cycleType": "COUNTER",
+    "forEachCollection": "1,2,3,4",
+    "forEachCollectionType": "TEXT",
+    "forEachIteratorName": "XX",
+    "forEachSeparator": ","
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "CYCLIC_WF_WITH_IGNORE",
+      "processingTemplate": "CYCLIC_WF_WITH_IGNORE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "ignoreCondition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "processingTimestamp",
+            "operator": "NOT_IN_CAL",
+            "value": "HKG_WD"
+          }
+        ],
+        "operator": "AND"
+      }
+    }
+  ]
+}

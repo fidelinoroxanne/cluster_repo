@@ -1,0 +1,20 @@
+{
+  "endpoint": "EP_PKGNCST1_ANOWAGT_CSTPRDF1OS",
+  "endpointType": "SSH",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "node": "NODE_OS_PKGNCST1",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "HPUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "/cstf/amdocs/VAR/var/fin/projs/bf/inter/output/ElisaScripts/arscripts/ar_dd_refund_report.sh /cstf/amdocs/VAR/var/fin/projs/ar/interfaces/output/${MONTH_ABBR}/${DAY} ar.*TELLUS_*_AP*${DATE}*"
+  }
+}

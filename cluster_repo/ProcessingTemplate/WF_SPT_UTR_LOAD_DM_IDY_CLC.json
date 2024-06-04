@@ -1,0 +1,108 @@
+{
+  "description": "UTR SPOT LOAD DM Intraday",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "CLC"
+  ],
+  "workflowType": "CYCLE",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "checkBeforeFirstRun": true,
+    "cycleCondition": {
+      "criteria": 
+      [
+        {
+          "fieldName": "${VAR_SPT_UTR_LOAD_DM_IDY_ALLOWED}",
+          "operator": "EQ",
+          "value": "${VAR_YES}"
+        }
+      ],
+      "operator": "AND"
+    },
+    "cycleDelay": 300000,
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleFailMode": "RESTART_NONE",
+    "cycleType": "WHILE"
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "VAR_SPT_UTR_LOAD_DM_IDY_ALLOWED",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "resource": "VAR_SPT_UTR_LOAD_DM_IDY_ALLOWED",
+      "resourceType": "VARIABLE",
+      "value": "${VAR_YES}",
+      "valueOperator": "EQ",
+      "workflowType": "CYCLE"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "processingTemplate": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "templateParameters": {
+        "OCCURRENCE": "CLC",
+        "REGION": "UTR"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PROCESSING_TEMPLATE",
+          "name": "WF_SPT_UTR_DM_DLY",
+          "parent": "aa37f62b-285a-4fde-a658-475658f544aa",
+          "processingStatus": "EXECUTING",
+          "processingTemplate": "WF_SPT_UTR_DM_DLY",
+          "processingType": "WORKFLOW",
+          "timestampRelation": "ANY",
+          "workflowType": "STANDARD"
+        },
+        {
+          "dependencyType": "PROCESSING_TEMPLATE",
+          "name": "WF_SPT_UTR_LOAD_DM_MLY",
+          "parent": "aa37f62b-285a-4fde-a658-475658f544aa",
+          "processingStatus": "EXECUTING",
+          "processingTemplate": "WF_SPT_UTR_LOAD_DM_MLY",
+          "processingType": "WORKFLOW",
+          "timestampRelation": "ANY",
+          "workflowType": "STANDARD"
+        },
+        {
+          "dependencyType": "WORKFLOW_ITEM",
+          "name": "WF_SPT_UTR_DM_DLY.1",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "INTERNAL",
+          "taskType": "WAIT",
+          "timestampCalendar": "GFS_CAL",
+          "timestampRelation": "EQ",
+          "timestampSelector": "PREV_CAL_DAY",
+          "workflowTemplate": "WF_SPT_UTR_DM_DLY",
+          "workflowTemplateItem": "1"
+        },
+        {
+          "dependencyType": "NOR",
+          "groupId": "aa37f62b-285a-4fde-a658-475658f544aa",
+          "name": "NOR",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "CYCLE"
+        }
+      ]
+    }
+  ]
+}

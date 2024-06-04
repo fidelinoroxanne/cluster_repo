@@ -1,0 +1,107 @@
+{
+  "folder": "XT_BLOOMBERG1100",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "hint": "If true, allows Saturday and Sunday as business day",
+      "name": "AllowWeekendAsBusinessDay",
+      "title": "AllowWeekendAsBusinessDay"
+    },
+    {
+      "editorType": "TEXT",
+      "hint": "When AllowWeekendAsBusinessDay is to be used and no ShortCode is necessary, please specify empty string as \"\"",
+      "name": "BusDateShortCode",
+      "title": "BusDateShortCode"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "BusinessDateCode",
+      "required": true,
+      "title": "BusinessDateCode"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "BusinessDateCodeType",
+      "required": true,
+      "title": "BusinessDateCodeType"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "configdb",
+      "required": true,
+      "title": "configdb"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_SETBUSDATE_HEADER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_SETBUSDATE_HEADER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_SETBUSDATE_HEADER",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_SETBUSDATE",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_SETBUSDATE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_SETBUSDATE",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_SETBUSDATE_HEADER",
+          "predecessor": "T_XT_GEN_SETBUSDATE_HEADER",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_INNER_TRAILER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_INNER_TRAILER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_INNER_TRAILER",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_SETBUSDATE",
+          "predecessor": "T_XT_GEN_SETBUSDATE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

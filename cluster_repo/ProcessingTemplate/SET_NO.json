@@ -1,0 +1,20 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SET_VARIABLE_VALUE",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "operator": "SET",
+    "resource": "VAR_YES",
+    "timestampRelation": "EQ",
+    "timestampSelector": "SAME",
+    "value": "NO"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "oleksandr.semichev",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_COPY_FILE",
+      "processingTemplate": "W_XT_GEN_COPY_FILE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_FU_1900SP_SEND_BLOOMBERG_DATA_TO_MOPC",
+      "templateParameters": {
+        "CopyOptions": "overwrite yesterday",
+        "SourceFileName": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP.out",
+        "TargetFileName": "E:\\cris_data\\Outgoing\\MOUtrecht\\MX_FU_1900SPCCYYMMDD.out"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_IMP_IMPORT",
+      "processingTemplate": "W_XT_GEN_IMP_IMPORT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_FU_1900SP_IMPORT_BLOOMBERG_DATA",
+      "templateParameters": {
+        "APRConfigName": "Murex_FU_1900SP",
+        "APRInputFile": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP.out",
+        "ImportFileName": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\Checked\\MX_FU_1900SP.out.checked",
+        "ImportTDFName": "E:\\Timescape\\TDF\\Import\\Murex\\ImportBloombergData1900SP.tdf"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_IMP_REQUEST",
+      "processingTemplate": "W_XT_GEN_IMP_REQUEST",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_FU_1900SP_SEND_REQUEST",
+      "templateParameters": {
+        "FileWatcherOptions": "interval=30 retries=90 leadtime=60",
+        "RequestCopyOptions": "overwrite",
+        "RequestFileSource": "E:\\CRIS_DATA\\Marlin\\ItemLists\\Input\\MX_FU_1900SP.req",
+        "RequestFileTarget": "E:\\CRIS_DATA\\FTP\\Bloomberg\\Request\\MX_FU_1900SP.req",
+        "ResponseCopyOptions": "overwrite move",
+        "ResponseFileSource": "E:\\CRIS_DATA\\FTP\\Bloomberg\\Response\\MX_FU_1900SP.out",
+        "ResponseFileTarget": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP.out"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_MARLIN_EXPORT",
+      "processingTemplate": "W_XT_GEN_MARLIN_EXPORT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_FU_1900SP_EXPORT_IR",
+      "templateParameters": {
+        "Delimiter": ";",
+        "ExportArchiveName": "E:\\CRIS_DATA\\Exports\\Murex_MOPC\\Archive\\CCYYMMDD\\1900SP_FIX_FU_IR.csv",
+        "ExportArchiveOptions": "move yesterday overwrite",
+        "ExportConfiguration": "E:\\CRIS_DATA\\Marlin\\ExportConfigs\\Murex_Futures_1900SP.xml",
+        "ExportCopyName": "E:\\CRIS_DATA\\Outgoing\\Murex\\CCYYMMDD_1900SP_FIX_FU_IR.csv",
+        "ExportCopyOptions": "yesterday overwrite",
+        "ExportDateFormat": "yyyyMMdd",
+        "ExportFileName": "E:\\CRIS_DATA\\Exports\\Murex_MOPC\\1900SP_FIX_FU_IR.csv",
+        "ExportThreads": "8",
+        "ItemListFile": "E:\\CRIS_DATA\\Marlin\\Itemlists\\Input\\ItemList_FIX_1900SP_Murex_IR.csv",
+        "LogFileName": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\Logs\\CCYYMMDD\\1900SP_FIX_FU_IR.log",
+        "ReportDate": "yesterday"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
+      "processingTemplate": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
+      "actions": 
+      [
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_STARTED",
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 0,
+            "variable": "STALE_RATES_NOT_FOUND"
+          }
+        },
+        {
+          "processingActionType": "SET_CONTEXT_VARIABLE_VALUE",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_STARTED",
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "SET_NUM",
+            "relation": {
+              "relationType": "ROOT"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": 0,
+            "variable": "TIMEOUT_COUNTER"
+          }
+        }
+      ]
+    }
+  ]
+}

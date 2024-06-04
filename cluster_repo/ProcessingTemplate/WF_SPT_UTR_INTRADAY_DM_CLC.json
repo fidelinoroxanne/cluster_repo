@@ -1,0 +1,141 @@
+{
+  "description": "DAILY_DM_PS_STAT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "martijn.steenhorst",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "CLC"
+  ],
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "CHRONOLOGY",
+      "name": "CHRONOLOGY",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "workflowType": "STANDARD"
+    }
+  ],
+  "designParameters": 
+  [
+    {
+      "defaultValue": "CLC",
+      "editorType": "TEXT",
+      "name": "OCCURRENCE",
+      "required": true,
+      "title": "Occurrence of this workflow (DLY, CLC etc.,)"
+    },
+    {
+      "defaultValue": "UTR",
+      "editorType": "TEXT",
+      "name": "REGION",
+      "required": true,
+      "title": "REGION for which this workflow has to run"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "TJ_SPT_POSTED_JOURNAL_LINES_IDY_S",
+      "priority": "0",
+      "processingTemplate": "TJ_SPT_POSTED_JOURNAL_LINES_IDY_S",
+      "serverNode": "ROX_OS_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "JO_SPT_UTR_POSTED_JOURNAL_LINES_IDY_S_CLC",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "TJ_SPT_PRPB_IDY_S",
+      "priority": "0",
+      "processingTemplate": "TJ_SPT_PRPB_IDY_S",
+      "serverNode": "ROX_OS_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "JO_SPT_UTR_PRPB_IDY_S_CLC",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_EMAIL",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "actionTargetType": "SELF",
+            "attachLogFile": true,
+            "contentType": "TEXT",
+            "keepForcedStatus": true,
+            "message": " ",
+            "recipient": "roxanne.fidelino@infinitedata.com",
+            "restartType": "RESTART_FROM_BEGINNING",
+            "subject": "Replicated event for CYCLIC ISSUE"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "TJ_SPT_PRPB_IDY_S_ACCOUNTING_METHOD_CODE",
+      "priority": "0",
+      "processingTemplate": "TJ_SPT_PRPB_IDY_S_ACCOUNTING_METHOD_CODE",
+      "serverNode": "ROX_OS_2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "JO_SPT_UTR_PRPB_IDY_S_ACCOUNTING_METHOD_CODE_CLC",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "KILL",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_STARTED",
+          "processingCommand": {
+            "actionTargetType": "CRITERIA",
+            "criteria": {
+              "processingStatus": 
+              [
+                "EXECUTING"
+              ],
+              "processingType": "TASK",
+              "showAdvancedCriteria": true,
+              "timestampRelation": "EQ",
+              "timestampSelector": "SAME",
+              "workflowTemplate": "WF_SPT_UTR_INTRADAY_DM_CLC",
+              "workflowTemplateItem": "TJ_SPT_PRPB_IDY_S"
+            },
+            "keepForcedStatus": true,
+            "operator": "",
+            "restartType": "RESTART_FROM_BEGINNING",
+            "resultMax": 9999,
+            "resultMin": 0
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "TJ_SPT_PRPB_IDY_S",
+          "predecessor": "TJ_SPT_PRPB_IDY_S",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

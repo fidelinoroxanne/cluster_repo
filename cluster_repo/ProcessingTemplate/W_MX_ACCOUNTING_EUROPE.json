@@ -1,0 +1,857 @@
+{
+  "description": "11999|Accounting EOD",
+  "folder": "MX_EOD",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "EOD",
+    "EU"
+  ],
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "PROCESSING_TEMPLATE",
+      "name": "W_MX_CLOSEDOWN_EUROPE",
+      "processingStatus": "COMPLETED",
+      "processingTemplate": "W_MX_CLOSEDOWN_EUROPE",
+      "processingType": "WORKFLOW",
+      "timestampRelation": "EQ",
+      "timestampSelector": "SAME",
+      "workflowType": "STANDARD"
+    },
+    {
+      "dependencyType": "WORKFLOW_ITEM",
+      "name": "W_MX_ACCOUNTING_ASIA.T_MX_CHECK_FOM_ACC_ASIA",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH",
+      "timestampRelation": "EQ",
+      "timestampSelector": "SAME",
+      "workflowTemplate": "W_MX_ACCOUNTING_ASIA",
+      "workflowTemplateItem": "T_MX_CHECK_FOM_ACC_ASIA"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_CHECK_EOM_ACCOUNTING_EUR",
+      "priority": "0",
+      "processingTemplate": "T_MX_CHECK_EOM_ACCOUNTING_EUR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_CHECK_EOM_ACCOUNTING_EUR",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "ADD_TAG",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "3"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "5"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "6"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "7"
+              }
+            ],
+            "operator": "OR"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_EOM_ACC_EUR_SUB_4",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": "SKIPPED"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "3"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "5"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "6"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "7"
+              }
+            ],
+            "operator": "OR"
+          },
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": false,
+            "forceChildren": true,
+            "keepForcedStatus": true,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_EOM_ACC_EUR_SUB_4",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_WAIT_10S",
+      "processingTemplate": "T_MX_WAIT_10S",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_WAIT_10S_EOM_ACCOUNTING_EUROPE",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_CHECK_EOM_ACCOUNTING_EUR",
+          "predecessor": "T_MX_CHECK_EOM_ACCOUNTING_EUR",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_MX_EOM_ACC_EUR_SUB_4",
+      "processingTemplate": "W_MX_EOM_ACC_EUR_SUB_4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_MX_EOM_ACC_EUR_SUB_4",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_WAIT_10S",
+          "predecessor": "T_MX_WAIT_10S",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        },
+        {
+          "dependencyType": "PROCESSING_TEMPLATE",
+          "name": "W_MX_FO_DATEMOVE_EUROPE",
+          "processingStatus": "COMPLETED",
+          "processingTemplate": "W_MX_FO_DATEMOVE_EUROPE",
+          "processingType": "WORKFLOW",
+          "timestampRelation": "EQ",
+          "timestampSelector": "SAME",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_ACC_DM_EUR",
+      "processingTemplate": "T_MX_ACC_DM_EUR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_ACC_DM_EUR",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_MX_EOM_ACC_EUR_SUB_4",
+          "predecessor": "W_MX_EOM_ACC_EUR_SUB_4",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_ACC_EOD_EUR",
+      "processingTemplate": "T_MX_ACC_EOD_EUR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_ACC_EOD_EUR",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_ACC_DM_EUR",
+          "predecessor": "T_MX_ACC_DM_EUR",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_ACC_EOD_EUR_ND",
+      "processingTemplate": "T_MX_ACC_EOD_EUR_ND",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_ACC_EOD_EUR_ND",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_ACC_EOD_EUR",
+          "predecessor": "T_MX_ACC_EOD_EUR",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_ND_MANUAL_JOURNAL_EU",
+      "priority": "0",
+      "processingTemplate": "T_MX_ND_MANUAL_JOURNAL_EU",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_ND_MANUAL_JOURNAL_EU",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_ACC_EOD_EUR_ND",
+          "predecessor": "T_MX_ACC_EOD_EUR_ND",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_EUR_SHL_CHECK_ACC",
+      "priority": "0",
+      "processingTemplate": "T_MX_EUR_SHL_CHECK_ACC",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_EUR_SHL_CHECK_ACC",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_ND_MANUAL_JOURNAL_EU",
+          "predecessor": "T_MX_ND_MANUAL_JOURNAL_EU",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_ACC_MVDATE_EUR",
+      "processingTemplate": "T_MX_ACC_MVDATE_EUR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_ACC_MVDATE_EUR",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_EUR_SHL_CHECK_ACC",
+          "predecessor": "T_MX_EUR_SHL_CHECK_ACC",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_CHECK_FOM_ACC_EU",
+      "priority": "0",
+      "processingTemplate": "T_MX_CHECK_FOM_ACC_EU",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_CHECK_FOM_ACC_EU",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "ADD_TAG",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "5"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_3_4_6",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": "SKIPPED"
+          }
+        },
+        {
+          "processingActionType": "ADD_TAG",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "7"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_3_4_6",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": "SKIPPED"
+          }
+        },
+        {
+          "processingActionType": "ADD_TAG",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "7"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_5",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": "SKIPPED"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "3"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "4"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "6"
+              }
+            ],
+            "operator": "OR"
+          },
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": false,
+            "forceChildren": true,
+            "keepForcedStatus": false,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_7",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "ADD_TAG",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "5"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_7",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": "SKIPPED"
+          }
+        },
+        {
+          "processingActionType": "ADD_TAG",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "3"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "4"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "6"
+              }
+            ],
+            "operator": "OR"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_5",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": "SKIPPED"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "7"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": false,
+            "forceChildren": true,
+            "keepForcedStatus": false,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_5",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "5"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": false,
+            "forceChildren": true,
+            "keepForcedStatus": false,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_3_4_6",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "7"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": false,
+            "forceChildren": true,
+            "keepForcedStatus": false,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_3_4_6",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "5"
+              }
+            ],
+            "operator": "AND"
+          },
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": false,
+            "forceChildren": true,
+            "keepForcedStatus": false,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_7",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "3"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "4"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "6"
+              }
+            ],
+            "operator": "OR"
+          },
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": false,
+            "forceChildren": true,
+            "keepForcedStatus": false,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_5",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "ADD_TAG",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "3"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "4"
+              },
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ_NUM",
+                "value": "6"
+              }
+            ],
+            "operator": "OR"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "W_MX_FOM_ACC_EUR_SUB_7",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING",
+            "value": "SKIPPED"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_ACC_MVDATE_EUR",
+          "predecessor": "T_MX_ACC_MVDATE_EUR",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_MX_WAIT_10S.1",
+      "processingTemplate": "T_MX_WAIT_10S",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_MX_WAIT_10S_ACCOUNTING_EUROPE",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_CHECK_FOM_ACC_EU",
+          "predecessor": "T_MX_CHECK_FOM_ACC_EU",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_MX_BD_ACC_EUROPE_SUB",
+      "processingTemplate": "W_MX_BD_ACC_EUROPE_SUB",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_MX_BD_ACC_EUROPE_SUB",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_ACC_MVDATE_EUR",
+          "predecessor": "T_MX_ACC_MVDATE_EUR",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_MX_FOM_ACC_EUR_SUB_3_4_6",
+      "processingTemplate": "W_MX_FOM_ACC_EUR_SUB_3_4_6",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_MX_FOM_ACC_EUR_SUB_3_4_6",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_WAIT_10S.1",
+          "predecessor": "T_MX_WAIT_10S.1",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_MX_FOM_ACC_EUR_SUB_5",
+      "processingTemplate": "W_MX_FOM_ACC_EUR_SUB_5",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_MX_FOM_ACC_EUR_SUB_5",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_WAIT_10S.1",
+          "predecessor": "T_MX_WAIT_10S.1",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "W_MX_FOM_ACC_EUR_SUB_7",
+      "processingTemplate": "W_MX_FOM_ACC_EUR_SUB_7",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_MX_FOM_ACC_EUR_SUB_7",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_MX_WAIT_10S.1",
+          "predecessor": "T_MX_WAIT_10S.1",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "lazyLoad": true,
+  "owner": "i",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "workflowType": "TIME_SERIES",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "calendar": "",
+    "datePickMode": "",
+    "dateRangeType": "DATE_LIST",
+    "dates": "19750626,19961105,20200101,${loadDate}",
+    "endDate": "",
+    "endOffset": "",
+    "interval": "",
+    "startDate": "",
+    "startOffset": ""
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "000_IMPORT_TEST_TASK_001",
+      "processingTemplate": "000_IMPORT_TEST_TASK_001",
+      "serverNode": "ROX_NEW_LB",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL"
+    }
+  ]
+}

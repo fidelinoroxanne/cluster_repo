@@ -1,0 +1,125 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "krystian.stepien@infinitedata.com",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "SLEEP_0",
+      "processingTemplate": "SLEEP_0",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "SLEEP_0",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "maxNumberOfTaskRunning",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "maxNumberOfTaskRunning",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "SLEEP_4",
+      "processingTemplate": "SLEEP_4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "SLEEP_4",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "maxNumberOfTaskRunning",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "maxNumberOfTaskRunning",
+          "resourcePermits": "2",
+          "resourceType": "STOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "SLEEP_8",
+      "processingTemplate": "SLEEP_8",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "SLEEP_8",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "maxNumberOfTaskRunning",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "maxNumberOfTaskRunning",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "SLEEP_6",
+      "processingTemplate": "SLEEP_6",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "SLEEP_6",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "maxNumberOfTaskRunning",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "maxNumberOfTaskRunning",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "SLEEP_5",
+      "processingTemplate": "SLEEP_5",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "SLEEP_5",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "maxNumberOfTaskRunning",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "maxNumberOfTaskRunning",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    }
+  ]
+}

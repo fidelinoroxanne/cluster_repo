@@ -1,0 +1,21 @@
+{
+  "endpoint": "EP_PKGNCST1_ANOWAGT_CSTPRDF1OS",
+  "endpointType": "SSH",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "node": "NODE_OS_PKGNCST1",
+  "owner": "shrinivas.shendye",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "HPUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "/ctmagent/ownscripts/telarch_uusi.ksh /cstf/amdocs/VAR/var/fin/projs/ar/rep/layout/${MONTH_ABBR}/${DAY} 'ar_dd_refund_report*.txt' moved AR_Refunds_REPORT"
+  }
+}

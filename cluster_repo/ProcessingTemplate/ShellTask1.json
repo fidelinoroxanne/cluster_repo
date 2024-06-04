@@ -1,0 +1,17 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "ROX_NEW_LB",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "echo \"DateMod ${DateMod(\"2023-01-10\")}\"\necho \"DateModDDMMYYYY ${DateModDDMMYYYY(\"2023-01-10\")}\"\necho \"DateMod_COPY ${DateMod_COPY(\"2023-01-10\")}\"\necho \"DateModDDMMYYYY_COPY ${DateModDDMMYYYY_COPY(\"2023-01-10\")}\""
+  }
+}

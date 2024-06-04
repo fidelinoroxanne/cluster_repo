@@ -1,0 +1,23 @@
+{
+  "folder": "FLD_MAIN",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "ROX_NEW_LB",
+  "owner": "krystian.stepien",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "TAG1"
+  ],
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "sleep 10\necho ${node}\necho ${loadDate}\necho \"------------------------------------------------------------\"\necho \"------------------------------------------------------------\"\necho \"------------------------------------------------------------\"\necho \"------------------------------------------------------------\"\necho \"------------------------------------------------------------\"\n"
+  }
+}

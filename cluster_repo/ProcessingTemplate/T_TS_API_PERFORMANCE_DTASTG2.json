@@ -1,0 +1,59 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "bxtv450506",
+  "owner": "ton.schreurs",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "Performance_Test"
+  ],
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "sleep 5\ncd /home/anowadmin/api/\n./performance_test_api.sh ${environment} ${domain} ${objects}\n\n#check on differences in size of json output file\ncd /home/anowadmin/api/log\nCURRENT_FILENAME=`ls -ltr *${environment}*.json | tail -n1 | tr -s \"[:blank:]\"|  cut -d\" \" -f9`\nCURRENT_FILESIZE=$(stat -c%s \"$CURRENT_FILENAME\")\nPREVIOUS_FILENAME=`ls -ltr *${environment}*.json | tail -n2 | head -1 | tr -s \"[:blank:]\"|  cut -d\" \" -f9`\nPREVIOUS_FILESIZE=$(stat -c%s \"$PREVIOUS_FILENAME\")\nif (( $CURRENT_FILESIZE != $PREVIOUS_FILESIZE )); then\n   cp $CURRENT_FILENAME performance_test_${environment}_`date +%Y%m%d`.json_bck\nfi\n"
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "ST_TS_RUNNING_PERFORMANCE_TEST",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "ST_TS_RUNNING_PERFORMANCE_TEST",
+      "resourcePermits": "1",
+      "resourceType": "STOCK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    }
+  ],
+  "designParameters": 
+  [
+    {
+      "defaultValue": "stg2",
+      "editorType": "TEXT",
+      "name": "environment",
+      "required": true,
+      "title": "Environment"
+    },
+    {
+      "defaultValue": "ACCEPTANCE_WORKLOADAUTOMATION_PLAYGROUND",
+      "editorType": "TEXT",
+      "name": "domain",
+      "required": true,
+      "title": "Domain"
+    },
+    {
+      "defaultValue": "ARCHIVE_CLEANUP,ARCHIVE_INTERVAL,ASE_FOREACH_OVER_FILES_3,ASE_FOREACH_OVER_FILES_4,Chronology_Test,Chronology_Test_COPY,create_new_Task,DAILY_MAte_check,fail_task_rerun,HB_P62_TEST,HB_PRELOAD_TEST,HB_PRELOAD_TEST_COPY,HB_PRELOAD_TEST1,HB_PRELOAD_TEST2,HB_PRELOAD_TEST3,HB_PRELOAD_TEST4,HB_TEST,ID_direct_API_FLOW,ID_direct_API_FLOW_part2,ID_direct_API_PY,ID_OAPI_FLOW,idtest,ifan_test,IFAN_TEST2,Martijn_Task1_Foreach,2_Foreach,Martijn_Test_ForEach,RECALCULATE_STATISTICS,sleep60,T-task_paul_sev2,T-task_paul_sev2_COPY,T_ASE_FOREACH_OVER_FILES_PRINT_FILENAME,T_CHKFLOW2,T_CHKFLOW3,T_MARTIJN_CHECK,T_Martijn_File_Manager,T_Martijn_Long_Sleep,T_Martijn_Pass_Variable,T_Martijn_Pass_Variable_2,Tg_REST,T_Martijn_Powershell_For_Each,T_martijn_test,T_Martijn_Test_Failing_Continue_1,T_Martijn_Test_Failing_Continue_2,T_Martijn_Test_Failing_Continue_3,T_Martijn_Test_Murex,T_Martijn_Test_Python,T_Martijn_Test_Trigger_Dev_Playground,T_Martijn_TimeScape_For_Each,T_Martijn_r_Each_Echo,T_OBM_PdV,T_OBM_PdV_COPY,T_OBM_PdV_COPY1,T_PdV_sev2,T_PdV_sev3,T_PdV_sev3_or_sev2,T_Performance_issue,T_Performance_issue_COPY,T_Performance_issue_COPY1,T_Performance_issue_COPY10,T_Performance_issue_COPY2,T_Performance_issue_COPY3,T_Performance_issue_COPY3_COPYnce_issue_COPY6,T_Performance_issue_COPY7,T_Performance_issue_COPY8,T_Performance_issue_COPY9,T_RUN_EVERY_5,T_SLEEP,T_SMALL,T_test-paul_anowissue1,T_test-paul_anowissue1_COPY1,T_test-paul_anowissue1_COPY2,T_test-paul_anowissue1_COPY3,T_testforobm,T_testpaul_windows,T_TestTafter,T_TestTask_Selfstopafter10minutes,T_TestTask_Selfstopafter1minute,T_testvcs_demo,T_TIMEOUT_TEST,T_XT_GEN_COLLECT_FILE_NAMES_BY_FILE_NAME_PATTERN,TEST_EXECUTION_IN_ANOW,test_martijn_filemanager,testpaulcrossdomaina,tons_test,ttt,W-test-paul_anowissue1,W_ASE_PROCESS_FILEFor_Each_Test,W_Martijn_Long_Sleep,W_Martijn_Pass_Variable,W_Martijn_Test_Failing_Continue,W_Martijn_TimeScape_For_Each_Loop,W_Perofmance_Test,W_SMALL_COPY,W_TEST,W_test_paul_anowissue,W_XT_GEN_COLLECT_FILE_NAMES_BY_FILE_NAME_PATTERN,WF_Performance_issues_paul",
+      "editorType": "TEXT",
+      "name": "objects",
+      "required": true,
+      "title": "Objects to export"
+    }
+  ]
+}

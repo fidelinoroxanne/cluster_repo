@@ -1,0 +1,29 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "ROX_OS",
+  "owner": "des",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "forceCompletedCondition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "exitCode",
+        "operator": "EQ_NUM",
+        "value": "5"
+      }
+    ],
+    "operator": "AND"
+  },
+  "processingCommand": {
+    "script": "exit 5"
+  }
+}

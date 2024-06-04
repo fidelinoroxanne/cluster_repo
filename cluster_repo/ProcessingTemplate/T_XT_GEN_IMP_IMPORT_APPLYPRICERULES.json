@@ -1,0 +1,18 @@
+{
+  "endpointType": "USER",
+  "folder": "XT_ALCO_IMPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "timescape_appserver",
+  "owner": "Rob.Trocha",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "processingCommand": {
+    "script": "if \"${APRInputFile}\"==\"\" GOTO SKIPSTEP\nEcho on\n${XT_APPLYPRICERULES} /file ${APRInputFile} /name ${APRConfigName}\nEcho off\nset retcode=%errorlevel%\necho ApplyPriceRules ended with return code: %retcode%\nIF %retcode% EQU 0 GOTO NORMALFLOW\nGOTO ERRORFLOW\n:NORMALFLOW\nset resexe=0\nGOTO END\n:ERRORFLOW\nset resexe=1\nGOTO END\n:SKIPSTEP\nEcho APRInputFile variable not set, step is skipped\nset resexe=0\nGOTO END\n:END\nexit %resexe%"
+  }
+}

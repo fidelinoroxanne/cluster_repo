@@ -1,0 +1,2327 @@
+{
+  "description": "ELIMankeli 160 Interface",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "INTERFACE"
+  ],
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "NOTIFY_GROUP",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_COMPLETED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "attachLogFile": false,
+        "notificationGroup": "SUPPORT_R2_MANKELI",
+        "notificationMessageTemplate": "MANKELI_SUCCESS"
+      }
+    },
+    {
+      "processingActionType": "NOTIFY_GROUP",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FAILED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "attachLogFile": false,
+        "notificationGroup": "SUPPORT_R2_MANKELI",
+        "notificationMessageTemplate": "MANKELI_FAILURE"
+      }
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A1",
+      "priority": "0",
+      "processingTemplate": "MANKELIMANINT60EXPORT_A1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A1",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A10",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A10",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A10",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A11",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A11",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A11",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A12",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A12",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A12",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A13",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163EXPORT_A13",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A13",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A14",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A14",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A14",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A15",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163EXPORT_A15",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A15",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A16",
+      "priority": "0",
+      "processingTemplate": "MANKELIEXTNGHTINT63EXPORT_A16",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A16",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "ext-aseem.garg@elisa.fi",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A2",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163EXPORT_A2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A2",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A3",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A3",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A3",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A4",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A4",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A5",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A5",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A5",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A6",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A6",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A6",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A7",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163EXPORT_A7",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A7",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A8",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163EXPORT_A8",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A8",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160EXPORT_A9",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160EXPORT_A9",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160EXPORT_A9",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "lockState": "EXCLUSIVE",
+          "name": "ANAPLAN_EXPORT_EXC_RES",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "ANAPLAN_EXPORT_EXC_RES",
+          "resourceType": "LOCK",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A1",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160LOAD_A1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A1",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A17",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160LOAD_A17",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A17",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A3",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160LOAD_A3",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A3",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A1",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160RM_A1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A1",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A1",
+          "predecessor": "59MANKELIINT160LOAD_A1",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A2",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163RM_A2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A2",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A3",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163RM_A3",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A3",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A3",
+          "predecessor": "59MANKELIINT160LOAD_A3",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A1",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163TRF_A1",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A1",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A1",
+          "predecessor": "59MANKELIINT160EXPORT_A1",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A10",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160TRF_A10",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A10",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A10",
+          "predecessor": "59MANKELIINT160EXPORT_A10",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A10",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A10",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A10",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A10",
+          "predecessor": "59MANKELIINT160TRF_A10",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A10",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160RM_A10",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A10",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A10",
+          "predecessor": "59MANKELIINT160LOAD_A10",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A11",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160TRF_A11",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A11",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A11",
+          "predecessor": "59MANKELIINT160EXPORT_A11",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A11",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160LOAD_A11",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A11",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A11",
+          "predecessor": "59MANKELIINT160TRF_A11",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A11",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160RM_A11",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A11",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A11",
+          "predecessor": "59MANKELIINT160LOAD_A11",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A12",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163TRF_A12",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A12",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A12",
+          "predecessor": "59MANKELIINT160EXPORT_A12",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A12",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A12",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A12",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A12",
+          "predecessor": "59MANKELIINT160TRF_A12",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A12",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163RM_A12",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A12",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A12",
+          "predecessor": "59MANKELIINT160LOAD_A12",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A13",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163TRF_A13",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A13",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A13",
+          "predecessor": "59MANKELIINT160EXPORT_A13",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A13",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A13",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A13",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A13",
+          "predecessor": "59MANKELIINT160TRF_A13",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A13",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160RM_A13",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A13",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A13",
+          "predecessor": "59MANKELIINT160LOAD_A13",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A14",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163TRF_A14",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A14",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A14",
+          "predecessor": "59MANKELIINT160EXPORT_A14",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A14",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160LOAD_A14",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A14",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A14",
+          "predecessor": "59MANKELIINT160TRF_A14",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A14",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163RM_A14",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A14",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A14",
+          "predecessor": "59MANKELIINT160LOAD_A14",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A15",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160TRF_A15",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A15",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A15",
+          "predecessor": "59MANKELIINT160EXPORT_A15",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A15",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160LOAD_A15",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A15",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A15",
+          "predecessor": "59MANKELIINT160TRF_A15",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A15",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160RM_A15",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A15",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A15",
+          "predecessor": "59MANKELIINT160LOAD_A15",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A16",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160TRF_A16",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A16",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A16",
+          "predecessor": "59MANKELIINT160EXPORT_A16",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A16",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A16",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A16",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A16",
+          "predecessor": "59MANKELIINT160TRF_A16",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A16",
+      "priority": "0",
+      "processingTemplate": "MANKELIMANINT60RM_A16",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A16",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A16",
+          "predecessor": "59MANKELIINT160LOAD_A16",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A2",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163TRF_A2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A2",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A2",
+          "predecessor": "59MANKELIINT160EXPORT_A2",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A2",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A2",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A2",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A2",
+          "predecessor": "59MANKELIINT160TRF_A2",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A3",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160TRF_A3",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A3",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A3",
+          "predecessor": "59MANKELIINT160EXPORT_A3",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A4",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163TRF_A4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A4",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A4",
+          "predecessor": "59MANKELIINT160EXPORT_A4",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A4",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160LOAD_A4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A4",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A4",
+          "predecessor": "59MANKELIINT160TRF_A4",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A4",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160RM_A4",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A4",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A4",
+          "predecessor": "59MANKELIINT160LOAD_A4",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A5",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163TRF_A5",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A5",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A5",
+          "predecessor": "59MANKELIINT160EXPORT_A5",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A5",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A5",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A5",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A5",
+          "predecessor": "59MANKELIINT160TRF_A5",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A5",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160RM_A5",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A5",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A5",
+          "predecessor": "59MANKELIINT160LOAD_A5",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A6",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT163TRF_A6",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A6",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A6",
+          "predecessor": "59MANKELIINT160EXPORT_A6",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A6",
+      "priority": "0",
+      "processingTemplate": "MANKELIEXTNGHTINT60LOAD_A6",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A6",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A6",
+          "predecessor": "59MANKELIINT160TRF_A6",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A7",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163TRF_A7",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A7",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A7",
+          "predecessor": "59MANKELIINT160EXPORT_A7",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A7",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A7",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A7",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A6",
+          "predecessor": "59MANKELIINT160TRF_A6",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        },
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A7",
+          "predecessor": "59MANKELIINT160TRF_A7",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A6",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160RM_A6",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A6",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A6",
+          "predecessor": "59MANKELIINT160LOAD_A6",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        },
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A7",
+          "predecessor": "59MANKELIINT160LOAD_A7",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A7",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160RM_A7",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A7",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A7",
+          "predecessor": "59MANKELIINT160LOAD_A7",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A8",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160TRF_A8",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A8",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A8",
+          "predecessor": "59MANKELIINT160EXPORT_A8",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A8",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A8",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A8",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A8",
+          "predecessor": "59MANKELIINT160TRF_A8",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A8",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160RM_A8",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A8",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A8",
+          "predecessor": "59MANKELIINT160LOAD_A8",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160TRF_A9",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT163TRF_A9",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160TRF_A9",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160EXPORT_A9",
+          "predecessor": "59MANKELIINT160EXPORT_A9",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160LOAD_A9",
+      "priority": "0",
+      "processingTemplate": "MANKELINGHTINT160LOAD_A9",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160LOAD_A9",
+      "weight": "1",
+      "actions": 
+      [
+        {
+          "processingActionType": "NOTIFY_GROUP",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FAILED",
+          "processingCommand": {
+            "attachLogFile": "true",
+            "cc": "${GC_RAPORT},${BI_L2}",
+            "contentType": "TEXT",
+            "notificationGroup": "DOMAIN_DEFAULT_MONITORING",
+            "notificationMessageTemplate": "MANKELI_FAILURE"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160TRF_A9",
+          "predecessor": "59MANKELIINT160TRF_A9",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "FILE_MANAGER",
+          "taskType": "FILE_TRANSFER"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "highRiskThreshold": 6,
+      "name": "59MANKELIINT160RM_A9",
+      "priority": "0",
+      "processingTemplate": "MANKELIINT160RM_A9",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "59MANKELIINT160RM_A9",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "59MANKELIINT160LOAD_A9",
+          "predecessor": "59MANKELIINT160LOAD_A9",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

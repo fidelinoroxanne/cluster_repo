@@ -1,0 +1,160 @@
+{
+  "folder": "XT_ABF_EXPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "Rob.Trocha",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "name": "DateOverrideFile",
+      "title": "DateOverrideFile"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportArchiveName",
+      "required": true,
+      "title": "ExportArchiveName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportArchiveOptions",
+      "required": true,
+      "title": "ExportArchiveOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportCopyName",
+      "required": true,
+      "title": "ExportCopyName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportCopyOptions",
+      "required": true,
+      "title": "ExportCopyOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportFileName",
+      "required": true,
+      "title": "ExportFileName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "FormatFileConfig",
+      "title": "FormatFileConfig"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "Tdf",
+      "required": true,
+      "title": "Tdf"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_INNER_TRAILER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_INNER_TRAILER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_INNER_TRAILER",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_TDF_EXPORT_ARCHIVE_OUTPUT",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_TDF_EXPORT_ARCHIVE_OUTPUT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_TDF_EXPORT_ARCHIVE_OUTPUT",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_TDF_EXPORT_COPY_OUTPUT",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_TDF_EXPORT_COPY_OUTPUT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_TDF_EXPORT_COPY_OUTPUT",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_TDF_EXPORT_HEADER",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_TDF_EXPORT_HEADER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_TDF_EXPORT_HEADER",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_TDF_EXPORT_RUN",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_TDF_EXPORT_RUN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_TDF_EXPORT_RUN",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_TDF_EXPORT_HEADER",
+          "predecessor": "T_XT_GEN_TDF_EXPORT_HEADER",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_TDF_EXPORT_FORMATFILE",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_TDF_EXPORT_FORMATFILE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_TDF_EXPORT_FORMATFILE",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_TDF_EXPORT_RUN",
+          "predecessor": "T_XT_GEN_TDF_EXPORT_RUN",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

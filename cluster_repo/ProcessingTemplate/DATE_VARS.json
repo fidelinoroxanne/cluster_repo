@@ -1,0 +1,27 @@
+{
+  "description": "Various DATE dependent variables",
+  "endpoint": "EP_LOKERO_ANOWAGT_LASERABPTRFOS",
+  "endpointType": "SSH",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "node": "NODE_OS_LOKERO",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "ENIRO",
+    "MEDIATION",
+    "MIPA"
+  ],
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "# All these variables are for the current Date\n\necho ANOWVAR:PARENT.YEAR=$(date +%y)\necho ANOWVAR:PARENT.YEAR4=$(date +%Y)\necho ANOWVAR:PARENT.MONTH=$(date +%m)\necho ANOWVAR:PARENT.DAY=$(date +%d)\necho ANOWVAR:PARENT.DATE=$(date +%Y%m%d)\necho ANOWVAR:PARENT.DATE-YY=$(date +%y%m%d)\necho ANOWVAR:PARENT.TIMESTAMP=$(date +%Y%m%d%H%M%S)\necho ANOWVAR:PARENT.TIMESTAMP-S=$(date +%Y%m%d%H%M)\necho ANOWVAR:PARENT.MONTH_ABBR=$(date +%b)\necho ANOWVAR:PARENT.DATE-HYP=$(date +\"%Y-%m-%d\")"
+  }
+}

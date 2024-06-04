@@ -1,0 +1,73 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WAIT_FOR_2MIN",
+      "processingTemplate": "WAIT_FOR_2MIN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "actions": 
+      [
+        {
+          "processingActionType": "FORCE_FAILED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "ADD_TAG",
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "WORKFLOW_LEVEL_LOCK",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WAIT_FOR_1MIN",
+      "processingTemplate": "WAIT_FOR_1MIN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WAIT_FOR_2MIN.1",
+      "processingTemplate": "WAIT_FOR_2MIN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WAIT_FOR_1MIN.1",
+      "processingTemplate": "WAIT_FOR_1MIN",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "WORKFLOW_LEVEL_LOCK",
+      "processingTemplate": "WORKFLOW_LEVEL_LOCK",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}

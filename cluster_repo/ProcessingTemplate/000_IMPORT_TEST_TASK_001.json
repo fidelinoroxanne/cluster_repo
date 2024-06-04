@@ -1,0 +1,58 @@
+{
+  "autoArchive": true,
+  "description": "587230947852349895094578390458732094587239045872309478523498950945783904587320945872390458723094785234989509457839045873209458723904587230947852349",
+  "highRiskStatisticMethod": "COUNT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "ROX_NEW_LB",
+  "owner": "i",
+  "priority": "11",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
+  "weight": "10",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "sleep 46\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho okokok\n\necho ${endpoint}\n\nexit 1\n\n\n\n\necho Hello"
+  },
+  "actions": 
+  [
+    {
+      "duration": 64800000,
+      "durationTimeMode": "TIME_OF_DAY",
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "NOT_STARTED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "1234567890QWERTYUIOPASDFGHJKLZXCVBNM.1234567890ASDUAFHJKDSFLZBCNMXZCMZXNBCJHCBUSADBCJSMCBJSHCBJSDHBCDJMCBDJSHCBDMSkjscfnskjncs"
+      }
+    },
+    {
+      "processingActionType": "FORCE_COMPLETED",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FINISHED",
+      "condition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "exitCode",
+            "operator": "EQ",
+            "value": "1"
+          }
+        ],
+        "operator": "AND"
+      },
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "restartType": "RESTART_FROM_BEGINNING"
+      }
+    }
+  ]
+}

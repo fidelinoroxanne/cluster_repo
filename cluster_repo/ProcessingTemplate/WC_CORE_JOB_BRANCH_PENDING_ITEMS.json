@@ -1,0 +1,95 @@
+{
+  "description": "check",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "tomasz.bartos",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "INTRADAY",
+    "var"
+  ],
+  "workflowType": "CYCLE",
+  "customFieldValues": {
+  },
+  "ignoreCondition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "processingTimestamp",
+        "operator": "NOT_IN_CAL",
+        "value": "${BRANCH}_WD"
+      }
+    ],
+    "operator": "AND"
+  },
+  "processingCommand": {
+    "checkBeforeFirstRun": true,
+    "cycleCondition": {
+      "criteria": 
+      [
+        {
+          "fieldName": "var_ENABLE_${BRANCH}_INTRADAY",
+          "operator": "EQ",
+          "value": "ON"
+        }
+      ],
+      "operator": "AND"
+    },
+    "cycleDayOffset": 0,
+    "cycleDelay": 3600000,
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleFailMode": "RESTART_FAILED",
+    "cycleRestartUntil": 85500000,
+    "cycleType": "WHILE"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "processingTemplate": "T_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "forceCompletedCondition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "var_ENABLE_NLU_INTRADAY",
+            "operator": "EQ",
+            "value": "OFF"
+          }
+        ],
+        "operator": "OR"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "RESOURCE",
+          "name": "maxNumberOfTaskRunning",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "resource": "maxNumberOfTaskRunning",
+          "resourcePermits": "1",
+          "resourceType": "STOCK",
+          "workflowType": "CYCLE"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "T_CORE_PDBS_JOB_BRANCH_PENDING_ITEMS",
+      "processingTemplate": "T_CORE_PDBS_JOB_BRANCH_PENDING_ITEMS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}

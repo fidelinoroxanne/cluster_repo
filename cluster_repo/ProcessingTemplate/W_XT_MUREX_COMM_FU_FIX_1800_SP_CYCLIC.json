@@ -1,0 +1,104 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "jaideep.panwar",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "CYCLE",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "checkBeforeFirstRun": false,
+    "cycleCondition": {
+      "criteria": 
+      [
+        {
+          "fieldName": "${WAIT_FOR_EXIT_CODE_CYCLIC}",
+          "operator": "EQ_NUM",
+          "value": "0"
+        }
+      ],
+      "operator": "AND"
+    },
+    "cycleDelay": "1000",
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleFailMode": "RESTART_NONE",
+    "cycleType": "WHILE"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_IMP_REQUEST",
+      "passBy": true,
+      "processingTemplate": "W_XT_GEN_IMP_REQUEST",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_REQUEST",
+      "templateParameters": {
+        "FileWatcherOptions": "interval=30 retries=180 leadtime=900",
+        "RequestCopyOptions": "overwrite",
+        "RequestFileSource": "E:\\CRIS_DATA\\Murex_MOPC\\Request_files\\COMM_FU_FIX_1800_SP.req",
+        "RequestFileTarget": "E:\\CRIS_DATA\\FTP\\Bloomberg\\Request\\COMM_FU_FIX_1800_SP.req",
+        "ResponseCopyOptions": "overwrite move",
+        "ResponseFileSource": "E:\\CRIS_DATA\\FTP\\Bloomberg\\Response\\COMM_FU_FIX_1800_SP.out",
+        "ResponseFileTarget": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1800_SP_CMT\\COMM_FU_FIX_1800_SP.out"
+      }
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_TOOLRUNNER",
+      "passBy": true,
+      "processingTemplate": "W_XT_GEN_TOOLRUNNER",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_OUTPUTFILEFILTER",
+      "templateParameters": {
+        "ToolName": "E:\\TIMESCAPE\\TOOLS\\OUTPUTFILEFILTER\\OUTPUTFILEFILTER.EXE",
+        "ToolParameters": "E:\\TIMESCAPE\\CONFIGS\\OUTPUTFILEFILTER\\Murex_Comm_FU_FIX_1800_SP_Stale_Rates.xml"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_XT_GEN_IMP_REQUEST",
+          "predecessor": "W_XT_GEN_IMP_REQUEST",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "W_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
+      "passBy": true,
+      "processingTemplate": "W_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
+      "resultMapping": "RM_EQ2_COMPLETED",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_WATCHFOR_STALE_RATES",
+      "templateParameters": {
+        "FileToWatchFor": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1800_SP_CMT\\Murex_Comm_FU_FIX_1800_SP_Stale_Rates.txt",
+        "FileWatcherOptions": "leadtime=0 retries=1 interval=5",
+        "NextTaskIfNotFound": "W_XT_MUREX_FU_1800SP_SEND_REQUEST"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "W_XT_GEN_TOOLRUNNER",
+          "predecessor": "W_XT_GEN_TOOLRUNNER",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        }
+      ]
+    }
+  ]
+}

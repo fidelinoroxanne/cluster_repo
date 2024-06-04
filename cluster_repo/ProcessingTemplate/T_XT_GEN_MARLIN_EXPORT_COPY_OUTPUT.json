@@ -1,0 +1,18 @@
+{
+  "endpointType": "USER",
+  "folder": "XT_5028_EXPORT",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "timescape_appserver",
+  "owner": "chris.visser",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "processingCommand": {
+    "script": "IF \"${ExportCopyName}\"==\"\" GOTO SKIPSTEP\n:COPYFILE\nEcho on\nIF \"${DateOverrideFile}\" EQU \"\" (\n  ${XT_COPYFILE} from=${ExportFileName} to=${ExportCopyName} ${ExportCopyOptions}\n) ELSE (\n  ${XT_COPYFILE} from=${ExportFileName} to=${ExportCopyName} datefile=${DateOverrideFile} ${ExportCopyOptions}\n)\nEcho Off\n:CHECK\nset retcode=%errorlevel%\necho \"CopyFile ended with return code: %retcode%\"\nIF %retcode% EQU 0 GOTO NORMALFLOW\nGOTO ERRORFLOW\n:NORMALFLOW\nset resexe=0\nGOTO END\n:ERRORFLOW\nset resexe=1\nGOTO END\n:SKIPSTEP\nEcho \"ExportCopyName is not defined, step is skipped\"\nset resexe=0\nGOTO END\n:END\nexit %resexe%"
+  }
+}

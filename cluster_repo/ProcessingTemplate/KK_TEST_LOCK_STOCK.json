@@ -1,0 +1,68 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "owner": "i",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "KK_TEST_SLEEP_20",
+      "processingTemplate": "KK_TEST_SLEEP_20",
+      "serverNode": "ROX_NEW_LB",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "KK_TEST_SLEEP_20.1",
+      "processingTemplate": "KK_TEST_SLEEP_20",
+      "serverNode": "ROX_NEW_LB",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "KK_TEST_SLEEP_20.2",
+      "processingTemplate": "KK_TEST_SLEEP_20",
+      "serverNode": "ROX_NEW_LB",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "KK_TEST_SLEEP_20.3",
+      "processingTemplate": "KK_TEST_SLEEP_20",
+      "serverNode": "ROX_NEW_LB",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
+      "name": "KK_TEST_SLEEP_20.4",
+      "processingTemplate": "KK_TEST_SLEEP_20",
+      "serverNode": "ROX_NEW_LB",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL"
+    }
+  ]
+}

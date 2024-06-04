@@ -1,0 +1,155 @@
+{
+  "folder": "XT_MARLIN",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "chris.visser",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "name": "DateOverrideFile",
+      "title": "DateOverrideFile"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "Delimiter",
+      "required": true,
+      "title": "Delimiter"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportArchiveName",
+      "required": true,
+      "title": "ExportArchiveName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportArchiveOptions",
+      "required": true,
+      "title": "ExportArchiveOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportConfiguration",
+      "required": true,
+      "title": "ExportConfiguration"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportCopyName",
+      "required": true,
+      "title": "ExportCopyName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportCopyOptions",
+      "required": true,
+      "title": "ExportCopyOptions"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportDateFormat",
+      "required": true,
+      "title": "ExportDateFormat"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportFileName",
+      "required": true,
+      "title": "ExportFileName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ExportThreads",
+      "required": true,
+      "title": "ExportThreads"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ItemListFile",
+      "required": true,
+      "title": "ItemListFile"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "LogFileName",
+      "required": true,
+      "title": "LogFileName"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "ReportDate",
+      "required": true,
+      "title": "ReportDate"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_MARLIN_EXPORT_RUN_MEX",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_MARLIN_EXPORT_RUN_MEX",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_MARLIN_EXPORT_RUN_MEX",
+      "weight": "1"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_MARLIN_EXPORT_COPY_OUTPUT",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_MARLIN_EXPORT_COPY_OUTPUT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_MARLIN_EXPORT_COPY_OUTPUT",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_MARLIN_EXPORT_RUN_MEX",
+          "predecessor": "T_XT_GEN_MARLIN_EXPORT_RUN_MEX",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "T_XT_GEN_MARLIN_EXPORT_ARCHIVE_OUTPUT",
+      "priority": "0",
+      "processingTemplate": "T_XT_GEN_MARLIN_EXPORT_ARCHIVE_OUTPUT",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "T_XT_GEN_MARLIN_EXPORT_ARCHIVE_OUTPUT",
+      "weight": "1",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "T_XT_GEN_MARLIN_EXPORT_COPY_OUTPUT",
+          "predecessor": "T_XT_GEN_MARLIN_EXPORT_COPY_OUTPUT",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

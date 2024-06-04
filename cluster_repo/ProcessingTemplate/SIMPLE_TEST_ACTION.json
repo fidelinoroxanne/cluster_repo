@@ -1,0 +1,85 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "fidelinoroxanne",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "exit_5",
+      "processingTemplate": "exit_5",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "actions": 
+      [
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_FINISHED",
+          "condition": {
+            "criteria": 
+            [
+              {
+                "fieldName": "exitCode",
+                "operator": "EQ",
+                "value": "8"
+              },
+              {
+                "criteria": 
+                [
+                  {
+                    "fieldName": "exitCode",
+                    "operator": "EQ",
+                    "value": "5"
+                  }
+                ],
+                "operator": "OR"
+              }
+            ],
+            "operator": "OR"
+          },
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": false,
+            "relation": {
+              "peer": "exit_8",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "exit_8",
+      "processingTemplate": "exit_8",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "templateParameters": {
+        "inherit_me": "INPUT1"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "exit_5",
+          "predecessor": "exit_5",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
+        }
+      ]
+    }
+  ]
+}

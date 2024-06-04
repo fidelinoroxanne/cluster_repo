@@ -1,0 +1,25 @@
+{
+  "endpoint": "EP_INFA_ANOWAGENT_CTMANKAL_SSH",
+  "endpointType": "SSH",
+  "folder": "MyFolder",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "highRiskThreshold": 6,
+  "node": "NODE_OS_INFA",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "INFA_WORKFLOWS"
+  ],
+  "taskType": "SH",
+  "title": "MANKELIINT160LOAD_A11",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "/Mankeli/sfw/sh/mankeli-generic/start_wfs_mankeli-generic.sh -f MANKELI_NS -w wf_AP_OTHER_INCOME_LE"
+  }
+}
