@@ -1,0 +1,325 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "description": "Connected WITH ssh connection",
+  "folder": "AA_DEMO",
+  "loadBalancerStrategy": "ROUND_ROBIN",
+  "manualBaselineDeviationMultiplier": 2.5,
+  "relatedResources": 
+  [
+    "TMG_01ETDC_TEMP",
+    "TMG_01MFDC_TEMP",
+    "TMG_01SHDC_TEMP"
+  ],
+  "serverNodeType": "LINUX",
+  "sortOrder": 6,
+  "tags": 
+  [
+    "AAA",
+    "917V",
+    "Activations"
+  ],
+  "totalWeightCapacity": 200,
+  "configuration": {
+    "AgentHeartbeat": 55000,
+    "Debug": 9,
+    "NoOfPrcss": 80,
+    "ShellCmd": "/bin/bash ${script} -v",
+    "connectionTimeout": 60000,
+    "enfPort": 4445,
+    "firstDayOfWeek": 6,
+    "ftpInterval": 5000,
+    "groovyCmd": "/home/tomasz.gorzkowski/anow/aa.sh",
+    "javaCmd": "/home/tomasz.gorzkowski/anow/jdk/open-jdk-13.0.2/bin/java",
+    "logDirectory": "/app/agent/work/log/tmg",
+    "logLevel": "DEBUG",
+    "logMaxFiles": 12,
+    "maxLogSize": 1000,
+    "perlCmd": "/usr/bin/perl",
+    "persistence": true,
+    "pythonCmd": "/usr/bin/python",
+    "rubyCmd": "/home/tomasz.gorzkowski/anow/bin/ruby.sh ${script} -54 -nolog -whatever",
+    "scalaCmd": "/usr/bin/scala",
+    "sysoutDirectoryTree": true,
+    "sysoutMaxAgeInDays": 12
+  },
+  "customFieldValues": {
+    "N1": "N1-N1-N1-N1-N1-N1-N1-N1"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_HOLD",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_HOLD",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_RESUME",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_RESUME",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_STARTED",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_STARTED",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_STOPPED",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_STOPED",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_CONNECTED",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_CONNECTED",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_DISCONNECTED",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_DISCONNECTED",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_ABORT_ALL",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_ABORT_ALL",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_ABORTED_ALL",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_ABORTED_ALL",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_KILL_ALL",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_KILL_ALL",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_SKIP_ON",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_SKIP_ON",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_SKIP_OFF",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_ROOT_SKIP_OFF",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "SET_VARIABLE_VALUE",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_AGENT_IP_CHANGED",
+      "processingCommand": {
+        "operator": "PLUS_NUM",
+        "resource": "TMG_AS_RP_CHANGED",
+        "timestampRelation": "EQ",
+        "timestampSelector": "SAME",
+        "value": 1
+      }
+    },
+    {
+      "processingActionType": "PROCESSING_RUN_NOW",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_HOLD",
+      "processingCommand": {
+        "actionTargetType": "CRITERIA",
+        "criteria": {
+          "processingTemplate": "tmg_prio",
+          "processingType": "WORKFLOW",
+          "workflowType": "STANDARD"
+        },
+        "processingTemplate": "___3025_WAIT_200_6",
+        "resultMax": 9999,
+        "resultMin": 1,
+        "specificDate": "2000-01-01",
+        "timestampSelector": "SPECIFIC_DATE"
+      }
+    },
+    {
+      "processingActionType": "SERVER_NODE_ADD_TAG",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_HOLD",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "restartType": "RESTART_FROM_BEGINNING",
+        "taskType": "SERVER_NODE_ADD_TAG",
+        "value": "Activations"
+      }
+    }
+  ],
+  "designParameters": 
+  [
+    {
+      "defaultValue": "ENCRYPTED::GwoLChsKDwobCgEKBwoREBsK",
+      "editorType": "PASSWORD",
+      "name": "NODE_PASSWD",
+      "title": "NODE_PASSWD"
+    },
+    {
+      "defaultValue": "v1",
+      "editorType": "LIST",
+      "listOfValues": "{\"v1\":\"desc 1\",\"v2\":\"desc 2\",\"v3\":\"desc 3\"}",
+      "name": "NODE_LIST",
+      "optionSource": "STATIC_LIST",
+      "title": "NODE_LIST"
+    },
+    {
+      "defaultValue": "false",
+      "editorType": "CHECKBOX",
+      "name": "NODE_BOOL",
+      "title": "NODE_BOOL"
+    },
+    {
+      "defaultValue": "12:00:00",
+      "editorType": "TIME",
+      "name": "NODE_TIME",
+      "title": "NODE_TIME"
+    },
+    {
+      "defaultValue": "99009900",
+      "editorType": "NUMBER",
+      "name": "NODE_NUM",
+      "title": "NODE_NUM"
+    },
+    {
+      "defaultValue": "${A}_free_txt_${B}",
+      "editorType": "TEXT",
+      "name": "JOBNAME",
+      "title": "Name of the job"
+    },
+    {
+      "defaultValue": "value of NODE_TEXT",
+      "editorType": "TEXT",
+      "name": "NODE_TEXT",
+      "title": "NODE_TEXT"
+    },
+    {
+      "defaultValue": "2021-04-14",
+      "editorType": "DATE",
+      "name": "NODE_DATE",
+      "title": "NODE_DATE"
+    }
+  ],
+  "endpoints": 
+  [
+    {
+      "endpoint": "TMG_NEW_tomasz.gorzkowski_on_esd",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "TMG_NEW_tomasz.gorzkowski_with_passwd",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "ks_d1_ssh_inline",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "TMG_NEW_non.existing.user_with_password",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "tomasz.gorzkowski_on_d1",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "TMG_NEW_tomasz.gorzkowski_wo_passwd",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "AS_ariel.ampol",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "D1_Tech_User_As_ariel.ampol",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "KS_D1_SSH",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "ks_d1_ssh_inline_COPY",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "ks_d1_ssh_inline_tmg_COPY",
+      "endpointType": "SSH"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "parent": "[ROX]fdw_appserver",
+  "parentLoadBalancer": "fdw_appserver",
+  "serverNodeType": "LINUX",
+  "totalWeightCapacity": 500,
+  "configuration": {
+    "AgentHeartbeat": 60000,
+    "NoOfPrcss": 500,
+    "connectionTimeout": 60000,
+    "enfPort": 4445,
+    "firstDayOfWeek": 6,
+    "ftpInterval": 5000,
+    "persistence": true,
+    "sysoutMaxAgeInDays": 180
+  },
+  "customFieldValues": {
+  },
+  "endpoints": 
+  [
+    {
+      "endpoint": "fbruser",
+      "endpointType": "USER"
+    },
+    {
+      "defaultEndpoint": true,
+      "endpoint": "fdwuser",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "fenuser",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "aeguser",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "fcluser",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "fdwadmin",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "fnluser",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "fususer",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "frcuser",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "s2buser",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "gfitsupp",
+      "endpointType": "USER"
+    },
+    {
+      "endpoint": "sptuser",
+      "endpointType": "USER"
+    }
+  ]
+}

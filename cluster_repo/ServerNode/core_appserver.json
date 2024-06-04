@@ -1,0 +1,25 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "serverNodeType": "LINUX",
+  "totalWeightCapacity": 200,
+  "configuration": {
+    "AgentHeartbeat": 60000,
+    "NoOfPrcss": 200,
+    "connectionTimeout": 60000,
+    "enfPort": 4445,
+    "firstDayOfWeek": 6,
+    "ftpInterval": 5000,
+    "logLevel": "WARN",
+    "logMaxFiles": 30,
+    "persistence": true,
+    "sysoutMaxAgeInDays": 14
+  },
+  "endpoints": 
+  [
+    {
+      "defaultEndpoint": true,
+      "endpoint": "anowcore",
+      "endpointType": "SSH"
+    }
+  ]
+}

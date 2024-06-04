@@ -1,0 +1,17 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "serverNodeType": "LINUX",
+  "totalWeightCapacity": 50,
+  "configuration": {
+    "AgentHeartbeat": 30000,
+    "NoOfPrcss": 60,
+    "connectionTimeout": 60000,
+    "enfPort": 4445,
+    "firstDayOfWeek": 6,
+    "ftpInterval": 5000,
+    "persistence": true,
+    "sysoutMaxAgeInDays": 7
+  },
+  "customFieldValues": {
+  }
+}

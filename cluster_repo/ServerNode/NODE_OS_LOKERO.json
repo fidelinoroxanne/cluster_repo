@@ -1,0 +1,62 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "serverNodeType": "LINUX",
+  "totalWeightCapacity": 50,
+  "customFieldValues": {
+  },
+  "endpoints": 
+  [
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_EIAMDATAOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_COMFONEOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_CGIEINVLOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_FINFJOPROS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_EMCEVTTLOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_HUSELTRFOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_ENIROOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_FINHAAVIOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_IBMSELISAOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_LASERABPTRFOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_NMPCTRFDOS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_TELEXFEROS",
+      "endpointType": "SSH"
+    },
+    {
+      "endpoint": "EP_LOKERO_ANOWAGT_VDFNELISAOS",
+      "endpointType": "SSH"
+    }
+  ]
+}
