@@ -37,40 +37,50 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "CROSS_DEP_WKF_C2",
       "processingTemplate": "CROSS_DEP_WKF_C2",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "CROSS_DEP_WKF_A",
       "processingTemplate": "CROSS_DEP_WKF_A",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "CROSS_DEP_WKF_B1",
       "processingTemplate": "CROSS_DEP_WKF_B1",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "CROSS_DEP_WKF_B2",
       "processingTemplate": "CROSS_DEP_WKF_B2",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "CROSS_DEP_WKF_C1",
       "processingTemplate": "CROSS_DEP_WKF_C1",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     }
   ]
 }

@@ -16,16 +16,20 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WF_SPT_UTR_LOAD_DM_IDY_CLC",
       "processingTemplate": "WF_SPT_UTR_LOAD_DM_IDY_CLC",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "CYCLE"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "WF_SPT_UTR_INTRADAY_DM_CLC",
       "processingTemplate": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "OCCURRENCE": "CLC",
         "REGION": "UTR"
@@ -36,8 +40,10 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WF_SPT_UTR_DM_DLY",
       "processingTemplate": "WF_SPT_UTR_DM_DLY",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     }
   ]
 }

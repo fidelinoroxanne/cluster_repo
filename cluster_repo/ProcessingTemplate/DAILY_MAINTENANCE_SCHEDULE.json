@@ -20,8 +20,10 @@
       "highRiskThreshold": 5,
       "name": "[INTERNAL]DAILY_MAINTENANCE",
       "processingTemplate": "DAILY_MAINTENANCE",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     }
   ]
 }

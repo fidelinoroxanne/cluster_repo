@@ -18,9 +18,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_GEN_COPY_FILE",
       "processingTemplate": "W_XT_GEN_COPY_FILE",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_FU_1900SP_SEND_BLOOMBERG_DATA_TO_MOPC",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "CopyOptions": "overwrite yesterday",
         "SourceFileName": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP.out",
@@ -32,9 +34,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_GEN_IMP_IMPORT",
       "processingTemplate": "W_XT_GEN_IMP_IMPORT",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_FU_1900SP_IMPORT_BLOOMBERG_DATA",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "APRConfigName": "Murex_FU_1900SP",
         "APRInputFile": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP.out",
@@ -47,9 +51,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_GEN_IMP_REQUEST",
       "processingTemplate": "W_XT_GEN_IMP_REQUEST",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_FU_1900SP_SEND_REQUEST",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "FileWatcherOptions": "interval=30 retries=90 leadtime=60",
         "RequestCopyOptions": "overwrite",
@@ -65,9 +71,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_GEN_MARLIN_EXPORT",
       "processingTemplate": "W_XT_GEN_MARLIN_EXPORT",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_FU_1900SP_EXPORT_IR",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "Delimiter": ";",
         "ExportArchiveName": "E:\\CRIS_DATA\\Exports\\Murex_MOPC\\Archive\\CCYYMMDD\\1900SP_FIX_FU_IR.csv",
@@ -88,9 +96,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
       "processingTemplate": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
+      "workflowType": "CYCLE",
       "actions": 
       [
         {

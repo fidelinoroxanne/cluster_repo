@@ -1,0 +1,15 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "resourceType": "TIME_SEMAPHORE",
+  "timeTriggers": 
+  [
+    {
+      "closeAfter": 3600000,
+      "endTime": 59400000,
+      "repeatInterval": 3600000,
+      "startTime": 58200000,
+      "timeTriggerType": "DAILY",
+      "timeZone": "Europe/Helsinki"
+    }
+  ]
+}

@@ -24,9 +24,11 @@
       "highRiskThreshold": 5,
       "name": "WC_CORE_JOB_BRANCH_PENDING_ITEMS",
       "processingTemplate": "WC_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "WC_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "workflowType": "CYCLE",
       "ignoreCondition": {
         "criteria": 
         [

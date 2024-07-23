@@ -22,16 +22,21 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "simple_wait",
       "processingTemplate": "simple_wait",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "WAIT"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ELI_BANKING_REFUND_WF_01",
       "processingTemplate": "ELI_BANKING_REFUND_WF_01",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
@@ -40,10 +45,12 @@
       "name": "ELIMANKELI_16",
       "priority": "0",
       "processingTemplate": "ELIMANKELI_16",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "ELIMANKELI_16",
-      "weight": "1"
+      "weight": "1",
+      "workflowType": "STANDARD"
     }
   ]
 }

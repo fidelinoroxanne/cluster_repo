@@ -26,8 +26,10 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "CYCLIC_WF_WITH_IGNORE",
       "processingTemplate": "CYCLIC_WF_WITH_IGNORE",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "workflowType": "CYCLE",
       "ignoreCondition": {
         "criteria": 
         [

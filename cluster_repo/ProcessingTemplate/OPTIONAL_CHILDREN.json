@@ -9,25 +9,40 @@
   [
     {
       "name": "other_wait",
-      "processingTemplate": "other_wait"
+      "processingTemplate": "other_wait",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "taskType": "WAIT"
     },
     {
       "name": "WAIT_1",
       "optional": true,
-      "processingTemplate": "WAIT_1"
+      "processingTemplate": "WAIT_1",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "taskType": "WAIT"
     },
     {
       "name": "WAIT_FOR_1MIN",
-      "processingTemplate": "WAIT_FOR_1MIN"
+      "processingTemplate": "WAIT_FOR_1MIN",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "taskType": "WAIT"
     },
     {
       "name": "WAIT_2",
-      "processingTemplate": "WAIT_2"
+      "processingTemplate": "WAIT_2",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "taskType": "WAIT"
     },
     {
       "name": "simple_wait",
       "optional": true,
-      "processingTemplate": "simple_wait"
+      "processingTemplate": "simple_wait",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "taskType": "WAIT"
     }
   ]
 }

@@ -31,9 +31,11 @@
       "highRiskThreshold": 5,
       "name": "W_XT_GEN_SETBUSDATE",
       "processingTemplate": "W_XT_GEN_SETBUSDATE",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_SETBUSDATE",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "AllowWeekendAsBusinessDay": "true",
         "BusDateShortCode": "\"\"",
@@ -47,8 +49,10 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_MUREX_COMM_FU_FIX_1800_SP_CYCLIC",
       "processingTemplate": "W_XT_MUREX_COMM_FU_FIX_1800_SP_CYCLIC",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "workflowType": "CYCLE",
       "dependencies": 
       [
         {
@@ -67,9 +71,11 @@
       "highRiskThreshold": 5,
       "name": "W_XT_GEN_IMP_IMPORT",
       "processingTemplate": "W_XT_GEN_IMP_IMPORT",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_IMPORT",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "APRConfigName": "COMM_FU_FIX_1800_SP",
         "APRInputFile": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1800_SP_CMT\\COMM_FU_FIX_1800_SP.out",
@@ -94,9 +100,11 @@
       "highRiskThreshold": 5,
       "name": "W_XT_GEN_MARLIN_EXPORT",
       "processingTemplate": "W_XT_GEN_MARLIN_EXPORT",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_EXPORT",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "Delimiter": ";",
         "ExportArchiveName": "E:\\CRIS_DATA\\Exports\\Murex_MOPC\\Archive\\CCYYMMDD\\1800SP_FIX_COMM_FUT.csv",
@@ -128,9 +136,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_GEN_COPY_FILE",
       "processingTemplate": "W_XT_GEN_COPY_FILE",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_COPY_TO_MOUTRECHT",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "CopyOptions": "today overwrite move",
         "SourceFileName": "E:\\CRIS_DATA\\Exports\\Murex_MOPC\\1800SP_FIX_COMM_FUT.csv",

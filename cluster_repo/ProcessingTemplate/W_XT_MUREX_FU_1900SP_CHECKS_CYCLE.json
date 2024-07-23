@@ -37,9 +37,12 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "T_XT_GEN_FILE_WATCHER",
       "processingTemplate": "T_XT_GEN_FILE_WATCHER",
+      "processingType": "TASK",
       "resultMapping": "RM_EQ2_COMPLETED",
+      "serverNodeType": "WINDOWS",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "T_XT_MUREX_FU_1900SP_CHECKS_CYCLE_FILE_WATCHER_FOR_STALE_RATES",
       "templateParameters": {
         "FileToWatchFor": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1900SP_FU\\MX_FU_1900SP_STALE_RATES.txt",
@@ -97,9 +100,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_GEN_IMP_REQUEST",
       "processingTemplate": "W_XT_GEN_IMP_REQUEST",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE_SEND_CHECK_REQUEST",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "FileWatcherOptions": "interval=30 retries=30 leadtime=180",
         "RequestCopyOptions": "overwrite",
@@ -115,9 +120,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "W_XT_GEN_TOOLRUNNER",
       "processingTemplate": "W_XT_GEN_TOOLRUNNER",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE_FIND_STALE_RATES",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "ToolName": "E:\\TIMESCAPE\\TOOLS\\OUTPUTFILEFILTER\\OUTPUTFILEFILTER.EXE",
         "ToolParameters": "E:\\TIMESCAPE\\CONFIGS\\OUTPUTFILEFILTER\\MUREX_1900SP_STALE_RATES.XML"

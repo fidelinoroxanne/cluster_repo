@@ -17,16 +17,22 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "Simple_Sleep",
       "processingTemplate": "Simple_Sleep",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEP_0",
       "processingTemplate": "SLEEP_0",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     }
   ]
 }

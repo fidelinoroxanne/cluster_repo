@@ -3,6 +3,7 @@
   "highRiskStatisticPeriod": "MONTH",
   "highRiskThreshold": 6,
   "node": "NODE_FM_PKGNCST1",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "TASK",
   "resultMapping": "RC_300_TO_COMPLETED_300",

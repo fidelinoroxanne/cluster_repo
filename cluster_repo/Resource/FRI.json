@@ -1,0 +1,8 @@
+{
+  "calendarDates": "2023-05-22,-2023-05-26",
+  "calendarDaysOfWeek": "5",
+  "calendarType": "BASE",
+  "codeRepository": "[ROX]cluster_repo",
+  "description": "Fridays calendar",
+  "resourceType": "CALENDAR"
+}

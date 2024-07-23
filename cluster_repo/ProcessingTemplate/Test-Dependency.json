@@ -24,8 +24,10 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "Workflow_with_Three_Items",
       "processingTemplate": "Workflow_with_Three_Items",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     }
   ]
 }

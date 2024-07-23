@@ -16,8 +16,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEP_0",
       "processingTemplate": "SLEEP_0",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "SLEEP_0",
       "dependencies": 
       [
@@ -38,8 +41,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEP_4",
       "processingTemplate": "SLEEP_4",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "SLEEP_4",
       "dependencies": 
       [
@@ -60,8 +66,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEP_8",
       "processingTemplate": "SLEEP_8",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "SLEEP_8",
       "dependencies": 
       [
@@ -82,8 +91,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEP_6",
       "processingTemplate": "SLEEP_6",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "SLEEP_6",
       "dependencies": 
       [
@@ -104,8 +116,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEP_5",
       "processingTemplate": "SLEEP_5",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "SLEEP_5",
       "dependencies": 
       [

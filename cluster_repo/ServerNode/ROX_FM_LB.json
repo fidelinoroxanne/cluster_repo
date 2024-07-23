@@ -1,0 +1,8 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "loadBalancer": true,
+  "loadBalancerStrategy": "ACTIVE_PASSIVE_FAILOVER",
+  "serverNodeType": "FILE_MANAGER",
+  "customFieldValues": {
+  }
+}

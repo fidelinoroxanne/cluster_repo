@@ -4,6 +4,7 @@
   "highRiskStatisticMethod": "PERCENT",
   "highRiskStatisticPeriod": "MONTH",
   "highRiskThreshold": 6,
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "statisticMethod": "AVERAGE",
@@ -20,8 +21,11 @@
       "name": "DATE_VARS",
       "priority": "0",
       "processingTemplate": "DATE_VARS",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "weight": "1",
       "actions": 
       [
@@ -46,8 +50,11 @@
       "name": "ELISA_REFUND_ABP_SFLS002_TRF",
       "priority": "0",
       "processingTemplate": "ELISA_REFUND_ABP_SFLS002_TRF",
+      "processingType": "TASK",
+      "serverNodeType": "FILE_MANAGER",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "FILE_TRANSFER",
       "weight": "1",
       "actions": 
       [
@@ -228,8 +235,11 @@
       "name": "ELISA_REFUND_REPORT_GENERATION",
       "priority": "0",
       "processingTemplate": "ELISA_REFUND_REPORT_GENERATION",
+      "processingType": "TASK",
+      "serverNodeType": "HPUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "weight": "1",
       "actions": 
       [
@@ -266,8 +276,11 @@
       "name": "ELISA_REFUND_REPORT_ABP_SFLS002_TRF",
       "priority": "0",
       "processingTemplate": "ELISA_REFUND_REPORT_ABP_SFLS002_TRF",
+      "processingType": "TASK",
+      "serverNodeType": "FILE_MANAGER",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "FILE_TRANSFER",
       "weight": "1",
       "actions": 
       [
@@ -326,8 +339,11 @@
       "name": "ELISA_REPORT_ARCHIVING_SCRIPT",
       "priority": "0",
       "processingTemplate": "ELISA_REPORT_ARCHIVING_SCRIPT",
+      "processingType": "TASK",
+      "serverNodeType": "HPUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "weight": "1",
       "actions": 
       [
@@ -364,8 +380,11 @@
       "name": "ELISA_REFUND_ARCHIVING_SCRIPT",
       "priority": "0",
       "processingTemplate": "ELISA_REFUND_ARCHIVING_SCRIPT",
+      "processingType": "TASK",
+      "serverNodeType": "HPUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "weight": "1",
       "actions": 
       [

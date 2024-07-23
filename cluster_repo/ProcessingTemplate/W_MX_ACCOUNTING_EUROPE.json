@@ -4,6 +4,7 @@
   "highRiskStatisticMethod": "PERCENT",
   "highRiskStatisticPeriod": "WEEK",
   "highRiskThreshold": 5,
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "statisticMethod": "AVERAGE",
@@ -160,10 +161,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_CHECK_EOM_ACCOUNTING_EUR",
           "predecessor": "T_MX_CHECK_EOM_ACCOUNTING_EUR",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -182,10 +180,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_WAIT_10S",
           "predecessor": "T_MX_WAIT_10S",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         },
         {
           "dependencyType": "PROCESSING_TEMPLATE",
@@ -214,9 +209,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "W_MX_EOM_ACC_EUR_SUB_4",
           "predecessor": "W_MX_EOM_ACC_EUR_SUB_4",
-          "processingStatus": "COMPLETED",
-          "processingType": "WORKFLOW",
-          "workflowType": "STANDARD"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -235,10 +228,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_ACC_DM_EUR",
           "predecessor": "T_MX_ACC_DM_EUR",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -257,10 +247,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_ACC_EOD_EUR",
           "predecessor": "T_MX_ACC_EOD_EUR",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -281,10 +268,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_ACC_EOD_EUR_ND",
           "predecessor": "T_MX_ACC_EOD_EUR_ND",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -305,10 +289,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_ND_MANUAL_JOURNAL_EU",
           "predecessor": "T_MX_ND_MANUAL_JOURNAL_EU",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -327,10 +308,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_EUR_SHL_CHECK_ACC",
           "predecessor": "T_MX_EUR_SHL_CHECK_ACC",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -736,10 +714,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_ACC_MVDATE_EUR",
           "predecessor": "T_MX_ACC_MVDATE_EUR",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -758,10 +733,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_CHECK_FOM_ACC_EU",
           "predecessor": "T_MX_CHECK_FOM_ACC_EU",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -780,10 +752,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_ACC_MVDATE_EUR",
           "predecessor": "T_MX_ACC_MVDATE_EUR",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -802,10 +771,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_WAIT_10S.1",
           "predecessor": "T_MX_WAIT_10S.1",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -824,10 +790,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_WAIT_10S.1",
           "predecessor": "T_MX_WAIT_10S.1",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -846,10 +809,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "T_MX_WAIT_10S.1",
           "predecessor": "T_MX_WAIT_10S.1",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     }

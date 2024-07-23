@@ -16,8 +16,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "SET_YES",
       "processingTemplate": "SET_YES",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SET_VARIABLE_VALUE"
     }
   ]
 }

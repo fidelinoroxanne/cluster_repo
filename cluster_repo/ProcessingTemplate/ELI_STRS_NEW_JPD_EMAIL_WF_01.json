@@ -60,7 +60,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -88,7 +88,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -150,10 +150,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "GEN_BATCH_ID_1_170",
           "predecessor": "GEN_BATCH_ID_1_170",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -178,7 +175,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -190,10 +187,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_LIST_FILE_TRF01",
           "predecessor": "STRS_JPD_EMAIL_LIST_FILE_TRF01",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "FILE_MANAGER",
-          "taskType": "FILE_TRANSFER"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -218,7 +212,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -230,10 +224,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
           "predecessor": "STRS_JPD_EMAIL_LIST_FILE_COPYF_FILES",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -255,10 +246,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
           "predecessor": "STRS_JPD_EMAIL_LIST_FILE_TRF01_BKP",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "FILE_MANAGER",
-          "taskType": "FILE_TRANSFER"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -282,7 +270,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -294,10 +282,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "JPD_EMAIL_MAIL_WAIT",
           "predecessor": "JPD_EMAIL_MAIL_WAIT",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "INTERNAL",
-          "taskType": "WAIT"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -321,7 +306,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${IT_INFRA_TEAM}\n${EXSTREAM_TEAM}",
+            "cc": "${IT_INFRA_TEAM}\\\n${EXSTREAM_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -333,10 +318,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_TRF01",
           "predecessor": "STRS_JPD_EMAIL_TRF01",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "FILE_MANAGER",
-          "taskType": "FILE_TRANSFER"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -360,7 +342,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": true,
-            "cc": "${OPS_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${OPS_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_EXSTREAM",
             "notificationMessageTemplate": "AMDPRD_EXTREAM_PROCESSING_FAIL"
           }
@@ -372,10 +354,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_COPYF_FILES",
           "predecessor": "STRS_JPD_EMAIL_COPYF_FILES",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -445,7 +424,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${OPS_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${OPS_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_EXSTREAM",
             "notificationMessageTemplate": "AMDPRD_CONTROL_MOVE_FILE_MISSING"
           }
@@ -468,7 +447,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${OPS_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${OPS_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_EXSTREAM",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -480,10 +459,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_TRIGGER",
           "predecessor": "STRS_JPD_EMAIL_TRIGGER",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -507,7 +483,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -520,8 +496,7 @@
           "name": "STRS_JPD_EMAIL_TRF_FC",
           "predecessor": "STRS_JPD_EMAIL_TRF_FC",
           "processingStatus": "COMPLETED",
-          "processingType": "SERVICE",
-          "serverNodeType": "FILE_MANAGER"
+          "sensorType": "FILE_SENSOR"
         }
       ]
     },
@@ -545,7 +520,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${IT_INFRA_TEAM}\n${EXSTREAM_TEAM}",
+            "cc": "${IT_INFRA_TEAM}\\\n${EXSTREAM_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -557,10 +532,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAILF_COMPRESS_TARKKI",
           "predecessor": "STRS_JPD_EMAILF_COMPRESS_TARKKI",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -584,7 +556,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${TCS_BILLING_TEAM}\n${EXSTREAM_TEAM}",
+            "cc": "${TCS_BILLING_TEAM}\\\n${EXSTREAM_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK_TCS"
           }
@@ -606,10 +578,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_EMAIL_TAR_PACKAGE",
           "predecessor": "STRS_EMAIL_TAR_PACKAGE",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -633,7 +602,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "TCS_BILLING_TEAM\nEXSTREAM_TEAM\nIT_INFRA_TEAM",
+            "cc": "TCS_BILLING_TEAM\\\nEXSTREAM_TEAM\\\nIT_INFRA_TEAM",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK_TCS"
           }
@@ -655,10 +624,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_TARKKI_CREA_DIR",
           "predecessor": "STRS_JPD_EMAIL_TARKKI_CREA_DIR",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -682,7 +648,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -694,10 +660,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_TRF02",
           "predecessor": "STRS_JPD_EMAIL_TRF02",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "FILE_MANAGER",
-          "taskType": "FILE_TRANSFER"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -753,7 +716,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": true,
-            "cc": "${EXSTREAM_TEAM}\n${AMDOCS_BILLING_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${AMDOCS_BILLING_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_TARKKI_BATCH_ERROR_CODE_1"
           }
@@ -776,7 +739,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${AMDOCS_BILLING_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${AMDOCS_BILLING_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -799,7 +762,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": true,
-            "cc": "${IT_INFRA_TEAM}\n${EXSTREAM_TEAM}",
+            "cc": "${IT_INFRA_TEAM}\\\n${EXSTREAM_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_TARKKI_BATCH_ERROR_CODE_2"
           }
@@ -821,10 +784,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_TRF02",
           "predecessor": "STRS_JPD_EMAIL_TRF02",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "FILE_MANAGER",
-          "taskType": "FILE_TRANSFER"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -848,7 +808,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -910,19 +870,13 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_EMAIL_PROD_DEL_SOURCE",
           "predecessor": "STRS_EMAIL_PROD_DEL_SOURCE",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         },
         {
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_EMAIL_TARKKI_BATCH_RUN",
           "predecessor": "STRS_JPD_EMAIL_TARKKI_BATCH_RUN",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "LINUX",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -946,7 +900,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -958,10 +912,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "JPD_SUMMARY_PDF_FILES_TRF",
           "predecessor": "JPD_SUMMARY_PDF_FILES_TRF",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "FILE_MANAGER",
-          "taskType": "FILE_TRANSFER"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -985,7 +936,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -997,10 +948,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
           "predecessor": "STRS_JPD_SUMMARY_PDF_FILES_BACKUP",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     },
@@ -1034,7 +982,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }
@@ -1046,10 +994,7 @@
           "dependencyType": "PREDECESSOR",
           "name": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
           "predecessor": "STRS_JPD_SUMMARY_PDF_DEL_SOURCE",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "serverNodeType": "WINDOWS",
-          "taskType": "SH"
+          "processingStatus": "COMPLETED"
         }
       ]
     }

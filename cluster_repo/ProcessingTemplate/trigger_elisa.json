@@ -28,8 +28,10 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
       "processingTemplate": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     }
   ]
 }

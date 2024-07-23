@@ -55,8 +55,11 @@
       "highRiskThreshold": 5,
       "name": "T_CORE_JOB_BRANCH_PENDING_ITEMS",
       "processingTemplate": "T_CORE_JOB_BRANCH_PENDING_ITEMS",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "T_CORE_JOB_BRANCH_PENDING_ITEMS",
       "forceCompletedCondition": {
         "criteria": 
@@ -88,8 +91,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "T_CORE_PDBS_JOB_BRANCH_PENDING_ITEMS",
       "processingTemplate": "T_CORE_PDBS_JOB_BRANCH_PENDING_ITEMS",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     }
   ]
 }

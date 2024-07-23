@@ -1,0 +1,5 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "description": "Event triggered when file 111.txt will be found",
+  "resourceType": "EVENT"
+}

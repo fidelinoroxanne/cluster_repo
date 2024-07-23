@@ -1,0 +1,7 @@
+{
+  "calendarType": "AND",
+  "calendars": "1STWEEK,SAT",
+  "codeRepository": "[ROX]cluster_repo",
+  "description": "1st Saturday of the month",
+  "resourceType": "CALENDAR"
+}

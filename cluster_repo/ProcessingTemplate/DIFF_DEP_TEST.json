@@ -17,9 +17,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WKF_SLEEP_2",
       "processingTemplate": "WKF_SLEEP_2",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "Waiting_On_Lock",
+      "workflowType": "STANDARD",
       "dependencies": 
       [
         {
@@ -39,9 +41,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WKF_SLEEP_1",
       "processingTemplate": "WKF_SLEEP_1",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "Waiting_On_Stock",
+      "workflowType": "STANDARD",
       "dependencies": 
       [
         {
@@ -61,9 +65,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WKF_SLEEP_1.1",
       "processingTemplate": "WKF_SLEEP_1",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "Waiting_On_Semaphore",
+      "workflowType": "STANDARD",
       "dependencies": 
       [
         {
@@ -83,9 +89,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WKF_SLEEP_2.1",
       "processingTemplate": "WKF_SLEEP_2",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "Waiting_On_CrossDep",
+      "workflowType": "STANDARD",
       "dependencies": 
       [
         {
@@ -106,9 +114,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WKF_SLEEP_1.2",
       "processingTemplate": "WKF_SLEEP_1",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "Waiting_On_TimeWindow",
+      "workflowType": "STANDARD",
       "dependencies": 
       [
         {
@@ -128,9 +138,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WKF_SLEEP_1.3",
       "processingTemplate": "WKF_SLEEP_1",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "Waiting_On_Lock_And_CrossDep",
+      "workflowType": "STANDARD",
       "dependencies": 
       [
         {
@@ -161,9 +173,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WKF_SLEEP_2.2",
       "processingTemplate": "WKF_SLEEP_2",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "Waiting_On_Lock_And_TimeWindow",
+      "workflowType": "STANDARD",
       "dependencies": 
       [
         {

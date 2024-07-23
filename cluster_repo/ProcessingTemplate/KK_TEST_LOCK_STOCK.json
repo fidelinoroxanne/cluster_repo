@@ -20,9 +20,12 @@
       "highRiskThreshold": 3,
       "name": "KK_TEST_SLEEP_20",
       "processingTemplate": "KK_TEST_SLEEP_20",
+      "processingType": "TASK",
       "serverNode": "ROX_NEW_LB",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
@@ -30,9 +33,12 @@
       "highRiskThreshold": 3,
       "name": "KK_TEST_SLEEP_20.1",
       "processingTemplate": "KK_TEST_SLEEP_20",
+      "processingType": "TASK",
       "serverNode": "ROX_NEW_LB",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
@@ -40,9 +46,12 @@
       "highRiskThreshold": 3,
       "name": "KK_TEST_SLEEP_20.2",
       "processingTemplate": "KK_TEST_SLEEP_20",
+      "processingType": "TASK",
       "serverNode": "ROX_NEW_LB",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
@@ -50,9 +59,12 @@
       "highRiskThreshold": 3,
       "name": "KK_TEST_SLEEP_20.3",
       "processingTemplate": "KK_TEST_SLEEP_20",
+      "processingType": "TASK",
       "serverNode": "ROX_NEW_LB",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
@@ -60,9 +72,12 @@
       "highRiskThreshold": 3,
       "name": "KK_TEST_SLEEP_20.4",
       "processingTemplate": "KK_TEST_SLEEP_20",
+      "processingType": "TASK",
       "serverNode": "ROX_NEW_LB",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     }
   ]
 }

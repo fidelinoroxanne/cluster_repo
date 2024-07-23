@@ -39,8 +39,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S",
       "processingTemplate": "ROX_SLEEP_10S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "dependencies": 
       [
         {
@@ -60,8 +63,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S_X",
       "processingTemplate": "ROX_SLEEP_10S_X",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "dependencies": 
       [
         {
@@ -81,72 +87,99 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_X",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_X",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_V",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_V",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_Z",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_Z",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S_w",
       "processingTemplate": "ROX_SLEEP_10S_w",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_X.1",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_X",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK.1",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S_Z",
       "processingTemplate": "ROX_SLEEP_10S_Z",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_B_S",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_B_S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "dependencies": 
       [
         {
@@ -166,24 +199,33 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S_X.1",
       "processingTemplate": "ROX_SLEEP_10S_X",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S.1",
       "processingTemplate": "ROX_SLEEP_10S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_A_S",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_A_S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "dependencies": 
       [
         {
@@ -203,16 +245,22 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_W",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_W",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_C_S",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_C_S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "dependencies": 
       [
         {
@@ -232,24 +280,33 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S_V",
       "processingTemplate": "ROX_SLEEP_10S_V",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_10S_Y",
       "processingTemplate": "ROX_SLEEP_10S_Y",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "ROX_SLEEP_WITH_LOCK_Y",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_Y",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     }
   ]
 }

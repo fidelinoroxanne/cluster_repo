@@ -16,8 +16,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "exit_5",
       "processingTemplate": "exit_5",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "actions": 
       [
         {
@@ -63,8 +66,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "exit_8",
       "processingTemplate": "exit_8",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "templateParameters": {
         "inherit_me": "INPUT1"
       },

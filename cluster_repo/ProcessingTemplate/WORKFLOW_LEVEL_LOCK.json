@@ -35,8 +35,11 @@
       "highRiskThreshold": 3,
       "name": "sleep_rox_10",
       "processingTemplate": "sleep_rox_10",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
       "statisticPeriod": "ALL",
+      "taskType": "SH",
       "title": "sleep_rox_10"
     },
     {
@@ -44,8 +47,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WAIT_FOR_1MIN",
       "processingTemplate": "WAIT_FOR_1MIN",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "WAIT",
       "dependencies": 
       [
         {

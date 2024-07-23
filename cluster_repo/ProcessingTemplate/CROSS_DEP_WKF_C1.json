@@ -44,9 +44,12 @@
       "highRiskThreshold": 3,
       "name": "SLEEP_10",
       "processingTemplate": "SLEEP_10",
+      "processingType": "TASK",
       "serverNode": "ROX_NEW_LB",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
       "statisticPeriod": "ALL",
+      "taskType": "SH",
       "title": "SLEEP_10"
     }
   ]

@@ -6,6 +6,7 @@
   "highRiskStatisticPeriod": "MONTH",
   "highRiskThreshold": 6,
   "node": "NODE_OS_INFA",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "LINUX",

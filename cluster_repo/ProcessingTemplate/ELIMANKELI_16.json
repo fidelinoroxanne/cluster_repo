@@ -4,6 +4,7 @@
   "highRiskStatisticMethod": "PERCENT",
   "highRiskStatisticPeriod": "MONTH",
   "highRiskThreshold": 6,
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "statisticMethod": "AVERAGE",
@@ -24,10 +25,12 @@
       "name": "ELIMANKELI_I160",
       "priority": "0",
       "processingTemplate": "ELIMANKELI_I160",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "ELIMANKELI_I160",
-      "weight": "1"
+      "weight": "1",
+      "workflowType": "STANDARD"
     }
   ]
 }

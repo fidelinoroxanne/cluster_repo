@@ -35,9 +35,12 @@
       "name": "T_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
       "priority": "0",
       "processingTemplate": "T_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
+      "processingType": "TASK",
       "resultMapping": "RM_EQ2_COMPLETED",
+      "serverNodeType": "WINDOWS",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "title": "T_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
       "weight": "1",
       "actions": 

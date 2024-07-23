@@ -15,11 +15,17 @@
   [
     {
       "name": "ArchiveOldItems.Anow.maint",
-      "processingTemplate": "ArchiveOldItems.Anow.maint"
+      "processingTemplate": "ArchiveOldItems.Anow.maint",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "taskType": "ARCHIVE_INTERVAL"
     },
     {
       "name": "ArchiveCleanup.Anow.maint",
-      "processingTemplate": "ArchiveCleanup.Anow.maint"
+      "processingTemplate": "ArchiveCleanup.Anow.maint",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "taskType": "ARCHIVE_CLEANUP"
     }
   ]
 }

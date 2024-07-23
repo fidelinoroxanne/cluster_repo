@@ -16,8 +16,10 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WF_SPT_UTR_LOAD_DM_MLY",
       "processingTemplate": "WF_SPT_UTR_LOAD_DM_MLY",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     }
   ]
 }

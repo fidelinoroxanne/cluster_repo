@@ -35,9 +35,11 @@
       "name": "W_XT_GEN_IMP_REQUEST",
       "passBy": true,
       "processingTemplate": "W_XT_GEN_IMP_REQUEST",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_REQUEST",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "FileWatcherOptions": "interval=30 retries=180 leadtime=900",
         "RequestCopyOptions": "overwrite",
@@ -54,9 +56,11 @@
       "name": "W_XT_GEN_TOOLRUNNER",
       "passBy": true,
       "processingTemplate": "W_XT_GEN_TOOLRUNNER",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_OUTPUTFILEFILTER",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "ToolName": "E:\\TIMESCAPE\\TOOLS\\OUTPUTFILEFILTER\\OUTPUTFILEFILTER.EXE",
         "ToolParameters": "E:\\TIMESCAPE\\CONFIGS\\OUTPUTFILEFILTER\\Murex_Comm_FU_FIX_1800_SP_Stale_Rates.xml"
@@ -79,10 +83,12 @@
       "name": "W_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
       "passBy": true,
       "processingTemplate": "W_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
+      "processingType": "WORKFLOW",
       "resultMapping": "RM_EQ2_COMPLETED",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "W_XT_MUREX_COMM_FU_FIX_1800_SP_WATCHFOR_STALE_RATES",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "FileToWatchFor": "E:\\CRIS_DATA\\Murex_MOPC\\FIX_1800_SP_CMT\\Murex_Comm_FU_FIX_1800_SP_Stale_Rates.txt",
         "FileWatcherOptions": "leadtime=0 retries=1 interval=5",

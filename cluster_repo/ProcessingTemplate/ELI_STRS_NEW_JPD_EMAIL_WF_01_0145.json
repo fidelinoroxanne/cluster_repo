@@ -68,7 +68,7 @@
           "processingCommand": {
             "actionTargetType": "SELF",
             "attachLogFile": false,
-            "cc": "${EXSTREAM_TEAM}\n${IT_INFRA_TEAM}",
+            "cc": "${EXSTREAM_TEAM}\\\n${IT_INFRA_TEAM}",
             "notificationGroup": "AMDPRD_OPS",
             "notificationMessageTemplate": "AMDPRD_FAILURE_RERUN_OK"
           }

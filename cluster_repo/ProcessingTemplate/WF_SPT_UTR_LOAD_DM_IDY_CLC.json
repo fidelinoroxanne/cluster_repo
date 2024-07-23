@@ -2,6 +2,7 @@
   "description": "UTR SPOT LOAD DM Intraday",
   "highRiskStatisticMethod": "PERCENT",
   "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
   "statisticMethod": "AVERAGE",
@@ -52,9 +53,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WF_SPT_UTR_INTRADAY_DM_CLC",
       "processingTemplate": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "title": "WF_SPT_UTR_INTRADAY_DM_CLC",
+      "workflowType": "STANDARD",
       "templateParameters": {
         "OCCURRENCE": "CLC",
         "REGION": "UTR"

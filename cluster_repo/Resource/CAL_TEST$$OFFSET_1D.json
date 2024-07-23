@@ -1,0 +1,5 @@
+{
+  "codeRepository": "[ROX]cluster_repo",
+  "resourceType": "VARIABLE",
+  "value": "${ALL_DAYS.OFFSET[-1]}"
+}

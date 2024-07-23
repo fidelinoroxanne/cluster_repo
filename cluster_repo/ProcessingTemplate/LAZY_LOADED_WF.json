@@ -17,48 +17,61 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WORKFLOW_LEVEL_STOCK",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "WORKFLOW_LEVEL_STOCK_1",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_1",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "WORKFLOW_LEVEL_STOCK_2",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_2",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "WORKFLOW_LEVEL_STOCK_3",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_3",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "WORKFLOW_LEVEL_STOCK_4",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_4",
+      "processingType": "WORKFLOW",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "000_IMPORT_TEST_TASK_001",
       "processingTemplate": "000_IMPORT_TEST_TASK_001",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "SH",
       "dependencies": 
       [
         {

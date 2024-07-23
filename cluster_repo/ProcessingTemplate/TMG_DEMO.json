@@ -30,9 +30,12 @@
       "highRiskThreshold": 3,
       "name": "000_IMPORT_TEST_TASK_001",
       "processingTemplate": "000_IMPORT_TEST_TASK_001",
+      "processingType": "TASK",
       "serverNode": "ROX_NEW_LB",
+      "serverNodeType": "LINUX",
       "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     }
   ]
 }

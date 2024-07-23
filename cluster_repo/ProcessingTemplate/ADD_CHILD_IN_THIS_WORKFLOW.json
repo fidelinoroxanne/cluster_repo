@@ -16,24 +16,33 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEPING_FOR_30S",
       "processingTemplate": "SLEEPING_FOR_30S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEPING_FOR_30S.1",
       "processingTemplate": "SLEEPING_FOR_30S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "SLEEPING_FOR_30S.2",
       "processingTemplate": "SLEEPING_FOR_30S",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     }
   ]
 }

@@ -34,16 +34,22 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "WAIT_FOR_1MIN",
       "processingTemplate": "WAIT_FOR_1MIN",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "WAIT"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
       "highRiskStatisticPeriod": "MONTH",
       "name": "WAIT_FOR_2MIN",
       "processingTemplate": "WAIT_FOR_2MIN",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
+      "taskType": "WAIT",
       "dependencies": 
       [
         {

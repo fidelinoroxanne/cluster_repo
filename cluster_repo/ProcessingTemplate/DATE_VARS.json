@@ -7,6 +7,7 @@
   "highRiskStatisticPeriod": "MONTH",
   "highRiskThreshold": 6,
   "node": "NODE_OS_LOKERO",
+  "owner": "Administrator",
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "LINUX",

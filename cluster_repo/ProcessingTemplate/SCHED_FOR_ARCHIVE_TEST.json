@@ -9,7 +9,9 @@
   [
     {
       "name": "DailyMaintenance.Anow.wst",
-      "processingTemplate": "DailyMaintenance.Anow.wst"
+      "processingTemplate": "DailyMaintenance.Anow.wst",
+      "processingType": "WORKFLOW",
+      "workflowType": "STANDARD"
     }
   ],
   "timeTriggers": 

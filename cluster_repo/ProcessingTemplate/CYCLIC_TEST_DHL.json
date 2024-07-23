@@ -24,8 +24,11 @@
       "highRiskStatisticPeriod": "MONTH",
       "name": "Simple_Sleep",
       "processingTemplate": "Simple_Sleep",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH"
+      "statisticPeriod": "MONTH",
+      "taskType": "SH"
     }
   ]
 }
