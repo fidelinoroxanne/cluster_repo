@@ -17,6 +17,6 @@
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "sleep 4\necho ${loadDate}\necho ANOWVAR:ROOT.FILE_FOUND=`echo 1`\ndate"
+    "script": "sleep 5\necho ${loadDate}\necho ANOWVAR:ROOT.FILE_FOUND=`echo 1`\ndate"
   }
 }
