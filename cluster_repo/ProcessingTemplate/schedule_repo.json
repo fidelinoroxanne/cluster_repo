@@ -2,6 +2,8 @@
   "owner": "Administrator",
   "priority": "0",
   "processingType": "TRIGGER",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "triggerType": "SCHEDULE",
   "customFieldValues": {
   },
@@ -11,15 +13,19 @@
       "name": "2",
       "processingTemplate": "2",
       "processingType": "TASK",
-      "serverNodeType": "INTERNAL",
-      "taskType": "WAIT"
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     },
     {
       "name": "1",
       "processingTemplate": "1",
       "processingType": "TASK",
-      "serverNodeType": "INTERNAL",
-      "taskType": "WAIT"
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
     }
   ],
   "timeTriggers": 

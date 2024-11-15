@@ -1,5 +1,4 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
   "description": "Connected WITH ssh connection",
   "folder": "AA_DEMO",
   "loadBalancerStrategy": "ROUND_ROBIN",

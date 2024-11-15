@@ -1,6 +1,5 @@
 {
   "calendarType": "OR",
   "calendars": "NLU_WD",
-  "codeRepository": "[ROX]cluster_repo",
   "resourceType": "CALENDAR"
 }

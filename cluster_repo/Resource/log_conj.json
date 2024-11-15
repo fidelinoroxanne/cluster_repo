@@ -1,6 +1,5 @@
 {
   "calendarType": "AND",
   "calendars": "log_base_workdays,log_weekends",
-  "codeRepository": "[ROX]cluster_repo",
   "resourceType": "CALENDAR"
 }

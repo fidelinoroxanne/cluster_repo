@@ -1,5 +1,4 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
   "lastLoadBalanceNode": "[ROX]ROX_OS",
   "loadBalancer": true,
   "loadBalancerStrategy": "ROUND_ROBIN",

@@ -1,5 +1,4 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
   "maxValue": "300",
   "minValue": "1",
   "resourceType": "METRIC",

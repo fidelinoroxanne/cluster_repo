@@ -1,5 +1,4 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
   "serverNodeType": "IBM_MQ",
   "totalWeightCapacity": 50,
   "configuration": {

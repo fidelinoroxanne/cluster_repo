@@ -29,10 +29,10 @@
       "name": "1",
       "processingTemplate": "1",
       "processingType": "TASK",
-      "serverNodeType": "INTERNAL",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
-      "taskType": "WAIT"
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",
@@ -40,10 +40,10 @@
       "name": "2",
       "processingTemplate": "2",
       "processingType": "TASK",
-      "serverNodeType": "INTERNAL",
+      "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
-      "taskType": "WAIT"
+      "taskType": "SH"
     },
     {
       "highRiskStatisticMethod": "PERCENT",

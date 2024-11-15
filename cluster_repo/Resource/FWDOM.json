@@ -2,7 +2,6 @@
   "calendarLimitExpression": "CALENDAR_DAY(1)",
   "calendarType": "CAL_SELECT",
   "calendars": "WORK_DAYS",
-  "codeRepository": "[ROX]cluster_repo",
   "description": "First Working Day of the Month",
   "resourceType": "CALENDAR"
 }

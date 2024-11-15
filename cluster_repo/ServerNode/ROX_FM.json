@@ -1,6 +1,5 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
-  "parent": "[ROX]ROX_FM_LB",
+  "parent": "[AUTO-REGRESSION-TEST]ROX_FM_LB",
   "parentLoadBalancer": "ROX_FM_LB",
   "serverNodeType": "FILE_MANAGER",
   "totalWeightCapacity": 50,

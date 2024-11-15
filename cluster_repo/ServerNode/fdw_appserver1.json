@@ -1,6 +1,5 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
-  "parent": "[ROX]fdw_appserver",
+  "parent": "[AUTO-REGRESSION-TEST]fdw_appserver",
   "parentLoadBalancer": "fdw_appserver",
   "serverNodeType": "LINUX",
   "totalWeightCapacity": 500,

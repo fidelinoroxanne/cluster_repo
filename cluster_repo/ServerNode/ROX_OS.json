@@ -1,6 +1,5 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
-  "parent": "[ROX]ROX_NEW_LB",
+  "parent": "[AUTO-REGRESSION-TEST]ROX_NEW_LB",
   "parentLoadBalancer": "ROX_NEW_LB",
   "serverNodeType": "LINUX",
   "totalWeightCapacity": 50,
