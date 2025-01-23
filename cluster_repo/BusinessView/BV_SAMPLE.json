@@ -1,2 +1,141 @@
 {
+  "items": 
+  [
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "1",
+      "processingType": "TASK",
+      "taskType": "SH"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "1_CARD_SQL_COUNT_DESTINATIE_INFORMIX_LUNAR",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "2.5",
+      "processingType": "TASK",
+      "taskType": "WAIT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "2",
+      "processingType": "TASK",
+      "taskType": "SH"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "1_CARD_SQL_COUNT_SURSA_ORACLE_LUNAR",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "10s",
+      "processingType": "TASK",
+      "taskType": "WAIT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "3hrs",
+      "processingType": "TASK",
+      "taskType": "WAIT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "4678_TASK1",
+      "processingType": "TASK",
+      "taskType": "SH"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "description": "Testing for",
+      "item": "6001_Test",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "description": "Testing for",
+      "item": "6001_Test_ResultAsJSON",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "6292_RDBS_SQL",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "6514_test",
+      "processingType": "TASK",
+      "taskType": "FILE_TRANSFER"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "6514_test_v2",
+      "processingType": "SERVICE",
+      "sensorType": "FILE_SENSOR",
+      "serviceType": "SENSOR"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "6514_test_v2_COPY",
+      "processingType": "SERVICE",
+      "sensorType": "FILE_SENSOR",
+      "serviceType": "SENSOR"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "description": "${DESCRIPTION}",
+      "item": "6609_test",
+      "processingType": "SERVICE",
+      "sensorType": "FILE_SENSOR",
+      "serviceType": "SENSOR"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "description": "${DESCRIPTION}",
+      "item": "6609_test_COPY",
+      "processingType": "SERVICE",
+      "sensorType": "FILE_SENSOR",
+      "serviceType": "SENSOR"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "6775_Test_Task",
+      "processingType": "TASK",
+      "taskType": "REST_WEB_SERVICE_CALL"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "description": "Test Case for ticket 6871",
+      "item": "6871_Test_Task",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "AA_Test_SQL_SCript_Semicolon",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "AA_Test_SQL_Statement_Semicolon",
+      "processingType": "TASK",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "AB_TEST_VARIABLES_NOTOK",
+      "processingType": "SERVICE",
+      "sensorType": "FILE_SENSOR",
+      "serviceType": "SENSOR"
+    }
+  ]
 }
