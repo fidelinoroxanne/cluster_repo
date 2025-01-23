@@ -4,6 +4,8 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "taskType": "AE_SHELL_SCRIPT",
   "customFieldValues": {
   },
