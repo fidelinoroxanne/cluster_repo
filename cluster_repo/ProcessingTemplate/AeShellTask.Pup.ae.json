@@ -1,0 +1,13 @@
+{
+  "node": "AnowEngine.Linux.apf",
+  "owner": "jpupik",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "taskType": "AE_SHELL_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": ":print \"Hello world from AES!\""
+  }
+}

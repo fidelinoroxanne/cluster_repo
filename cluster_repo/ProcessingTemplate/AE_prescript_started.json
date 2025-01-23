@@ -1,0 +1,18 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "tomas.drobisz@infinitedata.com",
+  "preScript": "\n:wait 120\n:  STOP NOMSG, 11, 'PRE: if you can see this, than it is OK'\n\n\n",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SCRIPT",
+  "useScripts": true,
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": ":P \"hello\""
+  }
+}

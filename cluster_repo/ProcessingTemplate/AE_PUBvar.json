@@ -1,0 +1,18 @@
+{
+  "description": "run PUB for new variable",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "LocalAETest",
+  "owner": "tomas.drobisz@infinitedata.com",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SHELL_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "!:multiple PUB usage on same variables did not update value but kept 1st one only\n!:this task set new VAR1\n\n:SET &VAR1=aaa\n:PUB &VAR1\n:PRINT &VAR1\n\n!: VAR1 value is set 3x (in each task), this status must be \"aaa\"\n\n:IF &VAR1 <> \"aaa\"\n:   STOP MSG, 14, \"Values do not match\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches the value of first variable\"\n:ENDIF\n"
+  }
+}

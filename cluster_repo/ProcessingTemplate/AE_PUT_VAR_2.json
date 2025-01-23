@@ -1,0 +1,22 @@
+{
+  "description": "only insert values in DS to be deleted in next task",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "LocalAETest",
+  "owner": "dawiener",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "VARA"
+  ],
+  "taskType": "AE_SHELL_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "!:data source variable name\n:SET &DATASOURCE = \"AE_TEST_DPG_3\"\n!:------------------------------------\n:PUT_VAR &DATASOURCE, NEW1, UPPERv\n:PUT_VAR &DATASOURCE, new2, lowerV\n:PUT_VAR &DATASOURCE, nEw3, miXedV\n\n!:check if correct value is there\n:SET &VAR1A = GET_VAR( &DATASOURCE, \"NEW1\", 1)\n:PRINT &VAR1A \n:SET &VAR1B = GET_VAR( &DATASOURCE, \"new2\", 1)\n:PRINT &VAR1B \n:SET &VAR1C = GET_VAR( &DATASOURCE, \"nEw3\", 1)\n:PRINT &VAR1C \n\n:IF  &VAR1A <> \"UPPERv\"\n:   STOP MSG, 14, \"Values do not match 1a\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR1B <> \"lowerV\"\n:   STOP MSG, 14, \"Values do not match 1b\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR1C <> \"miXedV\"\n:   STOP MSG, 14, \"Values do not match 1b\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n\n\n"
+  }
+}

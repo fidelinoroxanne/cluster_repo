@@ -1,0 +1,55 @@
+{
+  "description": "wf to test multile levels of input inherited from parent",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "tomas.drobisz@infinitedata.com",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "SET",
+    "RESOLVE",
+    "INPUT"
+  ],
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "defaultValue": "root level value 1",
+      "editorType": "TEXT",
+      "name": "ROOT_LVL_INPUT1",
+      "required": true,
+      "title": "ROOT_LVL_INPUT1"
+    },
+    {
+      "allowExpressions": true,
+      "defaultValue": "root level value 2",
+      "editorType": "TEXT",
+      "name": "ROOT_LVL_INPUT2",
+      "required": true,
+      "title": "ROOT_LVL_INPUT2"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "AE_parent_input_lvl1_WF",
+      "processingTemplate": "AE_parent_input_lvl1_WF",
+      "processingType": "WORKFLOW",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "workflowType": "STANDARD",
+      "templateParameters": {
+        "PARENT_LVL_INPUT1": "${ROOT_LVL_INPUT1}",
+        "PARENT_LVL_INPUT2": "&ROOT_LVL_INPUT2"
+      }
+    }
+  ]
+}

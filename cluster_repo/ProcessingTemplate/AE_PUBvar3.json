@@ -1,0 +1,18 @@
+{
+  "description": "run PUB for new variable and also overwrites previous value in published variable",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "LocalAETest",
+  "owner": "tomas.drobisz@infinitedata.com",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SHELL_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "!:multiple PUB usage on same variables did not update value but kept 1st one only\n!:this task overwrite VAR1, VAR2 and set new VAR3\n\n:SET &VAR1=ccc\n:PUB &VAR1\n:PRINT &VAR1\n:SET &VAR2=ccc\n:PUB &VAR2\n:PRINT &VAR2\n:SET &VAR3=ccc\n:PUB &VAR3\n:PRINT &VAR3\n\n:IF &VAR1 <> \"ccc\"\n:   STOP MSG, 14, \"Values do not match\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches the value of first variable\"\n:ENDIF\n\n:IF &VAR2 <> \"ccc\"\n:   STOP MSG, 14, \"Values do not match\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches the value of first variable\"\n:ENDIF\n\n:IF &VAR3 <> \"ccc\"\n:   STOP MSG, 14, \"Values do not match\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches the value of first variable\"\n:ENDIF\n"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "description": "create new lines in DS with PUT_VAR_COL and fill with values",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "LocalAETest",
+  "owner": "dawiener",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "VARA"
+  ],
+  "taskType": "AE_SHELL_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "!:data source variable name\n:SET &DATASOURCE = \"AE_TEST_DPG\"\n!:------------------\n!:sets 1st column\n:PUT_VAR_COL &DATASOURCE, UppER, 1, UPPERvalue1\n:PUT_VAR_COL &DATASOURCE, loWer, 1, lowerVALUE1\n!:------------------\n!:set ther rest\n:PUT_VAR_COL &DATASOURCE, UppER, 2, UPPERvalue2\n:PUT_VAR_COL &DATASOURCE, loWer, 2, lowerVALUE2\n:PUT_VAR_COL &DATASOURCE, UppER, 3, UPPERvalue3\n:PUT_VAR_COL &DATASOURCE, loWer, 3, lowerVALUE3\n:PUT_VAR_COL &DATASOURCE, UppER, 4, UPPERvalue4\n:PUT_VAR_COL &DATASOURCE, loWer, 4, lowerVALUE4\n:PUT_VAR_COL &DATASOURCE, UppER, 5, UPPERvalue5\n:PUT_VAR_COL &DATASOURCE, loWer, 5, lowerVALUE5\n!:------------------\n!:check if correct value is there\n:SET &VAR1A = GET_VAR( &DATASOURCE, \"UPPER\", 1)\n:PRINT &VAR1A \n:SET &VAR1B = GET_VAR( &DATASOURCE, \"lower\", 1)\n:PRINT &VAR1B \n:SET &VAR2A = GET_VAR( &DATASOURCE, \"UPPER\", 2)\n:PRINT &VAR2A \n:SET &VAR2B = GET_VAR( &DATASOURCE, \"lower\", 2)\n:PRINT &VAR2B \n:SET &VAR3A = GET_VAR( &DATASOURCE, \"UPPER\", 3)\n:PRINT &VAR3A \n:SET &VAR3B = GET_VAR( &DATASOURCE, \"lower\", 3)\n:PRINT &VAR3B \n:SET &VAR4A = GET_VAR( &DATASOURCE, \"UPPER\", 4)\n:PRINT &VAR4A \n:SET &VAR4B = GET_VAR( &DATASOURCE, \"lower\", 4)\n:PRINT &VAR4B \n:SET &VAR5A = GET_VAR( &DATASOURCE, \"UPPER\", 5)\n:PRINT &VAR5A \n:SET &VAR5B = GET_VAR( &DATASOURCE, \"lower\", 5)\n:PRINT &VAR5B \n:IF  &VAR1A <> \"UPPERvalue1\"\n:   STOP MSG, 14, \"Values do not match 1a\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR1B <> \"lowerVALUE1\"\n:   STOP MSG, 14, \"Values do not match 1b\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR2A <> \"UPPERvalue2\"\n:   STOP MSG, 14, \"Values do not match 2a\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR2B <> \"lowerVALUE2\"\n:   STOP MSG, 14, \"Values do not match 2b\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR3A <> \"UPPERvalue3\"\n:   STOP MSG, 14, \"Values do not match 3a\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR3B <> \"lowerVALUE3\"\n:   STOP MSG, 14, \"Values do not match 3b\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR4A <> \"UPPERvalue4\"\n:   STOP MSG, 14, \"Values do not match 4a\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR4B <> \"lowerVALUE4\"\n:   STOP MSG, 14, \"Values do not match 4b\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR5A <> \"UPPERvalue5\"\n:   STOP MSG, 14, \"Values do not match 5a\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n:IF  &VAR5B <> \"lowerVALUE5\"\n:   STOP MSG, 14, \"Values do not match 5b\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches\"\n:ENDIF\n\n:DELETE_VAR  &DATASOURCE,UPPER\n:DELETE_VAR  &DATASOURCE,lower\n\n:SET &VARX = GET_VAR( &DATASOURCE, \"UPPER\", 1)\n:PRINT &VARX \n:SET &VARY = GET_VAR( &DATASOURCE, \"lower\", 1)\n:PRINT &VARY \n!:------------------------\n!:now should be empty\n:IF  &VARX <> \"\"\n:   STOP MSG, 14, \"Values is no empty\"\n:ELSE\n:   PRINT \"Check is OK\"\n:ENDIF\n:IF  &VARY <> \"\"\n:   STOP MSG, 14, \"Values is no empty\"\n:ELSE\n:   PRINT \"Check is OK\"\n:ENDIF\n\n\n"
+  }
+}

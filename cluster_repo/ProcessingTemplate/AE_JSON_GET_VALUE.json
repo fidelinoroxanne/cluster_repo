@@ -1,0 +1,24 @@
+{
+  "node": "ROX_REGRESSION_LB",
+  "owner": "Roxanne",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "taskType": "AE_SHELL_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "!---Example AE Script with Shell Task----\n\n\n:S &response# = '${response}'\n:S &actual_start_time# = JSON_GET_VALUE(&response#, $.actual_start_time)\n:S &actual_end_time# = JSON_GET_VALUE(&response#, $.actual_end_time)\n\n:P \"$&actual_start_time#:   &actual_start_time#\"\n:P \"$&actual_end_time#:     &actual_end_time#\" \n\n\necho ${actual_start_time}\necho ${actual_end_time}"
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "defaultValue": "KVS::KVS_RESPONSE(response)",
+      "editorType": "KEY_VALUE_STORE",
+      "name": "response",
+      "optionDataSource": "KVS_RESPONSE",
+      "title": "response"
+    }
+  ]
+}
