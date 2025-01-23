@@ -1,0 +1,16 @@
+{
+  "endpoint": "ROX_SERVICENOW",
+  "endpointType": "SERVICE_NOW",
+  "node": "ROX_SERVICENOW",
+  "owner": "Roxanne",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "SERVICE_NOW",
+  "taskType": "SERVICE_NOW_ADD_ATTACHMENT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "filePaths": "/home/anowapp/attached_to_this_task,/home/anowapp/attached_to_this_task2,/home/anowapp/nohup.out",
+    "sysId": "17cc8aa4c33b0210a87dd5fc050131f4"
+  }
+}

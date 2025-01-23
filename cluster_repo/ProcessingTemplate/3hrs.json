@@ -11,7 +11,7 @@
     "cycleDelayMode": "FINISH_TO_START",
     "cycleFailMode": "RESTART_NONE",
     "cycleType": "COUNTER",
-    "waitDuration": "PT10S",
+    "waitDuration": "+P0Y0M0DT3H0M0S",
     "waitMode": "FOR"
   }
 }

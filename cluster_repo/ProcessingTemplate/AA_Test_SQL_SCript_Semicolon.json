@@ -1,0 +1,15 @@
+{
+  "endpoint": "ROX_ORACLE_ENDPOINT",
+  "endpointType": "ORACLE",
+  "node": "ROX_ORACLE",
+  "owner": "Ariel",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "ORACLE",
+  "taskType": "RDBMS_SQL",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "SELECT '1\\;' FROM dual;"
+  }
+}
