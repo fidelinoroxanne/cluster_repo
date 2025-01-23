@@ -1,7 +1,6 @@
 {
   "calendarDaysOfWeek": "1,2",
   "calendarType": "BASE",
-  "codeRepository": "[ROX]cluster_repo",
   "resourceType": "CALENDAR",
   "timeZone": "Europe/Warsaw"
 }

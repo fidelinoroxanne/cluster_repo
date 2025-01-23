@@ -25,5 +25,15 @@
       "statisticPeriod": "MONTH",
       "workflowType": "STANDARD"
     }
+  ],
+  "timeTriggers": 
+  [
+    {
+      "endTime": 86399999,
+      "repeatInterval": 3600000,
+      "startTime": 82800000,
+      "timeTriggerType": "DAILY",
+      "timeZone": "Europe/Warsaw"
+    }
   ]
 }

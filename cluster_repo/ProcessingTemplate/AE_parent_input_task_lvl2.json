@@ -1,0 +1,33 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "tomas.drobisz@infinitedata.com",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": ":PRINT \"   root level variables\"\n:PRINT \"---\"\n:PRINT \"var ROOT_LVL_INPUT1 is: ${ROOT_LVL_INPUT1}\"\n:PRINT \"var ROOT_LVL_INPUT2 is: &ROOT_LVL_INPUT2\"\n:PRINT \"---\"\n:PRINT \"------------------------------------------------\"\n:PRINT \"   parent level variables\"\n:PRINT \"------------------------------------------------\"\n:PRINT \"---\"\n:PRINT \"var PARENT_LVL_INPUT1 is: ${PARENT_LVL_INPUT1}\"\n:PRINT \"var PARENT_LVL_INPUT2 is: &PARENT_LVL_INPUT2\"\n:RESOLVE &PARENT_LVL_INPUT2B = &PARENT_LVL_INPUT2\n:PRINT \"resolved var PARENT_LVL_INPUT2B is: &PARENT_LVL_INPUT2B\"\n:PRINT \"---\"\n:PRINT \"------------------------------------------------\"\n:PRINT \"   task level variables\"\n:PRINT \"------------------------------------------------\"\n:PRINT \"---\"\n:PRINT \"var TASK_LVL_INPUT1 is: ${TASK_LVL_INPUT1}\"\n:PRINT \"var TASK_LVL_INPUT2 is: &TASK_LVL_INPUT2\"\n:RESOLVE &TASK_LVL_INPUT2B = &TASK_LVL_INPUT2\n:PRINT \"resolved var TASK_LVL_INPUT2B is: &TASK_LVL_INPUT2B\"\n:PRINT \"---\"\n:PRINT \"------------------------------------------------\"\n:PRINT \"   script level variables\"\n:PRINT \"------------------------------------------------\"\n:PRINT \"---\"\n:SET &SCRIPTVAR1 = \"${TASK_LVL_INPUT1}\"\n:PUB &SCRIPTVAR1\n:PRINT \"var SCRIPTVAR1 is: ${SCRIPTVAR1}\"\n:PRINT \"---\"\n:PRINT \"---\"\n:PRINT \" --------------    fun starts here: ------------\"\n:SET &SCRIPTVAR2 = &TASK_LVL_INPUT2\n:PRINT \"var SCRIPTVAR2 is: &SCRIPTVAR2\"\n:PUB &SCRIPTVAR2\n:RESOLVE &SCRIPTVAR2B = &SCRIPTVAR2\n:PRINT \"resolved var SCRIPTVAR2B is: &SCRIPTVAR2B\"\n:PUB &SCRIPTVAR2B\n:PRINT \"usage of SCRIPTVAR2B : &SCRIPTVAR2B\"\n:RESOLVE &LAST_VAL = &SCRIPTVAR2B\n:PRINT \"resolved LAST_VAL from var SCRIPTVAR2B \"\n:PRINT \"which is resolved from SCRIPTVAR2\"\n:PRINT \"which is set from input TASK_LVL_INPUT2\"\n:PRINT \"which has input PARENT_LVL_INPUT2\"\n:PRINT \"which has input ROOT_LVL_INPUT2\"\n:PRINT \"final result is: &LAST_VAL\"\n:PUB &LAST_VAL\n:IF &LAST_VAL <> &ROOT_LVL_INPUT2\n:PRINT \"COMPARED item1: &LAST_VAL\"\n:PRINT \"COMPARED item2: &ROOT_LVL_INPUT2\"\n:STOP MSG, 3, \"variable is not matching\"\n:ENDIF"
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "TASK_LVL_INPUT1",
+      "required": true,
+      "title": "TASK_LVL_INPUT1"
+    },
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "TASK_LVL_INPUT2",
+      "required": true,
+      "title": "TASK_LVL_INPUT2"
+    }
+  ]
+}

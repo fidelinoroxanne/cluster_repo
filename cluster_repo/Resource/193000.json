@@ -1,5 +1,4 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
   "description": "Autocreated on Fri Feb 24 11:58:49 CET 2023 with status CLOSED (without time triggers)",
   "resourceType": "TIME_SEMAPHORE",
   "timeTriggers": 

@@ -1,0 +1,13 @@
+{
+  "node": "ROX_CM_FMGR",
+  "owner": "Jabee",
+  "priority": "0",
+  "processingType": "SERVICE",
+  "sensorType": "FILE_SENSOR",
+  "serverNodeType": "FILE_MANAGER",
+  "serviceType": "SENSOR",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "customFieldValues": {
+  }
+}

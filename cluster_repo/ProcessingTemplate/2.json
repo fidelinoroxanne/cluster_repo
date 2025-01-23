@@ -1,17 +1,15 @@
 {
-  "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
-  "owner": "Administrator",
+  "node": "ROX_REGRESSION_LB",
+  "owner": "Roxanne",
   "priority": "0",
   "processingType": "TASK",
-  "serverNodeType": "INTERNAL",
-  "statisticMethod": "AVERAGE",
-  "statisticPeriod": "MONTH",
-  "taskType": "WAIT",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
   "customFieldValues": {
   },
   "processingCommand": {
-    "waitDuration": "PT5S",
-    "waitMode": "FOR"
+    "script": "sleep 10"
   }
 }

@@ -1,7 +1,6 @@
 {
   "calendarDaysOfWeek": "1,2,3,4,5",
   "calendarType": "BASE",
-  "codeRepository": "[ROX]cluster_repo",
   "description": "Monday to Friday Singapur TIme Zone",
   "resourceType": "CALENDAR",
   "timeZone": "Asia/Singapore"

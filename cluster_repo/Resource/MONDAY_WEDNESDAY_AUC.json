@@ -2,7 +2,6 @@
   "calendarDates": "-2022-05-19",
   "calendarDaysOfWeek": "1,2,3",
   "calendarType": "BASE",
-  "codeRepository": "[ROX]cluster_repo",
   "resourceType": "CALENDAR",
   "timeZone": "Pacific/Auckland"
 }

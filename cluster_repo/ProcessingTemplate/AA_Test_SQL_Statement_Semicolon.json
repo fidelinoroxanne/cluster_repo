@@ -1,0 +1,22 @@
+{
+  "endpoint": "ROX_ORACLE_ENDPOINT",
+  "endpointType": "ORACLE",
+  "node": "ROX_ORACLE",
+  "owner": "Ariel",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "ORACLE",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "RDBMS_SQL_STATEMENT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "rowsMax": 1,
+    "rowsMin": 1,
+    "rowsVariableLevel": "SELF",
+    "selectResultAction": "SYSOUT",
+    "statement": "select '1;' FROM dual;",
+    "statementType": "SELECT"
+  }
+}

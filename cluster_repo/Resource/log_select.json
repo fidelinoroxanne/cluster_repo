@@ -2,6 +2,5 @@
   "calendarLimitExpression": "SHIFT(-1D)",
   "calendarType": "CAL_SELECT",
   "calendars": "log_conj",
-  "codeRepository": "[ROX]cluster_repo",
   "resourceType": "CALENDAR"
 }

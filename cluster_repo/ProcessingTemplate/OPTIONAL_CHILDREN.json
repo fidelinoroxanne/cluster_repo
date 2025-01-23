@@ -2,6 +2,8 @@
   "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "workflowType": "STANDARD",
   "customFieldValues": {
   },
@@ -12,6 +14,8 @@
       "processingTemplate": "other_wait",
       "processingType": "TASK",
       "serverNodeType": "INTERNAL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
       "taskType": "WAIT"
     },
     {
@@ -20,6 +24,8 @@
       "processingTemplate": "WAIT_1",
       "processingType": "TASK",
       "serverNodeType": "INTERNAL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
       "taskType": "WAIT"
     },
     {
@@ -27,6 +33,8 @@
       "processingTemplate": "WAIT_FOR_1MIN",
       "processingType": "TASK",
       "serverNodeType": "INTERNAL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
       "taskType": "WAIT"
     },
     {
@@ -34,6 +42,8 @@
       "processingTemplate": "WAIT_2",
       "processingType": "TASK",
       "serverNodeType": "INTERNAL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
       "taskType": "WAIT"
     },
     {
@@ -42,6 +52,8 @@
       "processingTemplate": "simple_wait",
       "processingType": "TASK",
       "serverNodeType": "INTERNAL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
       "taskType": "WAIT"
     }
   ]

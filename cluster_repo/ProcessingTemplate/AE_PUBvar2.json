@@ -1,0 +1,18 @@
+{
+  "description": "run PUB for new variable and also overwrites previous value in published variable",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "node": "LocalAETest",
+  "owner": "tomas.drobisz@infinitedata.com",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SHELL_SCRIPT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "!:multiple PUB usage on same variables did not update value but kept 1st one only\n!:this task overwrite VAR1 and set new VAR2\n\n:SET &VAR1=bbb\n:PUB &VAR1\n:PRINT &VAR1\n:SET &VAR2=bbb\n:PUB &VAR2\n:PRINT &VAR2\n\n!: VAR1 value is set 3x (in each task), this status must be \"bbb\"\n\n:IF &VAR1 <> \"bbb\"\n:   STOP MSG, 14, \"Values do not match\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches the value of first variable\"\n:ENDIF\n\n:IF &VAR2 <> \"bbb\"\n:   STOP MSG, 14, \"Values do not match\"\n:ELSE\n:   PRINT \"Everythink is OK, value matches the value of first variable\"\n:ENDIF\n"
+  }
+}

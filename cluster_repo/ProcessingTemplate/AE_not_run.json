@@ -1,0 +1,33 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "tomas.drobisz@infinitedata.com",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "AE_SCRIPT",
+  "useScripts": true,
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": ":P \"hello\""
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "AE_not_run_smf",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "AE_not_run_smf",
+      "resourceType": "BINARY_SEMAPHORE",
+      "semaphoreState": "ON",
+      "serverNodeType": "INTERNAL",
+      "taskType": "AE_SCRIPT",
+      "timestampRelation": "EQ",
+      "timestampSelector": "SAME"
+    }
+  ]
+}

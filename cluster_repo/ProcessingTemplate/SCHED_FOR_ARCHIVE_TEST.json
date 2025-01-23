@@ -2,6 +2,8 @@
   "owner": "Administrator",
   "priority": "0",
   "processingType": "TRIGGER",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "triggerType": "SCHEDULE",
   "customFieldValues": {
   },
@@ -11,6 +13,8 @@
       "name": "DailyMaintenance.Anow.wst",
       "processingTemplate": "DailyMaintenance.Anow.wst",
       "processingType": "WORKFLOW",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
       "workflowType": "STANDARD"
     }
   ],

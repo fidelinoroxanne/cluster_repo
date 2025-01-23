@@ -1,0 +1,39 @@
+{
+  "description": "Testing for",
+  "endpoint": "ROX_ORACLE_ENDPOINT",
+  "endpointType": "ORACLE",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "node": "ROX_ORACLE",
+  "owner": "bien",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "ORACLE",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "RDBMS_SQL_STATEMENT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "rowsVariableLevel": "SELF",
+    "selectResultAction": "ALL_ROWS_AS_JSON_VARIABLE",
+    "selectResultVariableLevel": "SELF",
+    "statement": "SELECT '1\\;' FROM dual",
+    "statementType": "SELECT"
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "AAA",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "AAA",
+      "resourcePermits": "1",
+      "resourceType": "STOCK",
+      "serverNodeType": "ORACLE",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    }
+  ]
+}

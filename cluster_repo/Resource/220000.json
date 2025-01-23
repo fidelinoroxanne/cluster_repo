@@ -1,5 +1,4 @@
 {
-  "codeRepository": "[ROX]cluster_repo",
   "description": "From 22:00:00",
   "resourceType": "TIME_SEMAPHORE",
   "timeTriggers": 

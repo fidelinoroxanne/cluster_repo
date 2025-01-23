@@ -3,6 +3,8 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "INTERNAL",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "taskType": "WAIT",
   "customFieldValues": {
   },
@@ -11,7 +13,7 @@
     "cycleDelayMode": "FINISH_TO_START",
     "cycleFailMode": "RESTART_NONE",
     "cycleType": "COUNTER",
-    "waitDuration": "PT15S",
+    "waitDuration": "PT10S",
     "waitMode": "FOR"
   }
 }

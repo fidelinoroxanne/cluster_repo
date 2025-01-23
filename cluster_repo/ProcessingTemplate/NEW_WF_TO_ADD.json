@@ -2,6 +2,8 @@
   "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "workflowType": "STANDARD",
   "customFieldValues": {
   }

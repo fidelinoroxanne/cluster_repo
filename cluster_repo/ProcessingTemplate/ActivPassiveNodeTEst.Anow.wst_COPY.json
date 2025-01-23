@@ -1,0 +1,112 @@
+{
+  "description": "TEST active passive nodes function",
+  "owner": "dirudaya",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "tags": 
+  [
+    "DI"
+  ],
+  "workflowType": "STANDARD",
+  "workspace": "PlatformTest",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "editorType": "TEXT",
+      "hint": "Enter your token",
+      "name": "User_token",
+      "required": true,
+      "title": "User_token"
+    },
+    {
+      "addNewValues": true,
+      "allowExpressions": true,
+      "defaultValue": "KVS::LoadbalancerNames.Anow.dskv(AnowEngine.Linux.apf)",
+      "editorType": "KEY_VALUE_STORE",
+      "name": "lb_name",
+      "optionDataSource": "LoadbalancerNames.Anow.dskv",
+      "required": true,
+      "title": "lb_name"
+    },
+    {
+      "allowExpressions": true,
+      "defaultValue": "https://orchestration-dev.dhl.com/automatenow/api",
+      "editorType": "TEXT",
+      "hint": "https://orchestration-dev.dhl.com/automatenow/api",
+      "name": "base_url",
+      "required": true,
+      "title": "base_url"
+    },
+    {
+      "defaultValue": "Sandbox",
+      "editorType": "TEXT",
+      "name": "domain_name",
+      "required": true,
+      "title": "domain_name"
+    },
+    {
+      "defaultValue": "InsertData.Anow.sql",
+      "editorType": "TEXT",
+      "name": "job_sql",
+      "required": true,
+      "title": "job_sql"
+    }
+  ],
+  "items": 
+  [
+    {
+      "name": "ListApfnodes.Anow.sql",
+      "processingTemplate": "ListApfnodes.Anow.sql",
+      "processingType": "TASK",
+      "serverNodeType": "POSTGRESQL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "RDBMS_SQL_STATEMENT"
+    },
+    {
+      "name": "ParseNode_List.Anow.py",
+      "processingTemplate": "ParseNode_List.Anow.py",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "PYTHON",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ListApfnodes.Anow.sql",
+          "predecessor": "ListApfnodes.Anow.sql",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "POSTGRESQL",
+          "taskType": "RDBMS_SQL_STATEMENT"
+        }
+      ]
+    },
+    {
+      "name": "NodeStopTestJob.Anow.wfe",
+      "processingTemplate": "NodeStopTestJob.Anow.wfe",
+      "processingType": "WORKFLOW",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "workflowType": "FOR_EACH",
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "ParseNode_List.Anow.py",
+          "predecessor": "ParseNode_List.Anow.py",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "LINUX",
+          "taskType": "PYTHON"
+        }
+      ]
+    }
+  ]
+}
