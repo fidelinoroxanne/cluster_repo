@@ -1,0 +1,6 @@
+{
+  "isRule": true,
+  "processingActionType": "PROCESSING_RUN_NOW",
+  "processingEventCategory": "PROCESSING",
+  "processingEventType": "PROCESSING_FAILED"
+}

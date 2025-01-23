@@ -1,0 +1,19 @@
+{
+  "isRule": true,
+  "processingActionType": "ADD_TAG",
+  "processingEventCategory": "PROCESSING",
+  "processingEventType": "PROCESSING_LOADED",
+  "processingCommand": {
+    "actionTargetType": "SELF",
+    "keepForcedStatus": true,
+    "operator": "",
+    "restartType": "RESTART_FROM_BEGINNING",
+    "value": "ADDED_DURING_LOAD_EVENT"
+  },
+  "ruleDefinition": {
+    "nodeOperator": "EQUALS",
+    "parentTemplateOperator": "EQUALS",
+    "processingTemplateOperator": "EQUALS",
+    "processingType": "WORKFLOW"
+  }
+}

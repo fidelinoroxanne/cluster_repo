@@ -1,0 +1,40 @@
+{
+  "isRule": true,
+  "processingActionType": "RESTART",
+  "processingEventCategory": "PROCESSING",
+  "processingEventType": "PROCESSING_FAILED",
+  "skip": true,
+  "condition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "exitCode",
+        "operator": "EQ_NUM",
+        "value": "-16"
+      },
+      {
+        "fieldName": "exitCode",
+        "operator": "EQ_NUM",
+        "value": "200"
+      }
+    ],
+    "operator": "OR"
+  },
+  "processingCommand": {
+    "actionTargetType": "SELF",
+    "keepForcedStatus": true,
+    "operator": "",
+    "restartCounter": 3,
+    "restartDelay": 5000,
+    "restartMode": "COUNTER",
+    "restartType": "RESTART_FROM_BEGINNING"
+  },
+  "ruleDefinition": {
+    "node": "ROX_FMGR_LINUX",
+    "nodeOperator": "EQUALS",
+    "parentTemplateOperator": "EQUALS",
+    "processingTemplateOperator": "EQUALS",
+    "processingType": null,
+    "serverNodeType": "FILE_MANAGER"
+  }
+}
