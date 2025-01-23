@@ -6,6 +6,8 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "SERVICE_NOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "taskType": "SERVICE_NOW_ADD_ATTACHMENT",
   "customFieldValues": {
   },

@@ -3,6 +3,8 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "INTERNAL",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "taskType": "WAIT",
   "customFieldValues": {
   },

@@ -80,8 +80,8 @@
           "predecessor": "2",
           "processingStatus": "COMPLETED",
           "processingType": "TASK",
-          "serverNodeType": "INTERNAL",
-          "taskType": "WAIT"
+          "serverNodeType": "LINUX",
+          "taskType": "SH"
         }
       ]
     }

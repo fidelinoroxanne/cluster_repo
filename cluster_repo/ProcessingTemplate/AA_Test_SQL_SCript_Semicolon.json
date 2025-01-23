@@ -6,6 +6,8 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "ORACLE",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "taskType": "RDBMS_SQL",
   "customFieldValues": {
   },
