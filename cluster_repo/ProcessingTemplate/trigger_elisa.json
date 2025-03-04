@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Administrator",
   "priority": "0",
   "processingType": "TRIGGER",
@@ -25,7 +26,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
       "processingTemplate": "ELI_STRS_NEW_JPD_EMAIL_WF_01",
       "processingType": "WORKFLOW",

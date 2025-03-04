@@ -1,5 +1,8 @@
 {
-  "node": "AnowEngine.Linux.apf",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "node": "ROX_AE_LB",
   "owner": "jpupik",
   "priority": "0",
   "processingType": "TASK",
@@ -10,6 +13,17 @@
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": ":print \"Hello world from AES!\""
-  }
+    "script": ":print \"Hello world from AES!\"\n\nsleep 10"
+  },
+  "dependencies": 
+  [
+    {
+      "dependencyType": "CHRONOLOGY",
+      "name": "CHRONOLOGY",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "taskType": "AE_SHELL_SCRIPT"
+    }
+  ]
 }

@@ -1,4 +1,7 @@
 {
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Roxanne",
   "priority": "0",
   "processingType": "TASK",

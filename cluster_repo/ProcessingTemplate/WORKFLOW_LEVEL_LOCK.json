@@ -44,7 +44,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WAIT_FOR_1MIN",
       "processingTemplate": "WAIT_FOR_1MIN",
       "processingType": "TASK",

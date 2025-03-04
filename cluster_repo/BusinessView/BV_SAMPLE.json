@@ -15,15 +15,15 @@
     },
     {
       "businessViewItemType": "PROCESSING",
-      "item": "2.5",
-      "processingType": "TASK",
-      "taskType": "WAIT"
-    },
-    {
-      "businessViewItemType": "PROCESSING",
       "item": "2",
       "processingType": "TASK",
       "taskType": "SH"
+    },
+    {
+      "businessViewItemType": "PROCESSING",
+      "item": "2.5",
+      "processingType": "TASK",
+      "taskType": "WAIT"
     },
     {
       "businessViewItemType": "PROCESSING",

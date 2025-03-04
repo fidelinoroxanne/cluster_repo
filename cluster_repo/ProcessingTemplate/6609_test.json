@@ -1,7 +1,8 @@
 {
   "description": "${DESCRIPTION}",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "ROX_FMGR_WIN2K19_NEW",
   "owner": "Administrator",
   "priority": "0",

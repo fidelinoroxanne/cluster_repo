@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "timescape_appserver",
   "owner": "oleksandr.semichev",
   "priority": "0",

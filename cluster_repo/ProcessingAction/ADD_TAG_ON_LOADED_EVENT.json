@@ -3,6 +3,7 @@
   "processingActionType": "ADD_TAG",
   "processingEventCategory": "PROCESSING",
   "processingEventType": "PROCESSING_LOADED",
+  "skip": true,
   "processingCommand": {
     "actionTargetType": "SELF",
     "keepForcedStatus": true,

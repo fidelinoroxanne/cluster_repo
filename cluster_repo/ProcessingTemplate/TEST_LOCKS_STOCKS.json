@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Roxanne",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -36,7 +37,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S",
       "processingTemplate": "ROX_SLEEP_10S",
       "processingType": "TASK",
@@ -60,7 +62,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S_X",
       "processingTemplate": "ROX_SLEEP_10S_X",
       "processingType": "TASK",
@@ -84,7 +87,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK",
       "processingType": "TASK",
@@ -95,7 +99,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_X",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_X",
       "processingType": "TASK",
@@ -106,7 +111,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_V",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_V",
       "processingType": "TASK",
@@ -117,7 +123,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_Z",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_Z",
       "processingType": "TASK",
@@ -128,7 +135,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S_w",
       "processingTemplate": "ROX_SLEEP_10S_w",
       "processingType": "TASK",
@@ -139,7 +147,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_X.1",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_X",
       "processingType": "TASK",
@@ -150,7 +159,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK.1",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK",
       "processingType": "TASK",
@@ -161,7 +171,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S_Z",
       "processingTemplate": "ROX_SLEEP_10S_Z",
       "processingType": "TASK",
@@ -172,7 +183,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_B_S",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_B_S",
       "processingType": "TASK",
@@ -196,7 +208,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S_X.1",
       "processingTemplate": "ROX_SLEEP_10S_X",
       "processingType": "TASK",
@@ -207,7 +220,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S.1",
       "processingTemplate": "ROX_SLEEP_10S",
       "processingType": "TASK",
@@ -218,7 +232,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_A_S",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_A_S",
       "processingType": "TASK",
@@ -242,7 +257,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_W",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_W",
       "processingType": "TASK",
@@ -253,7 +269,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_C_S",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_C_S",
       "processingType": "TASK",
@@ -277,7 +294,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S_V",
       "processingTemplate": "ROX_SLEEP_10S_V",
       "processingType": "TASK",
@@ -288,7 +306,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_10S_Y",
       "processingTemplate": "ROX_SLEEP_10S_Y",
       "processingType": "TASK",
@@ -299,7 +318,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ROX_SLEEP_WITH_LOCK_Y",
       "processingTemplate": "ROX_SLEEP_WITH_LOCK_Y",
       "processingType": "TASK",

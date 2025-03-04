@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -23,7 +24,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "CYCLIC_WF_WITH_IGNORE",
       "processingTemplate": "CYCLIC_WF_WITH_IGNORE",
       "processingType": "WORKFLOW",

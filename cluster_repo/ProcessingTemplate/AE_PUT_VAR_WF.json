@@ -1,7 +1,8 @@
 {
   "description": "runs task with PUT_VAR, GET_VAR, PUT_VAR_COL, DELETE_VAR",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "tomas.drobisz@infinitedata.com",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -18,7 +19,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AE_PUT_VAR",
       "processingTemplate": "AE_PUT_VAR",
       "processingType": "TASK",
@@ -29,7 +31,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AE_PUT_VAR_COL",
       "processingTemplate": "AE_PUT_VAR_COL",
       "processingType": "TASK",
@@ -40,7 +43,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AE_GET_VAR",
       "processingTemplate": "AE_GET_VAR",
       "processingType": "TASK",

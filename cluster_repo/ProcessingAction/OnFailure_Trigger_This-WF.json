@@ -2,5 +2,10 @@
   "isRule": true,
   "processingActionType": "PROCESSING_RUN_NOW",
   "processingEventCategory": "PROCESSING",
-  "processingEventType": "PROCESSING_FAILED"
+  "processingEventType": "PROCESSING_FAILED",
+  "skip": true,
+  "processingCommand": {
+    "processingTemplate": "10s",
+    "timestampSelector": "SAME"
+  }
 }

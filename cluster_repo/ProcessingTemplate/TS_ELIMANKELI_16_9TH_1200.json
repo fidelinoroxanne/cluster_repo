@@ -19,7 +19,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "simple_wait",
       "processingTemplate": "simple_wait",
       "processingType": "TASK",
@@ -30,7 +31,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ELI_BANKING_REFUND_WF_01",
       "processingTemplate": "ELI_BANKING_REFUND_WF_01",
       "processingType": "WORKFLOW",

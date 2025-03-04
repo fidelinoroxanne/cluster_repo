@@ -1,5 +1,5 @@
 {
-  "lastLoadBalanceNode": "[AUTO-REGRESSION-TEST]ROX_OS",
+  "lastLoadBalanceNode": "[AUTO-REGRESSION-TEST]ROX_NEW_OS",
   "loadBalancer": true,
   "loadBalancerStrategy": "ROUND_ROBIN",
   "serverNodeType": "LINUX",

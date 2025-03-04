@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "oleksandr.semichev",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -34,7 +35,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "T_XT_GEN_FILE_WATCHER",
       "processingTemplate": "T_XT_GEN_FILE_WATCHER",
       "processingType": "TASK",
@@ -97,7 +99,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_IMP_REQUEST",
       "processingTemplate": "W_XT_GEN_IMP_REQUEST",
       "processingType": "WORKFLOW",
@@ -117,7 +120,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_TOOLRUNNER",
       "processingTemplate": "W_XT_GEN_TOOLRUNNER",
       "processingType": "WORKFLOW",

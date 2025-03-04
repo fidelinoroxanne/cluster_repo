@@ -1,7 +1,8 @@
 {
   "description": "create new lines in DS with PUT_VAR_COL and fill with values",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "LocalAETest",
   "owner": "dawiener",
   "priority": "0",

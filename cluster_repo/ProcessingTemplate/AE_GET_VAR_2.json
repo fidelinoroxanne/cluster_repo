@@ -1,7 +1,8 @@
 {
   "description": "check DS after DELETE_VAR from prev. task",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "LocalAETest",
   "owner": "dawiener",
   "priority": "0",

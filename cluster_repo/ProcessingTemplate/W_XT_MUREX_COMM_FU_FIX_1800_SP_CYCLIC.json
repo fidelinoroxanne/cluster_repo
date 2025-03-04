@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "jaideep.panwar",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -31,7 +32,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_IMP_REQUEST",
       "passBy": true,
       "processingTemplate": "W_XT_GEN_IMP_REQUEST",
@@ -52,7 +54,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_TOOLRUNNER",
       "passBy": true,
       "processingTemplate": "W_XT_GEN_TOOLRUNNER",
@@ -79,7 +82,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",
       "passBy": true,
       "processingTemplate": "W_XT_GEN_WAITFOR_START_TASK_BASED_ON_RESULT",

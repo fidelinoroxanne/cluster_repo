@@ -1,0 +1,14 @@
+{
+  "resourceType": "TIME_SEMAPHORE",
+  "timeTriggers": 
+  [
+    {
+      "closeAfter": 3600000,
+      "endTime": 25198000,
+      "repeatInterval": 3600000,
+      "startTime": 0,
+      "timeTriggerType": "DAILY",
+      "timeZone": "Europe/Helsinki"
+    }
+  ]
+}

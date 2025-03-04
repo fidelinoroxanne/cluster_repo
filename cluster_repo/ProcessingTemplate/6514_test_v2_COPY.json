@@ -1,4 +1,7 @@
 {
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "ROX_CM_FMGR",
   "owner": "Jabee",
   "priority": "0",

@@ -46,7 +46,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_MUREX_COMM_FU_FIX_1800_SP_CYCLIC",
       "processingTemplate": "W_XT_MUREX_COMM_FU_FIX_1800_SP_CYCLIC",
       "processingType": "WORKFLOW",
@@ -133,7 +134,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_COPY_FILE",
       "processingTemplate": "W_XT_GEN_COPY_FILE",
       "processingType": "WORKFLOW",

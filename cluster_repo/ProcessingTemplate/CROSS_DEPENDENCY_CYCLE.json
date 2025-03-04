@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -34,7 +35,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "CROSS_DEP_WKF_C2",
       "processingTemplate": "CROSS_DEP_WKF_C2",
       "processingType": "WORKFLOW",
@@ -44,7 +46,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "CROSS_DEP_WKF_A",
       "processingTemplate": "CROSS_DEP_WKF_A",
       "processingType": "WORKFLOW",
@@ -54,7 +57,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "CROSS_DEP_WKF_B1",
       "processingTemplate": "CROSS_DEP_WKF_B1",
       "processingType": "WORKFLOW",
@@ -64,7 +68,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "CROSS_DEP_WKF_B2",
       "processingTemplate": "CROSS_DEP_WKF_B2",
       "processingType": "WORKFLOW",
@@ -74,7 +79,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "CROSS_DEP_WKF_C1",
       "processingTemplate": "CROSS_DEP_WKF_C1",
       "processingType": "WORKFLOW",

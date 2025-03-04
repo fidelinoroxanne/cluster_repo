@@ -1,4 +1,7 @@
 {
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Administrator",
   "priority": "0",
   "processingType": "TRIGGER",
@@ -10,22 +13,15 @@
   "items": 
   [
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "DailyMaintenance.Anow.wst",
       "processingTemplate": "DailyMaintenance.Anow.wst",
       "processingType": "WORKFLOW",
       "statisticMethod": "MEDIAN",
       "statisticPeriod": "ALL",
       "workflowType": "STANDARD"
-    }
-  ],
-  "timeTriggers": 
-  [
-    {
-      "endTime": 86399999,
-      "repeatInterval": 3600000,
-      "startTime": 46500000,
-      "timeTriggerType": "DAILY",
-      "timeZone": "Europe/Warsaw"
     }
   ]
 }

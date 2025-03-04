@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -13,7 +14,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "SLEEPING_FOR_30S",
       "processingTemplate": "SLEEPING_FOR_30S",
       "processingType": "TASK",
@@ -24,7 +26,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "SLEEPING_FOR_30S.1",
       "processingTemplate": "SLEEPING_FOR_30S",
       "processingType": "TASK",
@@ -35,7 +38,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "SLEEPING_FOR_30S.2",
       "processingTemplate": "SLEEPING_FOR_30S",
       "processingType": "TASK",

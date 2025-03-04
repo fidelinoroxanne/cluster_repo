@@ -1,7 +1,8 @@
 {
   "description": "delete lines from ds, get_var checks after",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "LocalAETest",
   "owner": "dawiener",
   "priority": "0",

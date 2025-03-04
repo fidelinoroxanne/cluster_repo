@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Administrator",
   "priority": "0",
   "processingType": "TRIGGER",
@@ -13,7 +14,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WF_SPT_UTR_LOAD_DM_IDY_CLC",
       "processingTemplate": "WF_SPT_UTR_LOAD_DM_IDY_CLC",
       "processingType": "WORKFLOW",
@@ -23,7 +25,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WF_SPT_UTR_INTRADAY_DM_CLC",
       "processingTemplate": "WF_SPT_UTR_INTRADAY_DM_CLC",
       "processingType": "WORKFLOW",
@@ -37,7 +40,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WF_SPT_UTR_DM_DLY",
       "processingTemplate": "WF_SPT_UTR_DM_DLY",
       "processingType": "WORKFLOW",

@@ -1,5 +1,7 @@
 {
-  "autoArchive": true,
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "dawiener",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -16,6 +18,9 @@
   "items": 
   [
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ArchiveOldItems.Anow.maint",
       "processingTemplate": "ArchiveOldItems.Anow.maint",
       "processingType": "TASK",
@@ -25,6 +30,9 @@
       "taskType": "ARCHIVE_INTERVAL"
     },
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ArchiveCleanup.Anow.maint",
       "processingTemplate": "ArchiveCleanup.Anow.maint",
       "processingType": "TASK",

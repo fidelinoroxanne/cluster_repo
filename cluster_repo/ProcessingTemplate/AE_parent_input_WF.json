@@ -1,7 +1,8 @@
 {
   "description": "wf to test multile levels of input inherited from parent",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "tomas.drobisz@infinitedata.com",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -39,7 +40,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AE_parent_input_lvl1_WF",
       "processingTemplate": "AE_parent_input_lvl1_WF",
       "processingType": "WORKFLOW",

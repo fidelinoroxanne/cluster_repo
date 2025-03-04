@@ -1,8 +1,9 @@
 {
   "description": "only insert values in DS to be deleted in next task",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
-  "node": "LocalAETest",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "node": "ROX_NEW_LB",
   "owner": "dawiener",
   "priority": "0",
   "processingType": "TASK",

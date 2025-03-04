@@ -1,4 +1,7 @@
 {
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "ROX_REGRESSION_LB",
   "owner": "Roxanne",
   "priority": "0",

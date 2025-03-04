@@ -1,6 +1,4 @@
 {
-  "parent": "[AUTO-REGRESSION-TEST]ROX_NEW_LB",
-  "parentLoadBalancer": "ROX_NEW_LB",
   "serverNodeType": "LINUX",
   "totalWeightCapacity": 50,
   "configuration": {

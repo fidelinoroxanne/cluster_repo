@@ -1,7 +1,8 @@
 {
   "description": "reading case insens. values from DS",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "LocalAETest",
   "owner": "dawiener",
   "priority": "0",

@@ -1,4 +1,7 @@
 {
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "PZ004947",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -19,6 +22,9 @@
   "items": 
   [
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AB_TEST_VARIABLES_NOTOK",
       "processingTemplate": "AB_TEST_VARIABLES_NOTOK",
       "processingType": "SERVICE",
@@ -29,6 +35,9 @@
       "statisticPeriod": "ALL"
     },
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AB_TEST_VARIABLES_OK",
       "processingTemplate": "AB_TEST_VARIABLES_OK",
       "processingType": "SERVICE",

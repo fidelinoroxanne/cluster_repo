@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "lazyLoad": true,
   "owner": "Administrator",
   "priority": "0",
@@ -14,7 +15,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WORKFLOW_LEVEL_STOCK",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK",
       "processingType": "WORKFLOW",
@@ -24,7 +26,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WORKFLOW_LEVEL_STOCK_1",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_1",
       "processingType": "WORKFLOW",
@@ -34,7 +37,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WORKFLOW_LEVEL_STOCK_2",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_2",
       "processingType": "WORKFLOW",
@@ -44,7 +48,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WORKFLOW_LEVEL_STOCK_3",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_3",
       "processingType": "WORKFLOW",
@@ -54,7 +59,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WORKFLOW_LEVEL_STOCK_4",
       "processingTemplate": "WORKFLOW_LEVEL_STOCK_4",
       "processingType": "WORKFLOW",
@@ -64,7 +70,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "000_IMPORT_TEST_TASK_001",
       "processingTemplate": "000_IMPORT_TEST_TASK_001",
       "processingType": "TASK",

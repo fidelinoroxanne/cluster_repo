@@ -1,7 +1,8 @@
 {
   "description": "run PUB for new variable",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "LocalAETest",
   "owner": "tomas.drobisz@infinitedata.com",
   "priority": "0",

@@ -88,7 +88,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "T_CORE_PDBS_JOB_BRANCH_PENDING_ITEMS",
       "processingTemplate": "T_CORE_PDBS_JOB_BRANCH_PENDING_ITEMS",
       "processingType": "TASK",

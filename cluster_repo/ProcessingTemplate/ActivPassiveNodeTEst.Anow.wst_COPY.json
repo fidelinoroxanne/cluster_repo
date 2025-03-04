@@ -1,5 +1,8 @@
 {
   "description": "TEST active passive nodes function",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "dirudaya",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -59,6 +62,9 @@
   "items": 
   [
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ListApfnodes.Anow.sql",
       "processingTemplate": "ListApfnodes.Anow.sql",
       "processingType": "TASK",
@@ -68,6 +74,9 @@
       "taskType": "RDBMS_SQL_STATEMENT"
     },
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "ParseNode_List.Anow.py",
       "processingTemplate": "ParseNode_List.Anow.py",
       "processingType": "TASK",
@@ -89,6 +98,9 @@
       ]
     },
     {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "NodeStopTestJob.Anow.wfe",
       "processingTemplate": "NodeStopTestJob.Anow.wfe",
       "processingType": "WORKFLOW",

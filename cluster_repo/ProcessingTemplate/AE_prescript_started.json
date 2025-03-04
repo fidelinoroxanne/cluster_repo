@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "tomas.drobisz@infinitedata.com",
   "preScript": "\n:wait 120\n:  STOP NOMSG, 11, 'PRE: if you can see this, than it is OK'\n\n\n",
   "priority": "0",

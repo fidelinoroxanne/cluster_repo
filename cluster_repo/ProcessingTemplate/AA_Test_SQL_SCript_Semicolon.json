@@ -1,6 +1,9 @@
 {
   "endpoint": "ROX_ORACLE_ENDPOINT",
   "endpointType": "ORACLE",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "ROX_ORACLE",
   "owner": "Ariel",
   "priority": "0",

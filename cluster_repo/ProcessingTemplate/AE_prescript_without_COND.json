@@ -1,7 +1,8 @@
 {
   "description": "prescript in task runs even condition is not set yet",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "tomas.drobisz@infinitedata.com",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -14,7 +15,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AE_not_run",
       "processingTemplate": "AE_not_run",
       "processingType": "TASK",
@@ -25,7 +27,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AE_prescript_started",
       "processingTemplate": "AE_prescript_started",
       "processingType": "TASK",
@@ -48,7 +51,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "AE_not_run_2",
       "processingTemplate": "AE_not_run_2",
       "processingType": "TASK",

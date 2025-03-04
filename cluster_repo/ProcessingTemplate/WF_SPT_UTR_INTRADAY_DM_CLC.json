@@ -1,7 +1,8 @@
 {
   "description": "DAILY_DM_PS_STAT",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "martijn.steenhorst",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -45,7 +46,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "TJ_SPT_POSTED_JOURNAL_LINES_IDY_S",
       "priority": "0",
       "processingTemplate": "TJ_SPT_POSTED_JOURNAL_LINES_IDY_S",
@@ -60,7 +62,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "TJ_SPT_PRPB_IDY_S",
       "priority": "0",
       "processingTemplate": "TJ_SPT_PRPB_IDY_S",
@@ -93,7 +96,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "TJ_SPT_PRPB_IDY_S_ACCOUNTING_METHOD_CODE",
       "priority": "0",
       "processingTemplate": "TJ_SPT_PRPB_IDY_S_ACCOUNTING_METHOD_CODE",

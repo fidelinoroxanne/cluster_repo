@@ -1,7 +1,8 @@
 {
   "description": "SPT Load PRPB_IDY_S_ACCOUNTING_METHOD_CODE",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "ROX_NEW_LB",
   "owner": "Administrator",
   "priority": "0",

@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "Administrator",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -13,7 +14,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WAIT_FOR_2MIN",
       "processingTemplate": "WAIT_FOR_2MIN",
       "processingType": "TASK",
@@ -42,7 +44,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WAIT_FOR_1MIN",
       "processingTemplate": "WAIT_FOR_1MIN",
       "processingType": "TASK",
@@ -53,7 +56,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WAIT_FOR_2MIN.1",
       "processingTemplate": "WAIT_FOR_2MIN",
       "processingType": "TASK",
@@ -64,7 +68,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WAIT_FOR_1MIN.1",
       "processingTemplate": "WAIT_FOR_1MIN",
       "processingType": "TASK",
@@ -75,7 +80,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WORKFLOW_LEVEL_LOCK",
       "processingTemplate": "WORKFLOW_LEVEL_LOCK",
       "processingType": "WORKFLOW",

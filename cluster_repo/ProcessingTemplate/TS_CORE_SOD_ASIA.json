@@ -1,7 +1,8 @@
 {
   "description": "SOD_ASIA",
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "joris.de.groen",
   "priority": "0",
   "processingType": "TRIGGER",
@@ -36,7 +37,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "1",
       "processingTemplate": "1",
       "processingType": "TASK",

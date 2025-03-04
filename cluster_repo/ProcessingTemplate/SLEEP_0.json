@@ -17,6 +17,6 @@
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "echo ${loadDate}\ndate"
+    "script": "echo ${loadDate}\ndate\n\nsleep 120"
   }
 }

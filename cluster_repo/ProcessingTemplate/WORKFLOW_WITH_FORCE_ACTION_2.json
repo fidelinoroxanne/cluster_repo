@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "fidelinoroxanne",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -31,7 +32,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WAIT_FOR_1MIN",
       "processingTemplate": "WAIT_FOR_1MIN",
       "processingType": "TASK",
@@ -42,7 +44,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "WAIT_FOR_2MIN",
       "processingTemplate": "WAIT_FOR_2MIN",
       "processingType": "TASK",

@@ -1,6 +1,9 @@
 {
   "endpoint": "ROX_SERVICENOW",
   "endpointType": "SERVICE_NOW",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "node": "ROX_SERVICENOW",
   "owner": "Roxanne",
   "priority": "0",

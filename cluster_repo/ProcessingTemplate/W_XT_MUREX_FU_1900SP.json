@@ -1,6 +1,7 @@
 {
   "highRiskStatisticMethod": "PERCENT",
-  "highRiskStatisticPeriod": "MONTH",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
   "owner": "oleksandr.semichev",
   "priority": "0",
   "processingType": "WORKFLOW",
@@ -15,7 +16,8 @@
   [
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_COPY_FILE",
       "processingTemplate": "W_XT_GEN_COPY_FILE",
       "processingType": "WORKFLOW",
@@ -31,7 +33,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_IMP_IMPORT",
       "processingTemplate": "W_XT_GEN_IMP_IMPORT",
       "processingType": "WORKFLOW",
@@ -48,7 +51,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_IMP_REQUEST",
       "processingTemplate": "W_XT_GEN_IMP_REQUEST",
       "processingType": "WORKFLOW",
@@ -68,7 +72,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_GEN_MARLIN_EXPORT",
       "processingTemplate": "W_XT_GEN_MARLIN_EXPORT",
       "processingType": "WORKFLOW",
@@ -93,7 +98,8 @@
     },
     {
       "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "MONTH",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 3,
       "name": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
       "processingTemplate": "W_XT_MUREX_FU_1900SP_CHECKS_CYCLE",
       "processingType": "WORKFLOW",
