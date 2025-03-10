@@ -4,19 +4,22 @@
   "highRiskStatisticMethod": "COUNT",
   "highRiskStatisticPeriod": "WEEK",
   "highRiskThreshold": 5,
+  "ignoreProcessingStateRegistry": true,
   "node": "ROX_NEW_LB",
   "owner": "i",
+  "passBy": true,
   "priority": "11",
   "processingType": "TASK",
   "serverNodeType": "LINUX",
   "statisticMethod": "MEDIAN",
   "statisticPeriod": "ALL",
   "taskType": "SH",
+  "verboseMode": true,
   "weight": "10",
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "sleep 46\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho okokok\n\necho ${endpoint}\n\nexit 1\n\n\n\n\necho Hello"
+    "script": "sleep 46\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho okokok\n\necho ${endpoint}\n\nexit 1\n\n\n\n\necho Hello\necho hi"
   },
   "actions": 
   [
