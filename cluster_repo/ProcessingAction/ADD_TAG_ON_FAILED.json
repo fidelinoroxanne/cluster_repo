@@ -1,0 +1,11 @@
+{
+  "isRule": true,
+  "processingActionType": "ADD_TAG",
+  "processingEventCategory": "PROCESSING",
+  "processingEventType": "PROCESSING_FAILED",
+  "processingCommand": {
+    "actionTargetType": "SELF",
+    "keepForcedStatus": true,
+    "restartType": "RESTART_FROM_BEGINNING"
+  }
+}
