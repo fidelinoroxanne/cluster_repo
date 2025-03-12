@@ -1,7 +1,7 @@
 {
-  "calendarLimitExpression": "CALENDAR_DAY(-1)",
+  "calendarLimitExpression": "CALENDAR_DAY(1,3)",
   "calendarType": "CAL_SELECT",
-  "calendars": "WORK_DAYS",
-  "description": "Last working day of month",
+  "calendars": "working_days",
+  "description": "Last working day of a month",
   "resourceType": "CALENDAR"
 }
