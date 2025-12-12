@@ -9,9 +9,7 @@
   "statisticMethod": "AVERAGE",
   "statisticPeriod": "MONTH",
   "taskType": "ARCHIVE_CLEANUP",
-  "customFieldValues": {
-  },
   "processingCommand": {
-    "removeOlderThan": 604800000
+    "removeOlderThan": 259200000
   }
 }
