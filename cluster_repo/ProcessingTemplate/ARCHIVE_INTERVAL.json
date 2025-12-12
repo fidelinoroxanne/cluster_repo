@@ -9,11 +9,10 @@
   "statisticMethod": "AVERAGE",
   "statisticPeriod": "MONTH",
   "taskType": "ARCHIVE_INTERVAL",
-  "customFieldValues": {
-  },
   "processingCommand": {
-    "completedOlderThan": 3600000,
-    "failedOlderThan": 3600000,
-    "waitingOlderThan": 3600000
+    "completedOlderThan": 172800000,
+    "executingOlderThan": 432000000,
+    "failedOlderThan": 432000000,
+    "waitingOlderThan": 432000000
   }
 }
