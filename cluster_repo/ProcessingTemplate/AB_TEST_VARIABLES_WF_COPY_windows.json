@@ -32,7 +32,10 @@
       "serverNodeType": "FILE_MANAGER",
       "serviceType": "SENSOR",
       "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticPeriod": "ALL",
+      "templateParameters": {
+        "x": "xx"
+      }
     },
     {
       "highRiskStatisticMethod": "PERCENT",

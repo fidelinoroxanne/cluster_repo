@@ -4,12 +4,15 @@
   "highRiskThreshold": 3,
   "node": "ROX_REGRESSION_LB",
   "owner": "Roxanne",
+  "passBy": true,
+  "preScript": ":P \"Executing AE even if the task is Skipped\"",
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "LINUX",
   "statisticMethod": "MEDIAN",
   "statisticPeriod": "ALL",
   "taskType": "SH",
+  "useScripts": true,
   "customFieldValues": {
   },
   "processingCommand": {

@@ -45,29 +45,6 @@
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "taskType": "ARCHIVE_INTERVAL"
-    },
-    {
-      "disallowConcurrentExecution": false,
-      "highRiskStatisticMethod": "PERCENT",
-      "highRiskStatisticPeriod": "WEEK",
-      "highRiskThreshold": 5,
-      "name": "RECALCULATE_STATISTICS",
-      "processingTemplate": "RECALCULATE_STATISTICS",
-      "processingType": "TASK",
-      "statisticMethod": "AVERAGE",
-      "statisticPeriod": "MONTH",
-      "taskType": "RECALCULATE_STATISTICS",
-      "dependencies": 
-      [
-        {
-          "dependencyType": "PREDECESSOR",
-          "name": "ARCHIVE_CLEANUP",
-          "predecessor": "ARCHIVE_CLEANUP",
-          "processingStatus": "COMPLETED",
-          "processingType": "TASK",
-          "taskType": "ARCHIVE_CLEANUP"
-        }
-      ]
     }
   ]
 }

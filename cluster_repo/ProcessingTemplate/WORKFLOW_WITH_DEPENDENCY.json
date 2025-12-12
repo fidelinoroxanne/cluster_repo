@@ -13,6 +13,26 @@
   "dependencies": 
   [
     {
+      "dependencyType": "RESOURCE",
+      "name": "GetResults.AnsTower.stock",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "resource": "GetResults.AnsTower.stock",
+      "resourcePermits": "10",
+      "resourceType": "STOCK",
+      "workflowType": "STANDARD"
+    },
+    {
+      "dependencyType": "RESOURCE",
+      "name": "DPD_WKF_ASIA",
+      "processingStatus": "COMPLETED",
+      "processingType": "WORKFLOW",
+      "resource": "DPD_WKF_ASIA",
+      "resourceType": "BINARY_SEMAPHORE",
+      "semaphoreState": "ON",
+      "workflowType": "STANDARD"
+    },
+    {
       "dependencyType": "PROCESSING_TEMPLATE",
       "name": "SIMPLE_TEST_ACTION",
       "processingStatus": "COMPLETED",

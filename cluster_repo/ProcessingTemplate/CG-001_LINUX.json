@@ -1,0 +1,29 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "ROX_OS",
+  "owner": "nico",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "cat ${FILE}"
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "defaultValue": "TEXT_FILE::CG001_FILESTORE(cheese)",
+      "editorType": "TEXT_FILE",
+      "name": "FILE",
+      "optionDataSource": "CG001_FILESTORE",
+      "title": "FILE"
+    }
+  ]
+}

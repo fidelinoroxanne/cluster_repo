@@ -7,16 +7,16 @@
   "processingType": "WORKFLOW",
   "statisticMethod": "AVERAGE",
   "statisticPeriod": "MONTH",
+  "verboseMode": true,
   "workflowType": "CYCLE",
   "customFieldValues": {
   },
   "processingCommand": {
-    "cycleDayOffset": 0,
-    "cycleDelay": "1000",
-    "cycleDelayMode": "FINISH_TO_START",
-    "cycleFailMode": "RESTART_NONE",
-    "cycleRestartUntil": 85500000,
-    "cycleType": "TIME_OF_DAY"
+    "cycleCounter": 5,
+    "cycleDelay": 10000,
+    "cycleDelayMode": "START_TO_START",
+    "cycleFailMode": "RESTART_ALL",
+    "cycleType": "COUNTER"
   },
   "items": 
   [
@@ -27,10 +27,19 @@
       "name": "Simple_Sleep",
       "processingTemplate": "Simple_Sleep",
       "processingType": "TASK",
+      "serverNode": "ROX_ACTIVE_PASSIVE_LB",
       "serverNodeType": "LINUX",
       "statisticMethod": "AVERAGE",
       "statisticPeriod": "MONTH",
       "taskType": "SH"
+    },
+    {
+      "name": "WF_TO_BE_KILLED",
+      "processingTemplate": "WF_TO_BE_KILLED",
+      "processingType": "WORKFLOW",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "workflowType": "STANDARD"
     }
   ]
 }
