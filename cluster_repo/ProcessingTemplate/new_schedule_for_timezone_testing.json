@@ -13,11 +13,11 @@
   "timeTriggers": 
   [
     {
+      "calendar": "MondaysMYT.Gbl.cal",
       "endTime": 86399999,
       "repeatInterval": 3600000,
-      "startTime": 0,
-      "timeTriggerType": "DAILY",
-      "timeZone": "Africa/Cairo"
+      "startTime": 7200000,
+      "timeTriggerType": "DAILY"
     }
   ]
 }

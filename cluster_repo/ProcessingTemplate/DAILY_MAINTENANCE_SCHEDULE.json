@@ -30,7 +30,6 @@
   [
     {
       "endTime": 86399999,
-      "passBy": true,
       "repeatInterval": 3600000,
       "startTime": 82800000,
       "timeTriggerType": "DAILY",

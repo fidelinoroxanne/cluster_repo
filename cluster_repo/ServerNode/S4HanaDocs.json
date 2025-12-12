@@ -1,0 +1,13 @@
+{
+  "serverNodeType": "SAP_S4_HANA",
+  "totalWeightCapacity": 50,
+  "customFieldValues": {
+  },
+  "endpoints": 
+  [
+    {
+      "endpoint": "S4HanaDocs_ENDPOINT",
+      "endpointType": "SAP_S4_HANA"
+    }
+  ]
+}

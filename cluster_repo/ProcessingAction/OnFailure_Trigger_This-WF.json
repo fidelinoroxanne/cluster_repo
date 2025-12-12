@@ -5,7 +5,20 @@
   "processingEventType": "PROCESSING_FAILED",
   "skip": true,
   "processingCommand": {
+    "actionTargetType": "SELF",
     "processingTemplate": "10s",
     "timestampSelector": "SAME"
+  },
+  "ruleDefinition": {
+    "nodeOperator": "EQUALS",
+    "parentTemplateOperator": "EQUALS",
+    "processingTemplateOperator": "EQUALS",
+    "tagOperator": "NONE",
+    "tags": 
+    [
+      "MCA",
+      "new_tag",
+      "NotMonitored"
+    ]
   }
 }

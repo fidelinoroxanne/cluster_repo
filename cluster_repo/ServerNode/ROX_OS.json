@@ -1,6 +1,6 @@
 {
   "serverNodeType": "LINUX",
-  "totalWeightCapacity": 50,
+  "totalWeightCapacity": 1,
   "configuration": {
     "AgentHeartbeat": 30000,
     "NoOfPrcss": 60,
@@ -8,9 +8,33 @@
     "enfPort": 4445,
     "firstDayOfWeek": 6,
     "ftpInterval": 5000,
+    "ftpPoolSize": 10,
     "persistence": true,
+    "persistenceRetry": true,
+    "persistenceRetryDelay": 5000,
     "sysoutMaxAgeInDays": 7
   },
   "customFieldValues": {
-  }
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "NOTIFY_EMAIL",
+      "processingEventCategory": "SERVER_NODE",
+      "processingEventType": "SERVER_NODE_HOLD",
+      "processingCommand": {
+        "contentType": "TEXT",
+        "message": "ROX_OS node was put on hold...",
+        "recipient": "desry.hernalin@infinitedata.com",
+        "subject": "NODE PUT ON HOLD"
+      }
+    }
+  ],
+  "endpoints": 
+  [
+    {
+      "endpoint": "anowapp_as_id.support_nopasswd",
+      "endpointType": "USER"
+    }
+  ]
 }
