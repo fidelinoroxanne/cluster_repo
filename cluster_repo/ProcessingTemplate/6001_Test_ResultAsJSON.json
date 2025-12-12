@@ -12,6 +12,13 @@
   "serverNodeType": "ORACLE",
   "statisticMethod": "MEDIAN",
   "statisticPeriod": "ALL",
+  "tags": 
+  [
+    "new_tag",
+    "Restart",
+    "ADDED_DURING_LOAD_EVENT",
+    "TestTrigger"
+  ],
   "taskType": "RDBMS_SQL_STATEMENT",
   "customFieldValues": {
   },

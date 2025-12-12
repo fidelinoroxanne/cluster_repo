@@ -9,6 +9,13 @@
   "serverNodeType": "LINUX",
   "statisticMethod": "AVERAGE",
   "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "new_tag",
+    "Restart",
+    "ADDED_DURING_LOAD_EVENT",
+    "TestTrigger"
+  ],
   "taskType": "SH",
   "customFieldValues": {
   },
