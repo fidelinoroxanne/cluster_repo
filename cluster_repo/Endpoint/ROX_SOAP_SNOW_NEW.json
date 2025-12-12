@@ -1,0 +1,12 @@
+{
+  "endpointType": "SOAP_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "DIGEST",
+    "namespaceUri": "http://www.service-now.com/u_anow_soap_testing",
+    "password": "ENCRYPTED::BQUKEA0RDAwTEBYKCgwPERsTEwoYERgT",
+    "user": "admin",
+    "wsdlUri": "https://dev283829.service-now.com/u_anow_test_soap.do?WSDL"
+  }
+}

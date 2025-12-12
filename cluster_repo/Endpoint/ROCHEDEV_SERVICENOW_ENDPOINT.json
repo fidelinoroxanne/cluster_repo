@@ -1,0 +1,11 @@
+{
+  "endpointType": "SERVICE_NOW",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "instanceName": "rochedev",
+    "password": "ENCRYPTED::EwoYERMRBwoBCgwKDBAWChEQExATEREMEAwKDBYK",
+    "url": "https://rochedev.service-now.com/",
+    "user": "pdilsnd"
+  }
+}

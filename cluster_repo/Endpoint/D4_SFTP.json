@@ -1,0 +1,19 @@
+{
+  "endpointType": "SFTP",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "activeRemoteConnections": 0,
+    "disableRSA": false,
+    "host": "192.168.7.85",
+    "keyAuthentication": true,
+    "port": 2234,
+    "sftpFileMode": "0664",
+    "sshKey": "PuTTY-User-Key-File-2: ssh-rsa\nEncryption: none\nComment: id.support@rb-test-anow-01\nPublic-Lines: 9\nAAAAB3NzaC1yc2EAAAADAQABAAABgQC6RCzGDQ3rND3p5WsYK2mLOp3EFHqLnOrG\nVfHU1fcZ9MS3Q1ZPA1s5F5jBcZHpO50U4lIiODR2L8lviTzSKoGnxGHQc3Ymp7Vy\nNxeGrOvr9YupzsXTleeK0Ws8UYJe72TeieTGKpiZkN2/VfuAkpqlJaGdTjEhI1dY\nzf6YBdAl4lbWa3ZMenL8uauj/C+IadbRnk7UfsaPmzhTqMdO4OiSAMf2JQTgmAm9\nwAxasCQbUqedhkx1qhSRJgPhq/z0ttDVxC2ZX2d9b/uVXTTJu01zIlR4Tmsbnfc7\nlEs+ur1XpmU1aGQr+g+IDjLPt6vL4IU1ABvUCxH6hmO6vYlaS1awDW+14T58Br7Z\nieScOYCkgSnZu4nOJeM3IndQPeWZp2N+Gj2DIc8dKwcOSliKPoEcVuKh0mJ3ZAIo\nHXA+s6iMApsj3PhV2yiccuVLkd2bn9NEiH6Yi0kov8TOH8w412cdWqv+5Hnvcuyw\nyGsMrUoMQOiKWTNf4U0viyOdSBp6vIs=\nPrivate-Lines: 21\nAAABgQCaAI3oPZjZc3sRLG6MMDB2PcN8/9WGIvn1e8+TQkioPDh8sP7mGwdMP9c7\ncRPLe09XmfuAcWnmoYHxZs1TknNaa0LYHu577UNWqHgaEFSK5ZxQjDYBxzoGCzmX\nSGj65wFGAUqWEVfT9/NvI77qQcv8aQ2jSqfSFy87rC0oMf4zpFxZscXAW6lAjJ59\n2Z7PMXq8GyBgDmVLDHHYsX4AGHIRbPXm7BqJOwsqyGMug92GfaM52XTUAAg7Lewd\npJ5jEdZT7m3niV0CG/nbA2R2+oxfoOW+wQWEw5I56dfSFuRd6Muczi8/M8Tsg89r\nr+YHQ0mc3fycxkO+dR+3F9I9f6pMXcF+UnnFwSEU5abaXk37UaYIwgYOhUcE/aLV\ntgQyTHNziwMivEs8igLElNNa6VJ79DMdk1oRncn9xC1W6emo4v/lsCX38YUYW4yG\n5F+gfYk6FgMZ8Z2NkI4Sm8zaaUVpO5yUr9tZR6Gk8nzLRj1aG+tsZEfujCt0mP+0\nQRDMCSkAAADBAOzeEzIO0U56AL/8urRtqQUVsj6Im6FLTjs5OMzkzjS6iHU5Oyx2\nNts+iJSHeSV6OTEmXWk4Be8YJOwlsqOFCz0dal5SHlc/Rfym4U37HRNKM3Ep9OCK\n7yxqGD7FLT63O6U0nqdjjVSMmK0YFrVumpzl8/LCRnSRbf9LrAwH9FA2lsUIgqct\nzCquT73vQhwMYZ5Z0CVZE+QiWK9MBRTpL2EMByF6DGxP5cPqTHv+rxZiA7ZiQweJ\n6I6VT8XSVAVG5wAAAMEAyU/F92wBYaCG5wWbdd+FTb3XLOdz5efB+RzYoDo5jcac\niB+k+5a+d3LXiY7EEPmAHxW0okSDpLIhs+WYCCL3w0YOQI4s7CkcTJrXf91uEluA\nJW63JUEVwUm/Kf9Xj9EmSvu6bpvR37m6ayhYaA3sJtypTNKzirTHMjmmP6EE5GKE\nzxXK3s8DkRCmaveE9n4CjZNjoJ6Mmb8FNtB9/TPpFCyjNbwHti0g5ewD+fuWxw3E\ntErm8HZNFSnL0qgBpvy9AAAAwQCuWYdHU0QBXPDwJZz96QL6+Od7YsCFpmx9REcd\nh0dZKt8kMc0qkh9V9XEgUkN0vPfQGUGGBrgNigeva6jUlP2A/Cgot9fucoAPy9UT\nfqJS7xHap+EJxCJJhSlf/N2l2SlyUlTj1Pji5wsex74TdTRAnCfRTxPmaMgOjVLW\nncGlC6uMo3Sx6dfxHj9yC02Hk1IiZgg/QlE5lMW8Owk/vCECXZnXXq1MFwjmpvr7\n0twgV/5VCWtNIeZ5kEO6mkM2tY0=\nPrivate-MAC: 14ad98065f0357de882b4fc1a93e8ebcace0f03f",
+    "sshKeyLocationType": "INLINE_KEY",
+    "user": "id.support"
+  },
+  "docs": {
+    "documentation": "LInk:::&nbsp;http://192.168.7.10:8080/automatenow/#AUTO-REGRESSION-TEST/node-endpoint-edit/D4_SFTP<div><br><\/div><div><br><\/div>"
+  }
+}

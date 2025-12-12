@@ -1,0 +1,11 @@
+{
+  "endpointType": "SERVICE_NOW",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "instanceName": "dev223519",
+    "password": "ENCRYPTED::GxAFBQwFCAwQEBgMCAoNEQ8KEAobEQ8REAUYEwkRDQobEAsRCQUMChERDBARDBEQChANDBYMBwwPEwwTDQwKChETCQwbERsMCAUbERsFBRMBEwkQEAoYEA0MBRELDBEQCRERDBAKEAoPCg8KBwUNERsFBxEPExMKEAUMBQcRGwwRDA0QAQwPDAgQDAoJEBgREwoJEQEKDAoMEA8RGwwKCgETGAwIChgKARMQEQ0FBRAWBRsMCRANExsFDQwHBRYKBwUNEQoMDxE=",
+    "url": "https://dev223519.service-now.com/",
+    "user": "roxanne.fidelino"
+  }
+}

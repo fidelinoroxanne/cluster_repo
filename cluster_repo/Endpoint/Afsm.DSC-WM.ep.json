@@ -1,0 +1,15 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "DSC-WM"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::EQoMEwgFCAwNChgTDRAYBQkMCgoBEREM",
+    "url": "https://czcholstc003477.prg-dc.dhl.com/fat_afsm",
+    "user": "afsmuser"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "ORA-DGUA",
+    "Test"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": null,
+    "password": "",
+    "url": "https://orchestration.dhl.com/automatenow/api/processing/executeNow",
+    "user": null
+  }
+}

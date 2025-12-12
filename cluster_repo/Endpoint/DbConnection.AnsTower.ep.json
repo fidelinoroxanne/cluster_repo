@@ -1,0 +1,18 @@
+{
+  "endpointType": "POSTGRESQL",
+  "tags": 
+  [
+    "AnsTower.L3"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "closeConnectionPoolIfNotUsed": true,
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::BxEPEQwQCQwJDAERDBEQEAkQDQUREQoTBQUYERYKDBMQChsFDQUYBRgKGAoLEQgFDBATDAwRGBEBERMQAQobCg0QGww=",
+    "url": "jdbc:postgresql://awx-db2-sit.prg-dc.dhl.com:5433/automationcontroller",
+    "user": "automationcontroller"
+  }
+}

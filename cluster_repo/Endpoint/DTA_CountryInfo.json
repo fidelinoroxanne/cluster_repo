@@ -1,0 +1,9 @@
+{
+  "endpointType": "SOAP_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "namespaceUri": "http://www.oorsprong.org/websamples.countryinfo",
+    "wsdlUri": "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL"
+  }
+}

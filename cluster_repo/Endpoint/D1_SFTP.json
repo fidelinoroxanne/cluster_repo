@@ -1,0 +1,14 @@
+{
+  "endpointType": "SFTP",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "activeRemoteConnections": 0,
+    "authenticationMethod": "PASSWORD",
+    "host": "192.168.3.11",
+    "password": "ENCRYPTED::CAoWCgoKCAoWCggKERAFChYTGwwTDAwM",
+    "passwordAuthentication": true,
+    "port": 22,
+    "user": "desry.hernalin"
+  }
+}

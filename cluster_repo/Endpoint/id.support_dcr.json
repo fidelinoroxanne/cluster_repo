@@ -1,0 +1,14 @@
+{
+  "endpointType": "SSH",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "SSH_KEY",
+    "host": "192.168.7.30",
+    "port": 2234,
+    "sshKey": null,
+    "sshKeyLocationType": "SSH_KEY_FILE_PATH",
+    "sshKeyPath": "/home/anowapp/.ssh/rabo_ssh_key",
+    "user": "id.support"
+  }
+}

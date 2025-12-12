@@ -1,0 +1,11 @@
+{
+  "endpointType": "SOAP_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "namespaceUri": "https://www.w3schools.com/xml/",
+    "password": null,
+    "user": null,
+    "wsdlUri": "https://www.w3schools.com/xml/tempconvert.asmx?WSDL"
+  }
+}

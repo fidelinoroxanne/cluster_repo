@@ -1,0 +1,10 @@
+{
+  "endpointType": "MS_SSIS",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "password": "ENCRYPTED::GwoWCgcKEBAbDBMMDAw=",
+    "url": "jdbc:sqlserver://localhost;instanceName=MSSQLSERVER;encrypt=false;databaseName=VP_Test",
+    "user": "anow"
+  }
+}

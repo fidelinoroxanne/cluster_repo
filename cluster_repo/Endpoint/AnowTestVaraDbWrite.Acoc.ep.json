@@ -1,0 +1,18 @@
+{
+  "endpointType": "POSTGRESQL",
+  "folder": "pb",
+  "tags": 
+  [
+    "Anow"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::CxEKDBYFDAoWBRYKEBANDBEKEQUFDBsQGwoIEBsKCgUJEBsFAQoTCg==",
+    "url": "jdbc:postgresql://anowtest-vara-db.dhl.com:5434/anow-vara",
+    "user": "acoc-vara-write"
+  }
+}

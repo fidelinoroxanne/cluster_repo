@@ -1,0 +1,11 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH_HEADER",
+    "password": "ENCRYPTED::ExEbChMKCBAQCggKExALChsMEwwMDA==",
+    "url": "http://192.168.7.10:8080/automatenow/",
+    "user": "Roxanne"
+  }
+}

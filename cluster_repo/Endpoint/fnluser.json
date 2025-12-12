@@ -1,0 +1,8 @@
+{
+  "endpointType": "USER",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "user": "fnlbatch"
+  }
+}

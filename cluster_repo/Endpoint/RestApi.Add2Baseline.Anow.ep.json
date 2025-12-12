@@ -1,0 +1,19 @@
+{
+  "description": "For Baseline internal tool",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "Anow"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "FORM",
+    "formPasswordField": "j_password",
+    "formUrl": "https://orchestration-dev.dhl.com/automatenow/api/login/authenticate",
+    "formUserField": "j_username",
+    "password": "ENCRYPTED::EQoIEQ0MDAUBCgkQEAwFBQgQGwUJDBAFGwwWExMMBwoKEAkMEBAWCg==",
+    "url": "https://orchestration-dev.dhl.com/automatenow/api",
+    "user": "anow-rest"
+  }
+}

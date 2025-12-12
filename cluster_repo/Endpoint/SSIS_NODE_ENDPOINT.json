@@ -1,0 +1,13 @@
+{
+  "endpointType": "SQL_SERVER",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::GwoWCgcKEBAbDBMMDAw=",
+    "url": "jdbc:sqlserver://192.168.7.15:1433;database=VP_test;encrypt=true;trustServerCertificate=true;",
+    "user": "anow"
+  }
+}

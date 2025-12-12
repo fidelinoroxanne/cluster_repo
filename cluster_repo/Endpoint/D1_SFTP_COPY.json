@@ -1,0 +1,15 @@
+{
+  "endpointType": "SFTP",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "activeRemoteConnections": 0,
+    "authenticationMethod": "PASSWORD",
+    "host": "192.168.3.11",
+    "password": "ENCRYPTED::ExEbChMKCBAQCggKExALChsMEwwMDA==",
+    "passwordAuthentication": true,
+    "port": 22,
+    "timeout": 60,
+    "user": "roxanne.fidelino"
+  }
+}

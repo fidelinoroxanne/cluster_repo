@@ -1,0 +1,12 @@
+{
+  "endpointType": "SAP_HANA",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "password": "ENCRYPTED::DRANEA0QDRANEA0Q",
+    "url": "jdbc:sap://xxxx/databaseName=tdb1",
+    "user": "xxx"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Readonly connection to Anow DB. (user: anow-read)",
+  "endpointType": "POSTGRESQL",
+  "tags": 
+  [
+    "Global"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "closeConnectionPoolIfNotUsed": true,
+    "connectionPoolSize": 1,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::DQoQEA0FARANEQsMEAwJERgMBwoHDBsMBQUMExgQCgw=",
+    "url": "jdbc:postgresql://anowdev-db.prg-dc.dhl.com:5432/anow",
+    "user": "anow-read"
+  }
+}

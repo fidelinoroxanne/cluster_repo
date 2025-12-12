@@ -1,0 +1,17 @@
+{
+  "description": "SOAP connection for u_dhl_ci_hw_server table - Update Operation",
+  "endpointType": "SOAP_WEB_SERVICE",
+  "tags": 
+  [
+    "Acoc"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "DIGEST",
+    "namespaceUri": "http://www.service-now.com",
+    "password": "ENCRYPTED::CBERChgKCREKCgcKEAwKDAoKDBANCgEFGxEMExEQCRATDAwMGxEREAUKDBA=",
+    "user": "snc_sys_if_anow",
+    "wsdlUri": "https://soap.servicenow-uat.dhl.com/u_dhl_ci_hw_server.do?WSDL"
+  }
+}

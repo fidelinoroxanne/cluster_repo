@@ -1,0 +1,16 @@
+{
+  "endpointType": "SOAP_WEB_SERVICE",
+  "tags": 
+  [
+    "MQAuto"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "DIGEST",
+    "namespaceUri": "https://servicenow.dhl.com/ns/cchm_change_request_create/",
+    "password": "ENCRYPTED::BxMTBQsFEwwBDBgFDRMYExYMDAwWEwEKEwoIEwgRFgw=",
+    "user": "snc_sys_if_automic",
+    "wsdlUri": "https://soap.servicenow-uat.dhl.com/cchm_change_request_create.do?WSDL"
+  }
+}

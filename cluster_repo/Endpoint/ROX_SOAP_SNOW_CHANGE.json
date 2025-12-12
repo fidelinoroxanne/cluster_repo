@@ -1,0 +1,12 @@
+{
+  "endpointType": "SOAP_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "DIGEST",
+    "namespaceUri": "https://dev273162.service-now.com/ns/cchm_change_request_update/",
+    "password": "ENCRYPTED::GxAREwkQGxMQChEMBRENDAcRERETCgsR",
+    "user": "admin",
+    "wsdlUri": "https://dev273162.service-now.com/cchm_change_request_update.do?WSDL"
+  }
+}

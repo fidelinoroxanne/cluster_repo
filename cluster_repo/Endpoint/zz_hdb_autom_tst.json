@@ -1,0 +1,10 @@
+{
+  "endpointType": "POSTGRESQL",
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "password": "XXX",
+    "url": "XXX",
+    "user": "XXX"
+  }
+}

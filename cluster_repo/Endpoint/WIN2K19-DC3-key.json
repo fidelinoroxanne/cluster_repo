@@ -1,0 +1,23 @@
+{
+  "description": "key authentication bitvise",
+  "endpointType": "SFTP",
+  "tags": 
+  [
+    "JELLE"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "activeRemoteConnections": 0,
+    "host": "192.168.7.15",
+    "keyAuthentication": true,
+    "password": null,
+    "passwordAuthentication": false,
+    "port": 10022,
+    "sftpFileMode": "0664",
+    "sshKey": null,
+    "sshKeyLocationType": "SSH_KEY_FILE_PATH",
+    "sshKeyPath": "/home/anowapp/rabo.ppk",
+    "user": "roxanne.fidelino"
+  }
+}

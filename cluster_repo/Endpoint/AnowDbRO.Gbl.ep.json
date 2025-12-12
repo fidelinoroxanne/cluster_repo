@@ -1,0 +1,17 @@
+{
+  "endpointType": "POSTGRESQL",
+  "tags": 
+  [
+    "Anow"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::DQoQEA0FARANEQsMEAwJERgMBwoHDBsMBQUMExgQCgw=",
+    "url": "jdbc:postgresql://anowdev-db.prg-dc.dhl.com:5432/anow",
+    "user": "anow-read"
+  }
+}

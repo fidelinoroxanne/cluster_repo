@@ -1,0 +1,16 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "folder": "AMF",
+  "tags": 
+  [
+    "AMF"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::GwoFEBEQBwoPCggKDAobDBMMDAw=",
+    "url": "http:",
+    "user": "automic"
+  }
+}

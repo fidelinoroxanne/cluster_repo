@@ -1,0 +1,12 @@
+{
+  "endpointType": "EMAIL",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "mailFromAddress": "anowapp@test-anow.infinitedata.com",
+    "mailFromName": "AutomateNOW!",
+    "smtpHost": "162.19.193.193",
+    "smtpPort": 2515,
+    "useSmtp": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "endpointType": "SAP_S4_HANA",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "ashost": "10.56.143.19",
+    "certificate": false,
+    "certificateType": "INLINE",
+    "client": "300",
+    "connectionType": "DIRECT",
+    "loadBalancingGroup": "xx",
+    "messageServerHost": "xxx",
+    "password": "VAULT::pronto.13",
+    "r3Name": "rox",
+    "router": "/H/10.53.74.10/S/3299/H/",
+    "sysnr": "00",
+    "user": "psuser_rfc",
+    "userAuthentication": true
+  }
+}

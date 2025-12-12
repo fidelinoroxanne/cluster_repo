@@ -1,0 +1,16 @@
+{
+  "description": "API connecting to infra Security ",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "Acoc"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::GAUREAERARETERAQCQUKEQ8TCREMEQ0QCgwRDBYTAQwWDA8FDBMJERsMCgoTCgUMCgwIEA==",
+    "url": "https://infrasecurityapi.dhl.com",
+    "user": "srv_acoc-InfraSecAPI"
+  }
+}

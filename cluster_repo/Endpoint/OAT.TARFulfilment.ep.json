@@ -1,0 +1,15 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "TARFulfilment"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::GwoFCg0KCwoKChgRCRAPExsQBREIBQkMEAoJEAgKCQwTBQcRDQoNEAsKGAoMDA==",
+    "url": "https://dev-oat.dhl.com/api/",
+    "user": "srv_oatrrapi"
+  }
+}

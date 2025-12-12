@@ -1,0 +1,15 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "DSC-WM"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::EREYCgcKDBAJEQoKGAoKDAkMEwwRChsMGxMRChgKGBEYChAFAQoFCgkMDAwRDAoF",
+    "url": "https://servicenow-uat.dhl.com",
+    "user": "snc_sys_if_automic_jda_dr"
+  }
+}

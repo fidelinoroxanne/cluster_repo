@@ -1,0 +1,11 @@
+{
+  "endpointType": "RABBIT_MQ",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "host": "139.162.36.97",
+    "password": "ENCRYPTED::GwoWCgcKEBA=",
+    "port": 5672,
+    "user": "anow"
+  }
+}

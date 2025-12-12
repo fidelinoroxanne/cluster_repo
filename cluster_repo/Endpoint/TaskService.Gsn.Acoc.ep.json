@@ -1,0 +1,17 @@
+{
+  "description": "snc_sys_if_anow GSN table task_cmdb_ci_service",
+  "endpointType": "SOAP_WEB_SERVICE",
+  "tags": 
+  [
+    "Acoc"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "DIGEST",
+    "namespaceUri": "http://www.service-now.com",
+    "password": "ENCRYPTED::CBERChgKCREKCgcKEAwKDAoKDBANCgEFGxEMExEQCRATDAwMGxEREAUKDBA=",
+    "user": "snc_sys_if_anow",
+    "wsdlUri": "https://soap.servicenow-uat.dhl.com/u_excel_dhl_sw_upload.do?WSDL"
+  }
+}

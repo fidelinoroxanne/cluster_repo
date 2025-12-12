@@ -1,0 +1,13 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "SATS-IAM"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationHeader": "https://amc2appapi.prg-dc.dhl.com/api/SATSAccessManagement",
+    "url": "https://amc2appapi.prg-dc.dhl.com/api/"
+  }
+}

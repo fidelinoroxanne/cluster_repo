@@ -1,0 +1,12 @@
+{
+  "endpointType": "GOOGLE_BIG_QUERY",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "oAuthPvtKeyPath": "/home/anowapp/rox/ssh/rox-proj-1-bbe719819146.p12",
+    "url": "jdbc:bigquery://https://www.googleapis.com/bigquery/v2:443;ProjectId=rox-proj-1",
+    "user": "anow-testing@rox-proj-1.iam.gserviceaccount.com"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "folder": "DR_Test",
+  "tags": 
+  [
+    "DrTesting"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::EREYChMMERMYCgwKBwobEBsTERMTDAwMEQwYCgoKGwoLChEFGwoRDAoT",
+    "url": "https://servicenow-uat.dhl.com/api/now/table/",
+    "user": "snc_sys_if_automic"
+  }
+}

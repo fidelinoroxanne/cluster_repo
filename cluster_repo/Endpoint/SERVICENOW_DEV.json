@@ -1,0 +1,11 @@
+{
+  "endpointType": "SERVICE_NOW",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "instanceName": "dev268576",
+    "password": "ENCRYPTED::CQUTEAcKFgoREAcKFhMbDAwMGxM=",
+    "url": "https://dev268576.service-now.com",
+    "user": "roxanne.fidelino"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "description": "Pointing to PreProd SBF environment",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "Acoc",
+    "AcocTest",
+    "MJS"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::BREPChEKARAQBRsQDAULCg8KEwoNBQgKCAwKEBAKExATDAkMEwwRDA==",
+    "url": "https://preprod-sbf.dhl.com/",
+    "user": "srv_sbf_automic"
+  }
+}

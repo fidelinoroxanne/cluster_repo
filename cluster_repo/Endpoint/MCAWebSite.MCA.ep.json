@@ -1,0 +1,14 @@
+{
+  "description": "MCA website endpoint",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "MCA.L3",
+    "MCA"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "url": "https://mca-dev8.prg-dc.dhl.com/"
+  }
+}

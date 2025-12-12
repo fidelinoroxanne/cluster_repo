@@ -1,0 +1,12 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "Global"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "url": "https://orchestration-dev.dhl.com/automatenow/api"
+  }
+}

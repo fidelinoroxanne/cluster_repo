@@ -1,0 +1,11 @@
+{
+  "endpointType": "SERVICE_NOW",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "instanceName": "dev268576",
+    "password": "ENCRYPTED::EREbChYKERAFCgwQEwwMDAUFGxEbEw==",
+    "url": "https://dev268576.service-now.com",
+    "user": "viktor.kalashnykov"
+  }
+}

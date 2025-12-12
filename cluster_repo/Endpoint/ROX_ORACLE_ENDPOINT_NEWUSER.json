@@ -1,0 +1,15 @@
+{
+  "description": "currentpass: pronto.13",
+  "endpointType": "ORACLE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "closeConnectionPoolIfNotUsed": true,
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::CRATEAcKFgoREAcKFhMbDAwM",
+    "url": "jdbc:oracle:thin:@//192.168.7.65:1521/XEPDB1",
+    "user": "NEWUSER"
+  }
+}

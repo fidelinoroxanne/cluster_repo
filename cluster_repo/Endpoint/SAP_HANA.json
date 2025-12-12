@@ -1,0 +1,19 @@
+{
+  "endpointType": "SAP_S4_HANA",
+  "folder": "AndreLTest",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "ashost": "itap1093.cc1864.de",
+    "certificateType": "INLINE",
+    "client": "100",
+    "connectionType": "LOAD_BALANCED",
+    "language": "DE",
+    "loadBalancingGroup": "xx",
+    "messageServerHost": "xx",
+    "password": "ENCRYPTED::EQUFEQwFEQUbDBMMDAwRDA==",
+    "r3Name": "333",
+    "sysnr": "00",
+    "user": "TEST_HT"
+  }
+}

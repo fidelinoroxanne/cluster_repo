@@ -1,0 +1,15 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "Global"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::CBERChgKCREKCgcKEAwKDAoKDBANCgEFGxEMExEQCRATDAwMGxEREAUKDBA=",
+    "url": "https://soap.servicenow-uat.dhl.com",
+    "user": "snc_sys_if_anow"
+  }
+}

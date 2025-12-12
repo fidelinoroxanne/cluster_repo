@@ -1,0 +1,17 @@
+{
+  "description": "Endpoint for Cascade",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "NIAAuto",
+    "NIAAuto.L3"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::EREMBQoRERATEBEQARMRDAwMEQwKEREREBEQCgkFDQoTEAsKCwobDAwMDAwRDAoKEQoRCgoK",
+    "url": "https://prgdca-npm-pr01.dhl.com",
+    "user": "nia_restapi"
+  }
+}

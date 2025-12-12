@@ -1,0 +1,13 @@
+{
+  "description": "Pointing to QA SBF env",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "Acoc"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "url": "https://test-mu-sbf.dhl.com/sbfexport/"
+  }
+}

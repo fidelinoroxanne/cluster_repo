@@ -1,0 +1,12 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "AnsTower.L3"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "url": "https://ansible-test.dhl.com"
+  }
+}

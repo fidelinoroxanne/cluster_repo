@@ -1,0 +1,12 @@
+{
+  "endpointType": "SOAP_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "DIGEST",
+    "namespaceUri": "http://www.service-now.com/u_create_ticket_soap_anow",
+    "password": "ENCRYPTED::GxAbDBgFFgoYBQcTCAwRBRAKBREBEwEK",
+    "user": "admin",
+    "wsdlUri": "https://dev279407.service-now.com/u_create_ticket_soap_anow.do?WSDL"
+  }
+}

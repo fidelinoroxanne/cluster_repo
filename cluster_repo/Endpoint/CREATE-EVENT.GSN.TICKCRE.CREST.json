@@ -1,0 +1,16 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "folder": "TICKCRE",
+  "tags": 
+  [
+    "TICKCRE"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::BRATDBYFBwUFEBsKDxEMDA8KDxAMDAsRFgUKDAwTARE=",
+    "url": "https://soap.servicenow-uat.dhl.com/api/dpit2/event/create",
+    "user": "snc_sys_if_automic_ticket_creator"
+  }
+}

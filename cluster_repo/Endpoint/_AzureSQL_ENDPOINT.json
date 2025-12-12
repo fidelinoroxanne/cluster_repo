@@ -1,0 +1,12 @@
+{
+  "description": "Azure sql test emdpoint",
+  "endpointType": "AZURE_SQL_DATABASE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 1,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "url": "jdbc:sqlserver://sqlserver-hermes-dev.database.windows.net:1433;database=sqldb-hermes-dev;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;Authentication=ActiveDirectoryIntegrated"
+  }
+}

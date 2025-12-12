@@ -1,0 +1,12 @@
+{
+  "endpointType": "SSH",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "PASSWORD",
+    "host": "139.162.37.47",
+    "password": "ENCRYPTED::CRATEAcKFgoREAcKFhMbDAwM",
+    "port": 22,
+    "user": "rox"
+  }
+}

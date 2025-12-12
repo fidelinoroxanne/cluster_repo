@@ -1,0 +1,19 @@
+{
+  "description": "Connection to Anow Vara DB.",
+  "endpointType": "POSTGRESQL",
+  "tags": 
+  [
+    "Global"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "closeConnectionPoolIfNotUsed": true,
+    "connectionPoolSize": 1,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::GwoWCggQEwoREQUFEwwTBQwREQUMDAcFEwwTBQsREBAREQsKDAoRCg==",
+    "url": "jdbc:postgresql://anowdev-vara-db.prg-dc.dhl.com:5433/anow-vara",
+    "user": "anow-vara-read"
+  }
+}

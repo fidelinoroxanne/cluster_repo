@@ -1,0 +1,12 @@
+{
+  "endpointType": "POSTGRESQL",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "password": "ENCRYPTED::GwoWCgcKEBAbCgkQCRAbDBMMDAw=",
+    "url": "jdbc:postgresql://psg301:5448/anow_qa",
+    "user": "anowapp"
+  }
+}

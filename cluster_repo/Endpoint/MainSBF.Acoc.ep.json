@@ -1,0 +1,16 @@
+{
+  "description": "Pointing to QA SBF env",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "Acoc"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::BREPChEKARAQBRsQDAULCg8KEwoNBQgKCAwKEBAKExATDAkMEwwRDA==",
+    "url": "https://uat-sbf.dhl.com/",
+    "user": "srv_sbf_automic"
+  }
+}

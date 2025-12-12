@@ -1,0 +1,16 @@
+{
+  "description": "SAP DIC Endpoint",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "DIC"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH",
+    "password": "ENCRYPTED::ChAFDBMRGwoLEQUKDxMbDBgKERE=",
+    "url": "https://vsystem.ingress.dh-8eyup1nyn3w1.di-xmj.shoot.live.k8s-hana.ondemand.com/",
+    "user": "onepsl-dic-dev\\TU-ANOW-DIC"
+  }
+}

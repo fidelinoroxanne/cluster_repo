@@ -1,0 +1,18 @@
+{
+  "endpointType": "SFTP",
+  "tags": 
+  [
+    "JELLE"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "activeRemoteConnections": 0,
+    "host": "192.168.7.15",
+    "password": "ENCRYPTED::CgwKBQwMCgwPCggRGAUQEAoTDBETEQUT",
+    "passwordAuthentication": true,
+    "port": 22,
+    "sftpFileMode": "0664",
+    "user": "roxanne.fidelino"
+  }
+}

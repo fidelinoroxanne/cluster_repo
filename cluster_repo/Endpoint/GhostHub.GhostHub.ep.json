@@ -1,0 +1,17 @@
+{
+  "description": "rest endpoint for ghosthub",
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "GhostHub",
+    "GhostHub.L3"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "BASIC_AUTH_HEADER",
+    "password": "ENCRYPTED::GwUNDA8KCBEYBRAMGAoTEQgKCBMJEQwKGwoJDBsTCwo=",
+    "url": "https://ghosthub.prg-dc.dhl.com",
+    "user": "srv_prgdc-atmGHDCOM"
+  }
+}

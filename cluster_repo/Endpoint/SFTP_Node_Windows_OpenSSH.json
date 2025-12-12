@@ -1,0 +1,14 @@
+{
+  "endpointType": "SFTP",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "PASSWORD",
+    "host": "192.168.5.15",
+    "password": "ENCRYPTED::BwoKBQgQCRAWEQ0FCgwTDAgKEBAFEQwR",
+    "passwordAuthentication": true,
+    "port": 22,
+    "timeout": null,
+    "user": "Administrator"
+  }
+}

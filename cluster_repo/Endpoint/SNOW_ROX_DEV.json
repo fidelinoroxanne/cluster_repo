@@ -1,0 +1,11 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": null,
+    "password": null,
+    "url": "https://dev273162.service-now.com/",
+    "user": null
+  }
+}

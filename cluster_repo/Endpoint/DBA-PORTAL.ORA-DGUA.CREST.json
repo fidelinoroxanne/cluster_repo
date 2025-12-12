@@ -1,0 +1,13 @@
+{
+  "endpointType": "REST_WEB_SERVICE",
+  "tags": 
+  [
+    "ORA-DGUA"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "proxyProtocol": null,
+    "url": "https://dba.dhl.com/"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "description": "currentpass: anowapp123",
+  "endpointType": "ORACLE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "connectionPoolSize": 10,
+    "maxLifeTime": 0,
+    "oauthGrantType": "CLIENT_CREDENTIALS",
+    "password": "ENCRYPTED::GwoWCgcKEBAbCgkQCRAbDBMMDAw=",
+    "url": "jdbc:oracle:thin:@//192.168.7.65:1521/XEPDB1",
+    "user": "ANOWAPP"
+  }
+}

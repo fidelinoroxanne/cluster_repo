@@ -1,0 +1,17 @@
+{
+  "description": "SOAP connection for u_excel_dhl_hw_server_upload table - Insert Operation",
+  "endpointType": "SOAP_WEB_SERVICE",
+  "tags": 
+  [
+    "Acoc"
+  ],
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "authenticationMethod": "DIGEST",
+    "namespaceUri": "http://www.service-now.com",
+    "password": "ENCRYPTED::CBERChgKCREKCgcKEAwKDAoKDBANCgEFGxEMExEQCRATDAwMGxEREAUKDBA=",
+    "user": "snc_sys_if_anow",
+    "wsdlUri": "https://soap.servicenow-uat.dhl.com/u_excel_dhl_hw_server_upload.do?WSDL"
+  }
+}

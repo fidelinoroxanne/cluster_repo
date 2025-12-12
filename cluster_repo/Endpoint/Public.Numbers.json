@@ -1,0 +1,8 @@
+{
+  "endpointType": "SOAP_WEB_SERVICE",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "wsdlUri": "https://www.dataaccess.com/webservicesserver/NumberConversion.wso?WSDL"
+  }
+}

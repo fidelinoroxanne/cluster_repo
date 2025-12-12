@@ -1,0 +1,10 @@
+{
+  "endpointType": "JIRA",
+  "customFieldValues": {
+  },
+  "endpointProperties": {
+    "password": "ENCRYPTED::GxEFEBEQBwoPChsKERAFChYRBxEQBRsMEwwMDBsT",
+    "url": "https://rox-fidelino1.atlassian.net/",
+    "user": "jakub.szeliga@betasystems.com"
+  }
+}
